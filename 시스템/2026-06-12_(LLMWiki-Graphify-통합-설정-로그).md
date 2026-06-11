@@ -150,3 +150,4 @@ rmdir /s /q "%WIKI_OUT%"                                       REM 정리
 ## 3. 연관 개념 (지식 연결)
 - [[2026-06-05_(Claudian-Smart-Connections-MCP-설정가이드)]] — 동일 환경의 Smart Connections MCP 설정 (mcp.json, nvm 경로)
 - [[2026-06-05_(Claudian-GitHub-MCP-설정가이드)]] — GitHub MCP 설정 (Obsidian Git으로 대체된 업로드 방식과 연관)
+- [[2026-06-12_(Obsidian-Git-플러그인-연동가이드)]] — Claude Code GitHub 업로드를 대체한 Obsidian Git 플러그인 설정 상세
