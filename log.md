@@ -7,3 +7,5 @@
 - **2026-06-05**: `wiki/DBMS/Oracle/install/` 서브폴더 생성 — #Oracle #install 문서 3개→4개 도달로 트리거. 기존 문서 3개 이동 및 `2026-06-05_(Oracle-DBCA-NETCA-가이드).md` 신규 추가.
 - **2026-06-08**: `2026-06-08_(Advanced-SQL-PostgreSQL).md` 추가 — Oracle Advanced SQL 교육 과정 PostgreSQL 이식판. INDEX/IS NULL 차이, TOP-n, 조인·서브쿼리, ROLLUP·CUBE, 분석함수, 계층질의(WITH RECURSIVE), 정규식, Oracle→PG 이행 가이드 포함.
 - **2026-06-08**: `2026-06-08_(Advanced-SQL-PostgreSQL).md` 재처리 — `--confirm` 강제 재처리 테스트. PDF 재변환(421,419 chars) 및 wiki 문서 덮어쓰기 완료.
+- **2026-06-12**: `2026-06-05_(Claudian-Smart-Connections-MCP-설정가이드).md` 추가 — Obsidian+Claudian 환경 Smart Connections MCP 설정. nvm 심볼릭 링크 함정·Node v20 요구사항·mcp.json 직접 편집 방법 정리.
+- **2026-06-12**: `2026-06-05_(Claudian-GitHub-MCP-설정가이드).md` 추가 — Obsidian+Claudian 환경 GitHub MCP 설정. PAT 발급·npx-cli.js 절대경로·보안 주의사항(mcp.json git 제외) 정리.
