@@ -135,3 +135,4 @@ Test-Path "C:\Users\bsshi\AppData\Local\nvm\v20.20.2\node.exe"  # True 확인
 
 ## 3. 연관 개념 (지식 연결)
 - [[2026-06-05_(Claudian-GitHub-MCP-설정가이드)]] — 동일 패턴으로 GitHub MCP 설정 (node.exe 물리 경로, mcp.json 편집)
+- [[2026-06-12_(LLMWiki-Graphify-통합-설정-로그)]] — graphify 연동으로 vault 탐색 토큰 절감 전략

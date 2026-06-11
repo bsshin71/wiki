@@ -143,3 +143,4 @@ $env:GITHUB_PERSONAL_ACCESS_TOKEN = "ghp_여기에_발급받은_토큰"
 
 ## 3. 연관 개념 (지식 연결)
 - [[2026-06-05_(Claudian-Smart-Connections-MCP-설정가이드)]] — 동일 환경·동일 패턴의 Smart Connections MCP 설정 (선행 가이드)
+- [[2026-06-12_(LLMWiki-Graphify-통합-설정-로그)]] — graphify 연동 설정 (GitHub 업로드를 Obsidian Git으로 대체한 결정 포함)

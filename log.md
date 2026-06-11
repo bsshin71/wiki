@@ -9,3 +9,4 @@
 - **2026-06-08**: `2026-06-08_(Advanced-SQL-PostgreSQL).md` 재처리 — `--confirm` 강제 재처리 테스트. PDF 재변환(421,419 chars) 및 wiki 문서 덮어쓰기 완료.
 - **2026-06-12**: `2026-06-05_(Claudian-Smart-Connections-MCP-설정가이드).md` 추가 — Obsidian+Claudian 환경 Smart Connections MCP 설정. nvm 심볼릭 링크 함정·Node v20 요구사항·mcp.json 직접 편집 방법 정리.
 - **2026-06-12**: `2026-06-05_(Claudian-GitHub-MCP-설정가이드).md` 추가 — Obsidian+Claudian 환경 GitHub MCP 설정. PAT 발급·npx-cli.js 절대경로·보안 주의사항(mcp.json git 제외) 정리.
+- **2026-06-12**: `2026-06-12_(LLMWiki-Graphify-통합-설정-로그).md` 추가 — graphify 도입 배경·설치·출력경로 문제 해결(robocopy 왕복)·wrapper BAT 3종·CLAUDE.md 변경사항·첫 /lint 결과 기록.
