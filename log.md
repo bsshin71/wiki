@@ -11,3 +11,4 @@
 - **2026-06-12**: `2026-06-05_(Claudian-GitHub-MCP-설정가이드).md` 추가 — Obsidian+Claudian 환경 GitHub MCP 설정. PAT 발급·npx-cli.js 절대경로·보안 주의사항(mcp.json git 제외) 정리.
 - **2026-06-12**: `2026-06-12_(LLMWiki-Graphify-통합-설정-로그).md` 추가 — graphify 도입 배경·설치·출력경로 문제 해결(robocopy 왕복)·wrapper BAT 3종·CLAUDE.md 변경사항·첫 /lint 결과 기록.
 - **2026-06-12**: `2026-06-12_(Obsidian-Git-플러그인-연동가이드).md` 추가 — wiki/ 폴더만 GitHub Private 레포에 선택 동기화. Custom base path 설정·PAT 발급·첫 푸시 절차·자동 백업 설정.
+- **2026-06-12**: `wiki/ML(AI)/` 최상위 카테고리 신설 — 기존 `wiki/DBMS/MLAI/` 를 DBMS 하위에서 독립 카테고리로 승격. CLAUDE.md·system_prompt.md·index.md 카테고리 규칙 일괄 변경.

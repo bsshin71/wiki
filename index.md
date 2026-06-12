@@ -14,8 +14,8 @@
 | Altibase | DBMS/Altibase/ | Altibase 관련 문서 |
 | 쿼리튜닝 | DBMS/쿼리튜닝/ | DB 종류 무관 쿼리튜닝 (최우선 분류) |
 | DW | DBMS/DW/ | 데이터웨어하우스 / 분석 관련 문서 |
-| MLAI | DBMS/MLAI/ | ML·AI·딥러닝 관련 문서 |
 | (공통) | DBMS/(공통)/ | DB 공통 개념 문서 |
+| ML(AI) | ML(AI)/ | ML·AI·딥러닝 관련 문서 (최상위 독립 카테고리) |
 | 프로그래밍 | 프로그래밍/ | 프로그래밍 언어·도구 관련 문서 |
 | 시스템 | 시스템/ | 시스템·인프라 관련 문서 |
 | 시스템/Obsidian | 시스템/ | Obsidian·MCP·Claude 도구 설정 가이드 |
