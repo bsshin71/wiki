@@ -23,6 +23,7 @@
 | 프로그래밍 | 프로그래밍/ | 프로그래밍 언어·도구 관련 문서 |
 | DBMS | DBMS/ | DB 공통 |
 | PostgreSQL | DBMS/PostgreSQL/ | PostgreSQL 관련 문서 |
+| PostgreSQL/admin | DBMS/PostgreSQL/admin/ | PostgreSQL 운영·모니터링·관리 쿼리 문서 |
 | MySQL | DBMS/MySQL/ | MySQL 관련 문서 |
 | Oracle | DBMS/Oracle/ | Oracle 관련 문서 |
 | Oracle/install | DBMS/Oracle/install/ | Oracle 설치·구성 관련 문서 |
@@ -53,9 +54,9 @@
 - [[2026-06-02_(Oracle-쿼리튜닝-트러블슈팅)]] : Snapshot too old 원인·해결, SELECT 절 사용자 함수 병목 튜닝 4가지 방법 `#Oracle #쿼리튜닝 #tibero` `DBMS/쿼리튜닝/`
 - [[2026-06-02_(Oracle-spool-데이터-Export)]] : SQL*Plus spool을 이용한 테이블 데이터 Export 스크립트 `#Oracle #export #spool` `DBMS/Oracle/`
 - [[2026-06-02_(PostgreSQL-RPM-설치-가이드)]] : RHEL/Rocky Linux에서 공식 RPM으로 PG16·PG18 설치 절차 및 데이터 경로 변경 `#PostgreSQL #install` `DBMS/PostgreSQL/`
-- [[2026-06-02_(PostgreSQL-모니터링-쿼리-모음)]] : pg_stat_statements·pg_stat_activity·Block 관계·Cache Hit 비율 조회 `#PostgreSQL #admin #모니터링` `DBMS/PostgreSQL/`
-- [[2026-06-02_(PostgreSQL-객체-용량-조회-쿼리-모음)]] : DB 용량·Tablespace·Index·파티션·제약조건 조회 쿼리 모음 `#PostgreSQL #admin` `DBMS/PostgreSQL/`
-- [[2026-06-02_(PostgreSQL-운영-유틸리티-모음)]] : psql 명령어·파라미터 조회/변경·Auto Vacuum·테스트 데이터 생성 `#PostgreSQL #admin #psql` `DBMS/PostgreSQL/`
+- [[2026-06-02_(PostgreSQL-모니터링-쿼리-모음)]] : pg_stat_statements·pg_stat_activity·Block 관계·Cache Hit 비율 조회 `#PostgreSQL #admin #모니터링` `DBMS/PostgreSQL/admin/`
+- [[2026-06-02_(PostgreSQL-객체-용량-조회-쿼리-모음)]] : DB 용량·Tablespace·Index·파티션·제약조건 조회 쿼리 모음 `#PostgreSQL #admin` `DBMS/PostgreSQL/admin/`
+- [[2026-06-02_(PostgreSQL-운영-유틸리티-모음)]] : psql 명령어·파라미터 조회/변경·Auto Vacuum·테스트 데이터 생성 `#PostgreSQL #admin #psql` `DBMS/PostgreSQL/admin/`
 - [[2026-06-02_(PostgreSQL-EXPLAIN-실행계획-가이드)]] : EXPLAIN 옵션 비교표·실행계획 노드·BUFFERS 해석·pg_hint_plan 힌트 `#PostgreSQL #쿼리튜닝 #EXPLAIN` `DBMS/쿼리튜닝/`
 - [[2026-06-02_(PostgreSQL-pgBackRest-백업-가이드)]] : Stanza 생성→전체 백업→증분 백업→crontab 자동화, Tablespace 주의사항 `#PostgreSQL #backup` `DBMS/PostgreSQL/`
 - [[2026-06-02_(PostgreSQL-pgvector-설치)]] : pgvector 확장 설치·벡터 테이블 생성·유사도 검색·IVFFlat/HNSW 인덱스 `#PostgreSQL #AI-RAG #pgvector` `DBMS/PostgreSQL/`
