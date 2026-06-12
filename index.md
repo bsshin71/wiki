@@ -62,4 +62,11 @@
 - [[2026-06-02_(PostgreSQL-pgvector-설치)]] : pgvector 확장 설치·벡터 테이블 생성·유사도 검색·IVFFlat/HNSW 인덱스 `#PostgreSQL #AI-RAG #pgvector` `DBMS/PostgreSQL/`
 - [[2026-06-02_(PostgreSQL-MinTool4PG-DBA-도구)]] : Windows Terminal 환경용 PostgreSQL DBA 스크립트 도구 설치 및 pgpass.conf 설정 `#PostgreSQL #DBA #Windows` `DBMS/PostgreSQL/`
 - [[2026-06-02_(MySQL-데이터이관-Shell-스크립트)]] : mysqldump 기반 테이블 단위 INSERT/REPLACE 이관 Shell 스크립트 `#MySQL #migration` `DBMS/MySQL/`
+- [[2026-06-12_(MySQL-Lock-Deadlock-모니터링)]] : Lock 개념·종류·모니터링 쿼리·장애 사례(Update 지연이 Lock이 아닌 경우) `#MySQL #lock #모니터링` `DBMS/MySQL/`
+- [[2026-06-12_(MySQL-Replication-가이드)]] : Binary Log Position / GTID 기반 복제 설정, Slave 추가(XtraBackup), Semi-Sync, 상황별 조치 `#MySQL #replication #GTID` `DBMS/MySQL/`
+- [[2026-06-12_(MySQL-XtraBackup-백업복구-가이드)]] : Full/증분/시점 복구, innodb_force_recovery 긴급 장애 복구 `#MySQL #backup #XtraBackup` `DBMS/MySQL/`
+- [[2026-06-12_(MySQL-Percona-설치-가이드)]] : RHEL/Rocky에 Percona Server RPM 설치, 운영용 my.cnf 전체 예시 `#MySQL #Percona #install` `DBMS/MySQL/`
+- [[2026-06-12_(MySQL-Performance-Schema-활용)]] : sys 스키마 활용 SQL 성능 분석·인덱스 분석·메모리 분석·InnoDB 튜닝 `#MySQL #performance_schema #성능분석` `DBMS/쿼리튜닝/`
+- [[2026-06-12_(MySQL-관리자-쿼리-모음)]] : User 생성·권한, 세션/TX 모니터링, General Log, Audit `#MySQL #admin #모니터링` `DBMS/MySQL/`
+- [[2026-06-12_(MySQL-InnoDB-구조-설정)]] : Redo Log·Undo·Change Buffer·파티션·auto_increment·timezone·charset `#MySQL #InnoDB #구조` `DBMS/MySQL/`
 - [[2026-06-02_(Linux-고정-IP-설정)]] : CentOS/RHEL ifcfg 파일로 고정 IP 설정, nmcli 강제 적용, DHCP 덮어쓰기 방지 `#Linux #네트워크 #IP고정` `시스템/`

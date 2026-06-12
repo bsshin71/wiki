@@ -16,3 +16,4 @@
 - **2026-06-12**: `2026-06-12_(LLMWiki-시스템-전체-가이드).md` 추가 (ML(AI)/) — 폴더 구조·ingest/lint/query 프로세스·pdf2md·graphify 구축 과정·Obsidian 플러그인 5종 설정 통합 가이드.
 - **2026-06-12**: 일괄 ingest 13개 문서 추가 — Oracle(모니터링·쿼리튜닝·spool), PostgreSQL(RPM설치·모니터링·객체조회·운영유틸·EXPLAIN·pgBackRest·pgvector·MinTool4PG), MySQL(데이터이관), 시스템(Linux 고정IP). 36개 raw 파일 → 13개 wiki 문서로 그룹화.
 - **2026-06-12**: `wiki/DBMS/PostgreSQL/admin/` 서브폴더 생성 — #PostgreSQL #admin 문서 3개 도달로 트리거. 모니터링·객체조회·운영유틸리티 3개 문서 이동. (ingest 시 트리거 누락 건 사후 보정)
+- **2026-06-13**: MySQL 일괄 ingest 7개 문서 추가 — raw/clippings/mysql/ 하위 71개 파일 처리. Lock·Replication·XtraBackup백업복구·Percona설치·Performance Schema·관리자쿼리·InnoDB구조설정. sub-folder 트리거 미충족(각 태그 2개 미만).
