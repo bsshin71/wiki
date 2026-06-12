@@ -95,3 +95,4 @@ Ctrl+P → "Git: Commit-and-sync" 실행
 ## 3. 연관 개념 (지식 연결)
 - [[2026-06-05_(Claudian-GitHub-MCP-설정가이드)]] — GitHub PAT 발급·레포 연결 방식 동일 (Claude Code에서의 GitHub 연동)
 - [[2026-06-12_(LLMWiki-Graphify-통합-설정-로그)]] — Claude Code의 GitHub 업로드 기능을 이 플러그인으로 대체한 설계 결정 포함
+- [[2026-06-12_(LLMWiki-시스템-전체-가이드)]] — 전체 시스템 구조·프로세스 통합 가이드
