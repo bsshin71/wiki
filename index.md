@@ -69,13 +69,12 @@
 - [[2026-06-02_(PostgreSQL-pgvector-설치)]] : pgvector 확장 설치·벡터 테이블 생성·유사도 검색·IVFFlat/HNSW 인덱스 `#PostgreSQL #AI-RAG #pgvector` `DBMS/PostgreSQL/`
 - [[2026-06-02_(PostgreSQL-MinTool4PG-DBA-도구)]] : Windows Terminal 환경용 PostgreSQL DBA 스크립트 도구 설치 및 pgpass.conf 설정 `#PostgreSQL #DBA #Windows` `DBMS/PostgreSQL/`
 - [[2026-06-02_(MySQL-데이터이관-Shell-스크립트)]] : mysqldump 기반 테이블 단위 INSERT/REPLACE 이관 Shell 스크립트 `#MySQL #migration` `DBMS/MySQL/`
-- [[2026-06-12_(MySQL-Lock-Deadlock-모니터링)]] : Lock 개념·종류·모니터링 쿼리·장애 사례(Update 지연이 Lock이 아닌 경우) `#MySQL #lock #모니터링` `DBMS/MySQL/`
-- [[2026-06-12_(MySQL-Replication-가이드)]] : Binary Log Position / GTID 기반 복제 설정, Slave 추가(XtraBackup), Semi-Sync, 상황별 조치 `#MySQL #replication #GTID` `DBMS/MySQL/`
-- [[2026-06-12_(MySQL-XtraBackup-백업복구-가이드)]] : Full/증분/시점 복구, innodb_force_recovery 긴급 장애 복구 `#MySQL #backup #XtraBackup` `DBMS/MySQL/`
-- [[2026-06-12_(MySQL-Percona-설치-가이드)]] : RHEL/Rocky에 Percona Server RPM 설치, 운영용 my.cnf 전체 예시 `#MySQL #Percona #install` `DBMS/MySQL/`
-- [[2026-06-12_(MySQL-Performance-Schema-활용)]] : sys 스키마 활용 SQL 성능 분석·인덱스 분석·메모리 분석·InnoDB 튜닝 `#MySQL #performance_schema #성능분석` `DBMS/쿼리튜닝/`
-- [[2026-06-12_(MySQL-관리자-쿼리-모음)]] : User 생성·권한, 세션/TX 모니터링, General Log, Audit `#MySQL #admin #모니터링` `DBMS/MySQL/`
-- [[2026-06-12_(MySQL-InnoDB-구조-설정)]] : Redo Log·Undo·Change Buffer·파티션·auto_increment·timezone·charset `#MySQL #InnoDB #구조` `DBMS/MySQL/`
+- [[2026-06-13_(MySQL-Lock-Deadlock-모니터링)]] : Lock 개념·종류·모니터링 쿼리·장애 사례(Update 지연이 Lock이 아닌 경우) — 8개 소스 통합 `#MySQL #lock #모니터링` `DBMS/MySQL/`
+- [[2026-06-13_(MySQL-Replication-가이드)]] : Binary Log Position / GTID 기반 복제 설정, Slave 추가(XtraBackup), Semi-Sync, 상황별 조치 — 13개 소스 통합 `#MySQL #replication #GTID` `DBMS/MySQL/`
+- [[2026-06-13_(MySQL-XtraBackup-백업복구-가이드)]] : Full/증분/시점 복구, innodb_force_recovery 긴급 장애 복구 — 14개 소스 통합 `#MySQL #backup #XtraBackup` `DBMS/MySQL/`
+- [[2026-06-13_(MySQL-Percona-설치-가이드)]] : RHEL/Rocky에 Percona Server RPM 설치, 운영용 my.cnf 전체 예시 — 8개 소스 통합 `#MySQL #Percona #install` `DBMS/MySQL/`
+- [[2026-06-13_(MySQL-Performance-Schema-활용)]] : sys 스키마 활용 SQL 성능 분석·인덱스 분석·메모리 분석·InnoDB 튜닝 — 8개 소스 통합 `#MySQL #performance_schema #성능분석` `DBMS/쿼리튜닝/`
+- [[2026-06-13_(MySQL-관리자-쿼리-모음)]] : User 생성·권한, 세션/TX 모니터링, General Log, Audit — 10개 소스 통합 `#MySQL #admin #모니터링` `DBMS/MySQL/`
 - [[2026-06-02_(Linux-고정-IP-설정)]] : CentOS/RHEL ifcfg 파일로 고정 IP 설정, nmcli 강제 적용, DHCP 덮어쓰기 방지 `#Linux #네트워크 #IP고정` `시스템/`
 
 ---
@@ -137,25 +136,22 @@
 - `2026-06-05-listener 등록.md` → [[2026-06-05_(Oracle-리스너-등록)]]
 - `2026-06-05-DBCA 와 NETCA 실행방법.md` → [[2026-06-05_(Oracle-DBCA-NETCA-가이드)]]
 
-### raw/clippings/mysql/ (MySQL, 2026-06-12 · 71건)
+### raw/clippings/mysql/ (MySQL, 2026-06-12 · 71건) ✅ 처리 완료 (2026-06-13)
 
-**→ [[2026-06-12_(MySQL-Lock-Deadlock-모니터링)]]**
+**→ [[2026-06-13_(MySQL-Lock-Deadlock-모니터링)]]**
 - `2026-06-12-mysql lock - BigDataTeam.md`, `2026-06-12-mysql deadlock - BigDataTeam.md`, `2026-06-12-Lock 개념 - BigDataTeam.md`, `2026-06-12-누가누구를 막고 있는지 보기 - BigDataTeam.md`, `2026-06-12-meta lock 을 잡고 있는 세션찾기 - BigDataTeam.md`, `2026-06-12-단순 Update문 지연사례 분석 - BigDataTeam.md`, `2026-06-12-Update 문 지연2 - BigDataTeam.md`, `2026-06-12-mysql commit 안하고 있는 세션찾기 - BigDataTeam.md`
 
-**→ [[2026-06-12_(MySQL-Replication-가이드)]]**
+**→ [[2026-06-13_(MySQL-Replication-가이드)]]**
 - `2026-06-12-01. binary log file position based replication - BigDataTeam.md`, `2026-06-12-02. replication with global transaction identifiers - BigDataTeam.md`, `2026-06-12-03. semi sync replication - BigDataTeam.md`, `2026-06-12-05. replcation command 정리 - BigDataTeam.md`, `2026-06-12-07. replication 상황별 조치 - BigDataTeam.md`, `2026-06-12-semi replication - BigDataTeam.md`, `2026-06-12-replication 재설정 방법 - BigDataTeam.md`, `2026-06-12-slave 추가방법(cone statement) - BigDataTeam.md`, `2026-06-12-slave 추가방법(gtid based) - BigDataTeam.md`, `2026-06-12-slave 추가방법(mysqldump) - BigDataTeam.md`, `2026-06-12-slave 의 gtid_executed 를 master와 일치시키기 - BigDataTeam.md`, `2026-06-12-멀티 소스 복제 구성 - BigDataTeam.md`, `2026-06-12-BOS DB HA(failover) 테스트 - BigDataTeam.md`
 
-**→ [[2026-06-12_(MySQL-XtraBackup-백업복구-가이드)]]**
+**→ [[2026-06-13_(MySQL-XtraBackup-백업복구-가이드)]]**
 - `2026-06-12-Xtrabackup Install setting - BigDataTeam.md`, `2026-06-12-XtraBackup의 동작원리 - BigDataTeam.md`, `2026-06-12-Xtrabackup 백업 요소 - BigDataTeam.md`, `2026-06-12-Full 백업 및 복구 - BigDataTeam.md`, `2026-06-12-증분 백업 - BigDataTeam.md`, `2026-06-12-증분 백업 복구 테스트 - BigDataTeam.md`, `2026-06-12-증분백업script(V8) - BigDataTeam.md`, `2026-06-12-full백업script ( V8 ) - BigDataTeam.md`, `2026-06-12-full백업script( v2.4 구버전용) - BigDataTeam.md`, `2026-06-12-백업 복구 시나리오 - BigDataTeam.md`, `2026-06-12-백업 복구 테스트 - BigDataTeam.md`, `2026-06-12-시점 복구 - BigDataTeam.md`, `2026-06-12-시점 복구 테스트 - BigDataTeam.md`, `2026-06-12-긴급장애 복구 - BigDataTeam.md`
 
-**→ [[2026-06-12_(MySQL-Percona-설치-가이드)]]**
+**→ [[2026-06-13_(MySQL-Percona-설치-가이드)]]**
 - `2026-06-12-install percona by rpm on redhat - BigDataTeam.md`, `2026-06-12-install percona by rpm on redhat(설치요약본) - BigDataTeam.md`, `2026-06-12-percona mysql devel 환경만들기 - BigDataTeam.md`, `2026-06-12-Percona MySQL 경로 수정 - BigDataTeam.md`, `2026-06-12-percona server 8.0.40 패치과정 - BigDataTeam.md`, `2026-06-12-percona mysql 8.4  vs percona mysql 8.0 - BigDataTeam.md`, `2026-06-12-prd db용 my.cnf - BigDataTeam.md`, `2026-06-12-성능 최적화를 위한 주요 커널파라미터 - BigDataTeam.md`
 
-**→ [[2026-06-12_(MySQL-Performance-Schema-활용)]]**
+**→ [[2026-06-13_(MySQL-Performance-Schema-활용)]]**
 - `2026-06-12-MySQL Performance_schema 활용 - BigDataTeam.md`, `2026-06-12-Performance 스키마를 이용한 프로파일링 - BigDataTeam.md`, `2026-06-12-events_statements_summary_by_digest를 이용하여 SQL성능 분석 - BigDataTeam.md`, `2026-06-12-MySQL 성능 튜닝 - BigDataTeam.md`, `2026-06-12-mysql optimization Index - BigDataTeam.md`, `2026-06-12-fast index creation - BigDataTeam.md`, `2026-06-12-데이터 Load 성능 올리기 - BigDataTeam.md`, `2026-06-12-mymon shell script for monitoring MySQL.md`
 
-**→ [[2026-06-12_(MySQL-관리자-쿼리-모음)]]**
+**→ [[2026-06-13_(MySQL-관리자-쿼리-모음)]]**
 - `2026-06-12-mysql user 생성 - BigDataTeam.md`, `2026-06-12-mysql 권한 관리 - BigDataTeam.md`, `2026-06-12-sys schema 접근 권한 부여 - BigDataTeam.md`, `2026-06-12-MySQL Audit - BigDataTeam.md`, `2026-06-12-특정유저의 접속차단 - BigDataTeam.md`, `2026-06-12-03. MySQL admin 쿼리 - BigDataTeam.md`, `2026-06-12-기 실행된 쿼리내역 확인 - BigDataTeam.md`, `2026-06-12-오래 수행중인 TX 찾기 - BigDataTeam.md`, `2026-06-12-에러를 일으키는 client 프로세스 찾기 - BigDataTeam.md`, `2026-06-12-쿼리 로깅하기 - BigDataTeam.md`
-
-**→ [[2026-06-12_(MySQL-InnoDB-구조-설정)]]**
-- `2026-06-12-리두로그 및 로그버퍼 - BigDataTeam.md`, `2026-06-12-리두로그 아카이빙 - BigDataTeam.md`, `2026-06-12-리두로그 활성화 및 비활성화 - BigDataTeam.md`, `2026-06-12-체인지버퍼 - BigDataTeam.md`, `2026-06-12-mysql undo 관리 - BigDataTeam.md`, `2026-06-12-mysql partition 관리 - BigDataTeam.md`, `2026-06-12-auto_increment 의 사용시 주의점 - BigDataTeam.md`, `2026-06-12-MySQL timezone 설정 - BigDataTeam.md`, `2026-06-12-mysql character set 설정 - BigDataTeam.md`, `2026-06-12-MySQL bin log 활성비활성 작업 - BigDataTeam.md`
