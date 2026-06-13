@@ -176,6 +176,10 @@
 - [[2026-06-14-ES12_(Elasticsearch-ISM-Policy-Update-동시성제어)]] : seq_no·primary_term 조회 후 if_seq_no&if_primary_term으로 낙관적 update. `#elasticsearch #ISM #policy` `elasticsearch/`
 - [[2026-06-14-ES13_(Elasticsearch-Index명-날짜함수-Date-Math)]] : Date Math 인덱스명(now/d{yyyyMMdd}), URL percent-encoding, -000001 패턴+write alias. `#elasticsearch #date_math` `elasticsearch/`
 - [[2026-06-14-ES14_(Elasticsearch-ISM-History-비활성화-및-정리)]] : history.enabled=false로 ism history 생성 차단, 기존 history 자동삭제 policy. `#elasticsearch #ISM #history` `elasticsearch/`
+- [[2026-06-14-ES15_(Elasticsearch-Like-검색-Wildcard-Ngram)]] : inverted index·tokenizer 한계, wildcard 패턴매칭, ngram analyzer(min/max_gram) 부분검색. `#elasticsearch #FTS #ngram` `elasticsearch/`
+- [[2026-06-14-ES16_(Elasticsearch-Nested-Object-Array-조회)]] : object array는 nested 매핑 필수(pair 결합), nested 쿼리(path+query), bool+ngram 복합쿼리. `#elasticsearch #nested #조회` `elasticsearch/`
+- [[2026-06-14-ES17_(Elasticsearch-조건-filtering-update_by_query)]] : bool.filter+painless로 _update_by_query, shrink read_only 인덱스 writable 전환 후 update. `#elasticsearch #update_by_query` `elasticsearch/`
+- [[2026-06-14-ES18_(Elasticsearch-인덱스-생성-데이터-추가-조회-기본)]] : PUT index(settings/mappings), _doc 색인, dynamic mapping, _search·_mapping, text vs keyword. `#elasticsearch #기본` `elasticsearch/`
 - [[2026-06-02_(Linux-고정-IP-설정)]] : CentOS/RHEL ifcfg 파일로 고정 IP 설정, nmcli 강제 적용, DHCP 덮어쓰기 방지 `#Linux #네트워크 #IP고정` `시스템/`
 
 ---
@@ -376,6 +380,13 @@
 - `2026-06-14-policy update하기 - BigDataTeam.md` → [[2026-06-14-ES12_(Elasticsearch-ISM-Policy-Update-동시성제어)]]
 - `2026-06-14-index명에 날짜함수 적용 - BigDataTeam.md` → [[2026-06-14-ES13_(Elasticsearch-Index명-날짜함수-Date-Math)]]
 - `2026-06-14-disable ism 변경 history - BigDataTeam.md` → [[2026-06-14-ES14_(Elasticsearch-ISM-History-비활성화-및-정리)]]
+
+**배치 9 (ES 쿼리·검색)** — 5개 (4 신규, nested 2건 병합)
+- `2026-06-14-Like 검색하기 - BigDataTeam.md` → [[2026-06-14-ES15_(Elasticsearch-Like-검색-Wildcard-Ngram)]]
+- `2026-06-14-object array 조회 - BigDataTeam.md` → [[2026-06-14-ES16_(Elasticsearch-Nested-Object-Array-조회)]]
+- `2026-06-14-nested query 와 Non-nested query 사용 - BigDataTeam.md` → [[2026-06-14-ES16_(Elasticsearch-Nested-Object-Array-조회)]] (nested 쿼리 병합)
+- `2026-06-14-특정조건으로 filtering하고 update하기 - BigDataTeam.md` → [[2026-06-14-ES17_(Elasticsearch-조건-filtering-update_by_query)]]
+- `2026-06-14-인덱스생성및 데이터추가(simple) - BigDataTeam.md` → [[2026-06-14-ES18_(Elasticsearch-인덱스-생성-데이터-추가-조회-기본)]]
 
 **배치 14 (Schema·성능·커널·백업스크립트 + Performance 중복정리, 2026-06-13)** — 8개 (5 신규, 3 기존 Performance 문서 커버)
 - `2026-06-12-mysql partition 관리 - BigDataTeam.md` → [[2026-06-13-60_(MySQL-파티션-관리)]]
