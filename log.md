@@ -44,6 +44,7 @@
   - (2) system_prompt.md: "반드시 매 ingest마다 실행" 강조
   - (3) **.claude/commands/ingest.md**: **7단계 Sub 폴더 자동 생성 규칙 추가** (원래 1-6단계만 있었음)
   - 결과: ingest 후 sub 폴더 규칙 적용이 이제 **필수 3-파일 통합 지침**으로 강제됨
+- **2026-06-13**: 배치 8 (MySQL Backup/XtraBackup 나머지) 완료 — 원본 5개 → 4 신규(증분 2건 병합). 문서 35~38 생성(XtraBackup-동작원리·백업요소및옵션·설치및백업계정권한·증분백업및복구), 모두 `backup/` 폴더. `증분 백업 복구 테스트`(자동화 스크립트+crontab)는 `증분 백업`과 동일주제로 doc 38에 병합. 누적 38개. 미처리 잔여: 31개(배치 9~).
 - **2026-06-13**: 배치 7 (MySQL Replication 나머지 5개) 완료 — 4 신규 + 1 병합. 문서 31~34 생성(Slave-추가-CLONE·Slave-추가-XtraBackup-GTID·Slave-추가-mysqldump·Replication-재설정), 모두 `replication/` 폴더. `semi replication` 원본은 **2.5단계 중복검사로 기존 [[2026-06-13-03_(MySQL-Semi-Sync-복제)]]와 동일주제 판정** → 신규 생성 대신 전체 my.cnf·선택적 복제 필터링 내용 병합. 누적 34개. 미처리 잔여: 36개(배치 8~).
 - **2026-06-13**: 배치 6 (MySQL InnoDB 구조 5개) 완료 — **1:1 규칙 준수**. `wiki/DBMS/MySQL/innodb/` 서브폴더 신규 생성(#InnoDB 5개 트리거). 문서 26~30 생성: Redo-Log-및-로그버퍼·Redo-Log-아카이빙·Redo-Log-활성화비활성화·Undo-로그-관리·Change-Buffer. 누적 30개. 미처리 잔여: 41개(배치 7~).
 - **2026-06-13**: MySQL-Performance-Schema 중복 문서 병합 — `2026-06-12_(MySQL-Performance-Schema-활용)`(구버전, index.md 미등록 고아) + `2026-06-13_` 버전을 하나로 통합. 원인: 2026-06-13 전면 재처리 시 구버전 삭제 누락 + ingest에 중복 제목 검사 단계 부재. 통합본은 2026-06-13 버전을 베이스로 구버전의 프로파일링·sys상세뷰·메모리분석 흡수, Index/Fast-Index/digest심화는 백링크 처리. 구버전 삭제, Lock-Deadlock 문서 백링크 수정.

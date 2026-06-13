@@ -107,6 +107,10 @@
 - [[2026-06-13-32_(MySQL-Slave-추가-XtraBackup-GTID)]] : XtraBackup 물리백업+GTID로 Slave 구성. xtrabackup_binlog_info의 GTID→gtid_purged, copy-back, AUTO_POSITION. `#MySQL #replication #XtraBackup #GTID` `DBMS/MySQL/replication/`
 - [[2026-06-13-33_(MySQL-Slave-추가-mysqldump)]] : 논리백업(mysqldump --master-data=2)으로 Slave 구성. 덤프 내 gtid_purged 자동 설정, 소량 데이터 적합. `#MySQL #replication #mysqldump` `DBMS/MySQL/replication/`
 - [[2026-06-13-34_(MySQL-Replication-재설정)]] : 복제 깨짐 시 Master/Slave GTID 전체 리셋 후 mysqldump 재동기화 10단계. RESET MASTER로 gtid_executed 비우기. `#MySQL #replication #재설정` `DBMS/MySQL/replication/`
+- [[2026-06-13-35_(MySQL-XtraBackup-동작원리)]] : Hot Backup 원리. redo log 추적→별도 보관, prepare로 Roll Forward, LSN 일관성, MyISAM은 FTWRL. `#MySQL #backup #XtraBackup` `DBMS/MySQL/backup/`
+- [[2026-06-13-36_(MySQL-XtraBackup-백업-요소-및-옵션)]] : 메타파일(checkpoints·binlog_info·info), 주요 옵션(prepare·copy-back·apply-log-only), 증분 복구 시 apply-log-only 필수. `#MySQL #backup #XtraBackup` `DBMS/MySQL/backup/`
+- [[2026-06-13-37_(MySQL-XtraBackup-설치-및-백업-계정-권한)]] : percona-release 설치, 버전별(2.4/8.0/8.0.35+) 백업 계정 권한 차이, compress-threads 옵션명·native_password 주의. `#MySQL #backup #XtraBackup #설치` `DBMS/MySQL/backup/`
+- [[2026-06-13-38_(MySQL-XtraBackup-증분-백업-및-복구)]] : 증분 백업 시나리오(LSN basedir), --redo-only 규칙(마지막 증분만 롤백), 복구 절차·오류대처·crontab 자동화. `#MySQL #backup #증분백업` `DBMS/MySQL/backup/`
 - [[2026-06-02_(Linux-고정-IP-설정)]] : CentOS/RHEL ifcfg 파일로 고정 IP 설정, nmcli 강제 적용, DHCP 덮어쓰기 방지 `#Linux #네트워크 #IP고정` `시스템/`
 
 ---
@@ -203,3 +207,10 @@
 - `2026-06-12-slave 추가방법(mysqldump) - BigDataTeam.md` → [[2026-06-13-33_(MySQL-Slave-추가-mysqldump)]]
 - `2026-06-12-replication 재설정 방법 - BigDataTeam.md` → [[2026-06-13-34_(MySQL-Replication-재설정)]]
 - `2026-06-12-semi replication - BigDataTeam.md` → [[2026-06-13-03_(MySQL-Semi-Sync-복제)]] (기존 문서에 병합)
+
+**배치 8 (Backup/XtraBackup 나머지, 2026-06-13)** — 5개 (4 신규, 증분 2건 병합)
+- `2026-06-12-XtraBackup의 동작원리 - BigDataTeam.md` → [[2026-06-13-35_(MySQL-XtraBackup-동작원리)]]
+- `2026-06-12-Xtrabackup 백업 요소 - BigDataTeam.md` → [[2026-06-13-36_(MySQL-XtraBackup-백업-요소-및-옵션)]]
+- `2026-06-12-Xtrabackup Install setting - BigDataTeam.md` → [[2026-06-13-37_(MySQL-XtraBackup-설치-및-백업-계정-권한)]]
+- `2026-06-12-증분 백업 - BigDataTeam.md` → [[2026-06-13-38_(MySQL-XtraBackup-증분-백업-및-복구)]]
+- `2026-06-12-증분 백업 복구 테스트 - BigDataTeam.md` → [[2026-06-13-38_(MySQL-XtraBackup-증분-백업-및-복구)]] (자동화 섹션 병합)
