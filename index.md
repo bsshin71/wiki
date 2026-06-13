@@ -180,6 +180,9 @@
 - [[2026-06-14-ES16_(Elasticsearch-Nested-Object-Array-조회)]] : object array는 nested 매핑 필수(pair 결합), nested 쿼리(path+query), bool+ngram 복합쿼리. `#elasticsearch #nested #조회` `elasticsearch/`
 - [[2026-06-14-ES17_(Elasticsearch-조건-filtering-update_by_query)]] : bool.filter+painless로 _update_by_query, shrink read_only 인덱스 writable 전환 후 update. `#elasticsearch #update_by_query` `elasticsearch/`
 - [[2026-06-14-ES18_(Elasticsearch-인덱스-생성-데이터-추가-조회-기본)]] : PUT index(settings/mappings), _doc 색인, dynamic mapping, _search·_mapping, text vs keyword. `#elasticsearch #기본` `elasticsearch/`
+- [[2026-06-14-ES19_(Elasticsearch-ElastAlert-알림-도구)]] : ES 쿼리 기반 알림(이메일/Slack/Webhook), YAML 룰, Docker(jertel/elastalert2) 구동. `#elasticsearch #elastalert #monitoring` `elasticsearch/`
+- [[2026-06-14-ES20_(Elasticsearch-테스트용-Index-구성-실습-Rollover-Ngram)]] : Date Math seed→ISM rollover policy→template(rollover_alias+ngram) 통합 실습. `#elasticsearch #ISM #실습` `elasticsearch/`
+- [[2026-06-14-ES21_(Elasticsearch-운영-오류-Primary-Shard-not-active)]] : unavailable_shards_exception 진단(allocation/explain), 미할당 원인·조치 + 학습 PDF. `#elasticsearch #오류` `elasticsearch/`
 - [[2026-06-02_(Linux-고정-IP-설정)]] : CentOS/RHEL ifcfg 파일로 고정 IP 설정, nmcli 강제 적용, DHCP 덮어쓰기 방지 `#Linux #네트워크 #IP고정` `시스템/`
 
 ---
@@ -387,6 +390,14 @@
 - `2026-06-14-nested query 와 Non-nested query 사용 - BigDataTeam.md` → [[2026-06-14-ES16_(Elasticsearch-Nested-Object-Array-조회)]] (nested 쿼리 병합)
 - `2026-06-14-특정조건으로 filtering하고 update하기 - BigDataTeam.md` → [[2026-06-14-ES17_(Elasticsearch-조건-filtering-update_by_query)]]
 - `2026-06-14-인덱스생성및 데이터추가(simple) - BigDataTeam.md` → [[2026-06-14-ES18_(Elasticsearch-인덱스-생성-데이터-추가-조회-기본)]]
+
+**배치 10 (ES 도구·실습·오류, 마지막)** — 4개 (3 신규, 참고자료 병합)
+- `2026-06-14-ElastAlert - BigDataTeam.md` → [[2026-06-14-ES19_(Elasticsearch-ElastAlert-알림-도구)]]
+- `2026-06-14-테스트용 index 구성과정 - BigDataTeam.md` → [[2026-06-14-ES20_(Elasticsearch-테스트용-Index-구성-실습-Rollover-Ngram)]]
+- `2026-06-14-ElasticSearch 오류 - BigDataTeam.md` → [[2026-06-14-ES21_(Elasticsearch-운영-오류-Primary-Shard-not-active)]]
+- `2026-06-14-Elasticsearch 참고자료 - BigDataTeam.md` → [[2026-06-14-ES21_(Elasticsearch-운영-오류-Primary-Shard-not-active)]] (학습 PDF 자료 섹션 병합)
+
+> ✅ **raw/elasticsearch/ 24개 전량 처리 완료** (배치 6~10, ES01~ES21 21개 문서 / 병합 3건).
 
 **배치 14 (Schema·성능·커널·백업스크립트 + Performance 중복정리, 2026-06-13)** — 8개 (5 신규, 3 기존 Performance 문서 커버)
 - `2026-06-12-mysql partition 관리 - BigDataTeam.md` → [[2026-06-13-60_(MySQL-파티션-관리)]]
