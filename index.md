@@ -111,6 +111,11 @@
 - [[2026-06-13-36_(MySQL-XtraBackup-백업-요소-및-옵션)]] : 메타파일(checkpoints·binlog_info·info), 주요 옵션(prepare·copy-back·apply-log-only), 증분 복구 시 apply-log-only 필수. `#MySQL #backup #XtraBackup` `DBMS/MySQL/backup/`
 - [[2026-06-13-37_(MySQL-XtraBackup-설치-및-백업-계정-권한)]] : percona-release 설치, 버전별(2.4/8.0/8.0.35+) 백업 계정 권한 차이, compress-threads 옵션명·native_password 주의. `#MySQL #backup #XtraBackup #설치` `DBMS/MySQL/backup/`
 - [[2026-06-13-38_(MySQL-XtraBackup-증분-백업-및-복구)]] : 증분 백업 시나리오(LSN basedir), --redo-only 규칙(마지막 증분만 롤백), 복구 절차·오류대처·crontab 자동화. `#MySQL #backup #증분백업` `DBMS/MySQL/backup/`
+- [[2026-06-13-39_(Percona-MySQL-8.4-vs-8.0-비교)]] : 8.4 LTS 특징, MASTER/SLAVE→SOURCE/REPLICA 용어 변경, ProxySQL·MHA 호환 문제로 8.0 유지 권고. `#MySQL #install #version84` `DBMS/MySQL/installation/`
+- [[2026-06-13-40_(Percona-MySQL-devel-환경-구성)]] : C 클라이언트 devel/shared 패키지, Bug#92870(8.0.21+), mariadb 라이브러리 제거, libmysqlclient 컴파일 테스트. `#MySQL #install #devel` `DBMS/MySQL/installation/`
+- [[2026-06-13-41_(Percona-MySQL-datadir-basedir-경로-변경)]] : datadir/basedir 비표준 경로 변경, my.cnf 수정·초기화, mysqld_pre_systemd 수정으로 systemd가 my.cnf 참조. `#MySQL #install #datadir` `DBMS/MySQL/installation/`
+- [[2026-06-13-42_(Percona-Server-8.0.40-패치과정)]] : rpm -Uvh 업그레이드, libatomic·percona-telemetry-agent 의존성 해결, telemetry 비활성화. `#MySQL #install #patch` `DBMS/MySQL/installation/`
+- [[2026-06-13-43_(Percona-MySQL-운영-표준-my.cnf)]] : PRD 표준 my.cnf 항목별 설정값(연결·InnoDB·복제·로그·보안), READ-COMMITTED·buffer_pool 8G·doublewrite OFF. `#MySQL #install #my.cnf` `DBMS/MySQL/installation/`
 - [[2026-06-02_(Linux-고정-IP-설정)]] : CentOS/RHEL ifcfg 파일로 고정 IP 설정, nmcli 강제 적용, DHCP 덮어쓰기 방지 `#Linux #네트워크 #IP고정` `시스템/`
 
 ---
@@ -214,3 +219,10 @@
 - `2026-06-12-Xtrabackup Install setting - BigDataTeam.md` → [[2026-06-13-37_(MySQL-XtraBackup-설치-및-백업-계정-권한)]]
 - `2026-06-12-증분 백업 - BigDataTeam.md` → [[2026-06-13-38_(MySQL-XtraBackup-증분-백업-및-복구)]]
 - `2026-06-12-증분 백업 복구 테스트 - BigDataTeam.md` → [[2026-06-13-38_(MySQL-XtraBackup-증분-백업-및-복구)]] (자동화 섹션 병합)
+
+**배치 9 (Percona/설치 나머지, 2026-06-13)** — 5개
+- `2026-06-12-percona mysql 8.4  vs percona mysql 8.0 - BigDataTeam.md` → [[2026-06-13-39_(Percona-MySQL-8.4-vs-8.0-비교)]]
+- `2026-06-12-percona mysql devel 환경만들기 - BigDataTeam.md` → [[2026-06-13-40_(Percona-MySQL-devel-환경-구성)]]
+- `2026-06-12-Percona MySQL 경로 수정 - BigDataTeam.md` → [[2026-06-13-41_(Percona-MySQL-datadir-basedir-경로-변경)]]
+- `2026-06-12-percona server 8.0.40 패치과정 - BigDataTeam.md` → [[2026-06-13-42_(Percona-Server-8.0.40-패치과정)]]
+- `2026-06-12-prd db용 my.cnf - BigDataTeam.md` → [[2026-06-13-43_(Percona-MySQL-운영-표준-my.cnf)]]
