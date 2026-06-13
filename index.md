@@ -123,6 +123,10 @@
 - [[2026-06-13-48_(MySQL-권한-관리-체계)]] : 권한 범위(전역/DB/객체)·특성(Static/Dynamic)·역할(관리자/백업/서비스). GRANT 예시, 도구별 백업계정 최소권한. `#MySQL #admin #권한` `DBMS/MySQL/admin/`
 - [[2026-06-13-49_(MySQL-sys-schema-접근-권한-부여)]] : 일반 유저 sys schema 사용 위한 SELECT *.* + sys.* EXECUTE + sys_config INSERT/UPDATE 권한. `#MySQL #admin #sys_schema` `DBMS/MySQL/admin/`
 - [[2026-06-13-50_(MySQL-특정-유저-접속-차단)]] : 계정 삭제 없이 차단 5가지 — mysql_no_login, Host변경, 권한회수, AFTER CONNECT 트리거, my.cnf. `#MySQL #admin #접속차단` `DBMS/MySQL/admin/`
+- [[2026-06-13-51_(MySQL-기-실행된-쿼리-내역-확인)]] : events_statements_history_long 컨슈머 활성화 후 processlist_id별 과거/현재 SQL_TEXT 추적. `#MySQL #admin #performance_schema` `DBMS/MySQL/admin/`
+- [[2026-06-13-52_(MySQL-오래-수행중인-TX-찾기)]] : History List Length(undo) 개념·문제, 장시간/미커밋 트랜잭션·대량변경 쿼리 조회(sys.session, INNODB_TRX). `#MySQL #admin #트랜잭션` `DBMS/MySQL/admin/`
+- [[2026-06-13-53_(MySQL-에러-유발-클라이언트-프로세스-찾기)]] : events_errors_summary→socket_instances→netstat로 에러 유발 세션의 IP·port·OS 프로세스 역추적. `#MySQL #admin #문제해결` `DBMS/MySQL/admin/`
+- [[2026-06-13-54_(MySQL-쿼리-로깅-general-slow-log)]] : general_log/slow_query_log 켜기·log_output(FILE/TABLE), long_query_time, Percona 확장(rate_limit·global_control). `#MySQL #admin #로깅` `DBMS/MySQL/admin/`
 - [[2026-06-02_(Linux-고정-IP-설정)]] : CentOS/RHEL ifcfg 파일로 고정 IP 설정, nmcli 강제 적용, DHCP 덮어쓰기 방지 `#Linux #네트워크 #IP고정` `시스템/`
 
 ---
@@ -246,3 +250,9 @@
 - `2026-06-12-mysql 권한 관리 - BigDataTeam.md` → [[2026-06-13-48_(MySQL-권한-관리-체계)]]
 - `2026-06-12-sys schema 접근 권한 부여 - BigDataTeam.md` → [[2026-06-13-49_(MySQL-sys-schema-접근-권한-부여)]]
 - `2026-06-12-특정유저의 접속차단 - BigDataTeam.md` → [[2026-06-13-50_(MySQL-특정-유저-접속-차단)]]
+
+**배치 12 (admin 조회/진단, 2026-06-13)** — 4개
+- `2026-06-12-기 실행된 쿼리내역 확인 - BigDataTeam.md` → [[2026-06-13-51_(MySQL-기-실행된-쿼리-내역-확인)]]
+- `2026-06-12-오래 수행중인 TX 찾기 - BigDataTeam.md` → [[2026-06-13-52_(MySQL-오래-수행중인-TX-찾기)]]
+- `2026-06-12-에러를 일으키는 client 프로세스 찾기 - BigDataTeam.md` → [[2026-06-13-53_(MySQL-에러-유발-클라이언트-프로세스-찾기)]]
+- `2026-06-12-쿼리 로깅하기 - BigDataTeam.md` → [[2026-06-13-54_(MySQL-쿼리-로깅-general-slow-log)]]
