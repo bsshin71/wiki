@@ -144,6 +144,11 @@
 - [[2026-06-14-67_(MySQL-ProxySQL-MHA-연동-VIP-Failover)]] : MHA failover 시 master_ip_failover로 VIP 이동, app reconnect로 무손실, GTID failover 단계별 로그. `#MySQL #HA #ProxySQL` `DBMS/MySQL/ha/`
 - [[2026-06-14-68_(MySQL-Orchestrator-설치-및-특징)]] : 토폴로지 시각화·GUI 리팩토링·자동복구, repository DB, 웹 UI(3000), MHA 대비 data loss 가능성. `#MySQL #HA #orchestrator` `DBMS/MySQL/ha/`
 - [[2026-06-14-69_(MySQL-Orchestrator-Failover)]] : Recover 필터 설정, Master 장애 자동 승격, 양방향 복제 기반 원복(복잡→수동권장). `#MySQL #HA #orchestrator` `DBMS/MySQL/ha/`
+- [[2026-06-14-K01_(Kafka-Connect-설치-confluent-hub)]] : confluent-hub install로 커넥터 설치, worker 설정 plugin.path 자동 추가. `#kafka #connect` `kafka/`
+- [[2026-06-14-K02_(Kafka-Connect-설정-Debezium-CDC)]] : Debezium MySQL source/sink 커넥터 REST 등록, unwrap·RegexRouter, sink timestamp custom converter. `#kafka #connect #debezium` `kafka/`
+- [[2026-06-14-K03_(Kafka-Connect-Property-분산모드-설정)]] : connect-distributed.properties(bootstrap·group·내부토픽·plugin.path), NOT_ENOUGH_REPLICAS 해결. `#kafka #connect #config` `kafka/`
+- [[2026-06-14-K04_(Kafka-Connector-인증서-truststore-등록)]] : JVM cacerts/별도 truststore.jks에 keytool 인증서 등록, Connect 재시작. `#kafka #connect #SSL` `kafka/`
+- [[2026-06-14-K05_(Kafka-Connect-Sink-Connector-시작-offset-제어)]] : kafka-consumer-groups로 connect-<커넥터> offset --to-latest reset, LAG 조회. `#kafka #connect #offset` `kafka/`
 - [[2026-06-02_(Linux-고정-IP-설정)]] : CentOS/RHEL ifcfg 파일로 고정 IP 설정, nmcli 강제 적용, DHCP 덮어쓰기 방지 `#Linux #네트워크 #IP고정` `시스템/`
 
 ---
@@ -289,6 +294,15 @@
 - `2026-06-14-ProxySQL과 MHA연동 - BigDataTeam.md` → [[2026-06-14-67_(MySQL-ProxySQL-MHA-연동-VIP-Failover)]]
 - `2026-06-14-Orchestrator 설치 및 특징 - BigDataTeam.md` → [[2026-06-14-68_(MySQL-Orchestrator-설치-및-특징)]]
 - `2026-06-14-Orchestrator Failover - BigDataTeam.md` → [[2026-06-14-69_(MySQL-Orchestrator-Failover)]]
+
+### raw/kafka/ (Kafka, 2026-06-13 신규 · 20건)
+
+**배치 2 (Kafka Connect 그룹)** — 5개
+- `2026-06-13-connect 설치 - BigDataTeam.md` → [[2026-06-14-K01_(Kafka-Connect-설치-confluent-hub)]]
+- `2026-06-13-connect 설정 - BigDataTeam.md` → [[2026-06-14-K02_(Kafka-Connect-설정-Debezium-CDC)]]
+- `2026-06-13-confluent connect property - BigDataTeam.md` → [[2026-06-14-K03_(Kafka-Connect-Property-분산모드-설정)]]
+- `2026-06-13-connector 에 사용하는 인증서 등록 - BigDataTeam.md` → [[2026-06-14-K04_(Kafka-Connector-인증서-truststore-등록)]]
+- `2026-06-13-Starting a Kafka Connect sink connector at the end of a topic - BigDataTeam.md` → [[2026-06-14-K05_(Kafka-Connect-Sink-Connector-시작-offset-제어)]]
 
 **배치 14 (Schema·성능·커널·백업스크립트 + Performance 중복정리, 2026-06-13)** — 8개 (5 신규, 3 기존 Performance 문서 커버)
 - `2026-06-12-mysql partition 관리 - BigDataTeam.md` → [[2026-06-13-60_(MySQL-파티션-관리)]]
