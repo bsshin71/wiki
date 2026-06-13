@@ -167,6 +167,10 @@
 - [[2026-06-14-ES03_(Elasticsearch-Cluster-Shard-수-확인-및-증가)]] : 전체 shard=노드수×max_shards_per_node(1000), health·_cat/indices 확인, 상한 변경. `#elasticsearch #shard` `elasticsearch/`
 - [[2026-06-14-ES04_(Elasticsearch-API-Key-연결)]] : _security/api_key 발급(role_descriptors), Authorization ApiKey 헤더로 curl index/bulk/query. `#elasticsearch #apikey #security` `elasticsearch/`
 - [[2026-06-14-ES05_(Elasticsearch-Dev-Tools-DSL-조회)]] : Kibana Dev Tools로 _cluster/health, _cat/shards·indices·aliases 조회. `#elasticsearch #DSL #devtools` `elasticsearch/`
+- [[2026-06-14-ES06_(Elasticsearch-Index-관련-명령-매핑-Field삭제-Rollover)]] : 인덱스 리스트·매핑 조회, Field 삭제(reindex→update_by_query remove→재생성), rollover 강제. `#elasticsearch #index #reindex` `elasticsearch/`
+- [[2026-06-14-ES07_(Elasticsearch-Index-상태-진단-조회)]] : _cat/indices·shards, UNASSIGNED 원인 allocation/explain, ISM explain. `#elasticsearch #index #allocation` `elasticsearch/`
+- [[2026-06-14-ES08_(Elasticsearch-Index-Rename-reindex)]] : _reindex로 새 이름 복사 후 원본 삭제, 여러 인덱스 합치기(conflicts proceed). `#elasticsearch #rename #reindex` `elasticsearch/`
+- [[2026-06-14-ES09_(Elasticsearch-인덱스-구성-방안-ISM-Policy)]] : 날짜rotation vs 단일index+rollover 비교, ISM Policy(hot→cold 전이) hot-warm 라이프사이클. `#elasticsearch #ISM #policy` `elasticsearch/`
 - [[2026-06-02_(Linux-고정-IP-설정)]] : CentOS/RHEL ifcfg 파일로 고정 IP 설정, nmcli 강제 적용, DHCP 덮어쓰기 방지 `#Linux #네트워크 #IP고정` `시스템/`
 
 ---
@@ -353,6 +357,13 @@
 - `2026-06-14-cluster shard 수 확인 및 증가 - BigDataTeam.md` → [[2026-06-14-ES03_(Elasticsearch-Cluster-Shard-수-확인-및-증가)]]
 - `2026-06-14-api key 를 통한 연결 - BigDataTeam.md` → [[2026-06-14-ES04_(Elasticsearch-API-Key-연결)]]
 - `2026-06-14-DEV TOOL - BigDataTeam.md` → [[2026-06-14-ES05_(Elasticsearch-Dev-Tools-DSL-조회)]]
+
+**배치 7 (ES 인덱스 관리)** — 5개 (4 신규, 상태조회 2건 병합)
+- `2026-06-14-index 관련 명령 - BigDataTeam.md` → [[2026-06-14-ES06_(Elasticsearch-Index-관련-명령-매핑-Field삭제-Rollover)]]
+- `2026-06-14-특정 인덱스 상태 조회 - BigDataTeam.md` → [[2026-06-14-ES07_(Elasticsearch-Index-상태-진단-조회)]]
+- `2026-06-14-index 상태 조회하기 - BigDataTeam.md` → [[2026-06-14-ES07_(Elasticsearch-Index-상태-진단-조회)]] (ISM explain 병합)
+- `2026-06-14-index rename 하기 - BigDataTeam.md` → [[2026-06-14-ES08_(Elasticsearch-Index-Rename-reindex)]]
+- `2026-06-14-elasticsearch 인덱스 구성 - BigDataTeam.md` → [[2026-06-14-ES09_(Elasticsearch-인덱스-구성-방안-ISM-Policy)]]
 
 **배치 14 (Schema·성능·커널·백업스크립트 + Performance 중복정리, 2026-06-13)** — 8개 (5 신규, 3 기존 Performance 문서 커버)
 - `2026-06-12-mysql partition 관리 - BigDataTeam.md` → [[2026-06-13-60_(MySQL-파티션-관리)]]
