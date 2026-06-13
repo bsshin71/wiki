@@ -149,6 +149,11 @@
 - [[2026-06-14-K03_(Kafka-Connect-Property-분산모드-설정)]] : connect-distributed.properties(bootstrap·group·내부토픽·plugin.path), NOT_ENOUGH_REPLICAS 해결. `#kafka #connect #config` `kafka/`
 - [[2026-06-14-K04_(Kafka-Connector-인증서-truststore-등록)]] : JVM cacerts/별도 truststore.jks에 keytool 인증서 등록, Connect 재시작. `#kafka #connect #SSL` `kafka/`
 - [[2026-06-14-K05_(Kafka-Connect-Sink-Connector-시작-offset-제어)]] : kafka-consumer-groups로 connect-<커넥터> offset --to-latest reset, LAG 조회. `#kafka #connect #offset` `kafka/`
+- [[2026-06-14-K06_(Kafka-설치-Apache-Confluent-Debezium-CDC)]] : Apache/Confluent 설치, JDK11, confluent-hub Debezium 설치, source/sink connector, CDC DB계정. `#kafka #install #debezium` `kafka/`
+- [[2026-06-14-K07_(Kafka-Broker-server.properties-설정)]] : broker.id·listeners·log.dirs·retention·내부토픽 replication factor(운영 3 권장). `#kafka #config #broker` `kafka/`
+- [[2026-06-14-K08_(Kafka-Zookeeper-properties-설정)]] : tickTime·initLimit·syncLimit·dataDir(/tmp 금지)·clientPort·server.N 앙상블. `#kafka #config #zookeeper` `kafka/`
+- [[2026-06-14-K09_(Kafka-기동-순서-모듈)]] : 기본(zookeeper→kafka→schema-registry)→추가(connect) 기동 순서. `#kafka #install #start` `kafka/`
+- [[2026-06-14-K10_(Kafka-Topic-Producer-Consumer-명령어)]] : kafka-topics 생성/조회/파티션(늘리기만), console producer/consumer, group id 분리. `#kafka #command` `kafka/`
 - [[2026-06-02_(Linux-고정-IP-설정)]] : CentOS/RHEL ifcfg 파일로 고정 IP 설정, nmcli 강제 적용, DHCP 덮어쓰기 방지 `#Linux #네트워크 #IP고정` `시스템/`
 
 ---
@@ -303,6 +308,13 @@
 - `2026-06-13-confluent connect property - BigDataTeam.md` → [[2026-06-14-K03_(Kafka-Connect-Property-분산모드-설정)]]
 - `2026-06-13-connector 에 사용하는 인증서 등록 - BigDataTeam.md` → [[2026-06-14-K04_(Kafka-Connector-인증서-truststore-등록)]]
 - `2026-06-13-Starting a Kafka Connect sink connector at the end of a topic - BigDataTeam.md` → [[2026-06-14-K05_(Kafka-Connect-Sink-Connector-시작-offset-제어)]]
+
+**배치 3 (Kafka 코어)** — 5개
+- `2026-06-13-kafka 설치 - BigDataTeam.md` → [[2026-06-14-K06_(Kafka-설치-Apache-Confluent-Debezium-CDC)]]
+- `2026-06-13-kafka property - BigDataTeam.md` → [[2026-06-14-K07_(Kafka-Broker-server.properties-설정)]]
+- `2026-06-13-zookeeper property - BigDataTeam.md` → [[2026-06-14-K08_(Kafka-Zookeeper-properties-설정)]]
+- `2026-06-13-kafka start - BigDataTeam.md` → [[2026-06-14-K09_(Kafka-기동-순서-모듈)]]
+- `2026-06-13-kafka command - BigDataTeam.md` → [[2026-06-14-K10_(Kafka-Topic-Producer-Consumer-명령어)]]
 
 **배치 14 (Schema·성능·커널·백업스크립트 + Performance 중복정리, 2026-06-13)** — 8개 (5 신규, 3 기존 Performance 문서 커버)
 - `2026-06-12-mysql partition 관리 - BigDataTeam.md` → [[2026-06-13-60_(MySQL-파티션-관리)]]
