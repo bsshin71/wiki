@@ -171,6 +171,11 @@
 - [[2026-06-14-ES07_(Elasticsearch-Index-상태-진단-조회)]] : _cat/indices·shards, UNASSIGNED 원인 allocation/explain, ISM explain. `#elasticsearch #index #allocation` `elasticsearch/`
 - [[2026-06-14-ES08_(Elasticsearch-Index-Rename-reindex)]] : _reindex로 새 이름 복사 후 원본 삭제, 여러 인덱스 합치기(conflicts proceed). `#elasticsearch #rename #reindex` `elasticsearch/`
 - [[2026-06-14-ES09_(Elasticsearch-인덱스-구성-방안-ISM-Policy)]] : 날짜rotation vs 단일index+rollover 비교, ISM Policy(hot→cold 전이) hot-warm 라이프사이클. `#elasticsearch #ISM #policy` `elasticsearch/`
+- [[2026-06-14-ES10_(Elasticsearch-Hot-Warm-Delete-ISM-Rollover-구성)]] : hot(rollover)→warm(migration)→delete ISM policy + rollover index_template + seed index 구성 순서. `#elasticsearch #ISM #hot-warm` `elasticsearch/`
+- [[2026-06-14-ES11_(Elasticsearch-Rollover-Alias-개념)]] : alias가 write 인덱스 지칭, 조건(max_size/docs/age) 충족 시 새 인덱스 전환, alias로 일관 조회. `#elasticsearch #rollover #alias` `elasticsearch/`
+- [[2026-06-14-ES12_(Elasticsearch-ISM-Policy-Update-동시성제어)]] : seq_no·primary_term 조회 후 if_seq_no&if_primary_term으로 낙관적 update. `#elasticsearch #ISM #policy` `elasticsearch/`
+- [[2026-06-14-ES13_(Elasticsearch-Index명-날짜함수-Date-Math)]] : Date Math 인덱스명(now/d{yyyyMMdd}), URL percent-encoding, -000001 패턴+write alias. `#elasticsearch #date_math` `elasticsearch/`
+- [[2026-06-14-ES14_(Elasticsearch-ISM-History-비활성화-및-정리)]] : history.enabled=false로 ism history 생성 차단, 기존 history 자동삭제 policy. `#elasticsearch #ISM #history` `elasticsearch/`
 - [[2026-06-02_(Linux-고정-IP-설정)]] : CentOS/RHEL ifcfg 파일로 고정 IP 설정, nmcli 강제 적용, DHCP 덮어쓰기 방지 `#Linux #네트워크 #IP고정` `시스템/`
 
 ---
@@ -364,6 +369,13 @@
 - `2026-06-14-index 상태 조회하기 - BigDataTeam.md` → [[2026-06-14-ES07_(Elasticsearch-Index-상태-진단-조회)]] (ISM explain 병합)
 - `2026-06-14-index rename 하기 - BigDataTeam.md` → [[2026-06-14-ES08_(Elasticsearch-Index-Rename-reindex)]]
 - `2026-06-14-elasticsearch 인덱스 구성 - BigDataTeam.md` → [[2026-06-14-ES09_(Elasticsearch-인덱스-구성-방안-ISM-Policy)]]
+
+**배치 8 (ES 라이프사이클·Rollover)** — 5개
+- `2026-06-14-Hot-warm 과 Rollover - BigDataTeam.md` → [[2026-06-14-ES10_(Elasticsearch-Hot-Warm-Delete-ISM-Rollover-구성)]]
+- `2026-06-14-rollover alias - BigDataTeam.md` → [[2026-06-14-ES11_(Elasticsearch-Rollover-Alias-개념)]]
+- `2026-06-14-policy update하기 - BigDataTeam.md` → [[2026-06-14-ES12_(Elasticsearch-ISM-Policy-Update-동시성제어)]]
+- `2026-06-14-index명에 날짜함수 적용 - BigDataTeam.md` → [[2026-06-14-ES13_(Elasticsearch-Index명-날짜함수-Date-Math)]]
+- `2026-06-14-disable ism 변경 history - BigDataTeam.md` → [[2026-06-14-ES14_(Elasticsearch-ISM-History-비활성화-및-정리)]]
 
 **배치 14 (Schema·성능·커널·백업스크립트 + Performance 중복정리, 2026-06-13)** — 8개 (5 신규, 3 기존 Performance 문서 커버)
 - `2026-06-12-mysql partition 관리 - BigDataTeam.md` → [[2026-06-13-60_(MySQL-파티션-관리)]]
