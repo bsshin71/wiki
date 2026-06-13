@@ -62,3 +62,4 @@
     - ingest.md, lint.md: 실행 지침 통합 (중복 제거)
     - 유지보수 용이, AI 참고 파일 명확
 - **2026-06-13**: `/ingest 배치 9` (Percona/설치 나머지) — raw/archived/2026/MySQL/clippings/ 5개 1:1 개별 처리. 39_(8.4 vs 8.0 비교), 40_(devel 환경), 41_(datadir/basedir 경로변경), 42_(8.0.40 패치), 43_(운영 표준 my.cnf) 신규 → `DBMS/MySQL/installation/`. 누적 43개. 미처리 잔여: 26개(배치 10~).
+- **2026-06-13**: `/ingest 배치 10` (백업/복구 시나리오) — raw/archived/2026/MySQL/clippings/ 5개 처리(3 신규, 테스트 2건 병합). 44_(시점 복구 PITR ← 시점복구+시점복구테스트), 45_(백업 복구 시나리오 ← 시나리오+백업복구테스트 qpress검증), 46_(긴급장애 복구 innodb_force_recovery) → `DBMS/MySQL/backup/`. 누적 46개. 미처리 잔여: 21개(배치 11~).

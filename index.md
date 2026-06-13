@@ -116,6 +116,9 @@
 - [[2026-06-13-41_(Percona-MySQL-datadir-basedir-경로-변경)]] : datadir/basedir 비표준 경로 변경, my.cnf 수정·초기화, mysqld_pre_systemd 수정으로 systemd가 my.cnf 참조. `#MySQL #install #datadir` `DBMS/MySQL/installation/`
 - [[2026-06-13-42_(Percona-Server-8.0.40-패치과정)]] : rpm -Uvh 업그레이드, libatomic·percona-telemetry-agent 의존성 해결, telemetry 비활성화. `#MySQL #install #patch` `DBMS/MySQL/installation/`
 - [[2026-06-13-43_(Percona-MySQL-운영-표준-my.cnf)]] : PRD 표준 my.cnf 항목별 설정값(연결·InnoDB·복제·로그·보안), READ-COMMITTED·buffer_pool 8G·doublewrite OFF. `#MySQL #install #my.cnf` `DBMS/MySQL/installation/`
+- [[2026-06-13-44_(MySQL-시점-복구-PITR)]] : 전체 백업+백업 이후 binlog 재적용. xtrabackup_binlog_info position, mysqlbinlog --start/stop-position, 복구 테스트 검증. `#MySQL #backup #PITR` `DBMS/MySQL/backup/`
+- [[2026-06-13-45_(MySQL-백업-복구-시나리오)]] : 상황별 복구 4사례 — 단일테이블(DISCARD/IMPORT), 온라인/아카이브 binlog 시점복구, 실수 DROP 복구(drop 구문 주석), qpress 압축복구 검증. `#MySQL #backup #복구` `DBMS/MySQL/backup/`
+- [[2026-06-13-46_(MySQL-긴급장애-복구-innodb_force_recovery)]] : InnoDB 자동복구 실패 시 force_recovery(1~6) 강제기동 후 mysqldump 재구축. 값별 모드·손상유형별 적용순서. `#MySQL #backup #장애복구` `DBMS/MySQL/backup/`
 - [[2026-06-02_(Linux-고정-IP-설정)]] : CentOS/RHEL ifcfg 파일로 고정 IP 설정, nmcli 강제 적용, DHCP 덮어쓰기 방지 `#Linux #네트워크 #IP고정` `시스템/`
 
 ---
@@ -226,3 +229,10 @@
 - `2026-06-12-Percona MySQL 경로 수정 - BigDataTeam.md` → [[2026-06-13-41_(Percona-MySQL-datadir-basedir-경로-변경)]]
 - `2026-06-12-percona server 8.0.40 패치과정 - BigDataTeam.md` → [[2026-06-13-42_(Percona-Server-8.0.40-패치과정)]]
 - `2026-06-12-prd db용 my.cnf - BigDataTeam.md` → [[2026-06-13-43_(Percona-MySQL-운영-표준-my.cnf)]]
+
+**배치 10 (백업/복구 시나리오, 2026-06-13)** — 5개 (3 신규, 테스트 2건 병합)
+- `2026-06-12-시점 복구 - BigDataTeam.md` → [[2026-06-13-44_(MySQL-시점-복구-PITR)]]
+- `2026-06-12-시점 복구 테스트 - BigDataTeam.md` → [[2026-06-13-44_(MySQL-시점-복구-PITR)]] (테스트 검증 섹션 병합)
+- `2026-06-12-백업 복구 시나리오 - BigDataTeam.md` → [[2026-06-13-45_(MySQL-백업-복구-시나리오)]]
+- `2026-06-12-백업 복구 테스트 - BigDataTeam.md` → [[2026-06-13-45_(MySQL-백업-복구-시나리오)]] (qpress 압축복구 검증 섹션 병합)
+- `2026-06-12-긴급장애 복구 - BigDataTeam.md` → [[2026-06-13-46_(MySQL-긴급장애-복구-innodb_force_recovery)]]
