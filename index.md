@@ -69,10 +69,11 @@
 - [[2026-06-02_(PostgreSQL-pgvector-설치)]] : pgvector 확장 설치·벡터 테이블 생성·유사도 검색·IVFFlat/HNSW 인덱스 `#PostgreSQL #AI-RAG #pgvector` `DBMS/PostgreSQL/`
 - [[2026-06-02_(PostgreSQL-MinTool4PG-DBA-도구)]] : Windows Terminal 환경용 PostgreSQL DBA 스크립트 도구 설치 및 pgpass.conf 설정 `#PostgreSQL #DBA #Windows` `DBMS/PostgreSQL/`
 - [[2026-06-02_(MySQL-데이터이관-Shell-스크립트)]] : mysqldump 기반 테이블 단위 INSERT/REPLACE 이관 Shell 스크립트 `#MySQL #migration` `DBMS/MySQL/`
-- [[2026-06-13_(MySQL-Lock-Deadlock-모니터링)]] : Lock 개념·종류·모니터링 쿼리·장애 사례(Update 지연이 Lock이 아닌 경우) — 8개 소스 통합 `#MySQL #lock #모니터링` `DBMS/MySQL/lock/`
-- [[2026-06-13_(MySQL-Replication-가이드)]] : Binary Log Position / GTID 기반 복제 설정, Slave 추가(XtraBackup), Semi-Sync, 상황별 조치 — 13개 소스 통합 `#MySQL #replication #GTID` `DBMS/MySQL/replication/`
-- [[2026-06-13_(MySQL-XtraBackup-백업복구-가이드)]] : Full/증분/시점 복구, innodb_force_recovery 긴급 장애 복구 — 14개 소스 통합 `#MySQL #backup #XtraBackup` `DBMS/MySQL/backup/`
-- [[2026-06-13_(MySQL-Percona-설치-가이드)]] : RHEL/Rocky에 Percona Server RPM 설치, 운영용 my.cnf 전체 예시 — 8개 소스 통합 `#MySQL #Percona #install` `DBMS/MySQL/installation/`
+- [[2026-06-13_(MySQL-Lock-Deadlock-모니터링)]] : 🗂️**허브** — Lock·Deadlock·세션경합·장애사례 개별문서 목차(16,17,23,24,55,56,57) `#MySQL #lock #허브` `DBMS/MySQL/lock/`
+- [[2026-06-13_(MySQL-Replication-가이드)]] : 🗂️**허브** — 복제 방식·Slave 추가·운영/장애 개별문서 목차(01~04,06,31~34,58,59) `#MySQL #replication #허브` `DBMS/MySQL/replication/`
+- [[2026-06-13_(MySQL-XtraBackup-백업복구-가이드)]] : 🗂️**허브** — XtraBackup 원리·Full/증분·복구 시나리오 개별문서 목차(11,35~38,44~46,64) `#MySQL #backup #허브` `DBMS/MySQL/backup/`
+- [[2026-06-13_(MySQL-Percona-설치-가이드)]] : 🗂️**허브** — Percona 설치·경로·패치·운영설정 개별문서 목차(14,15,39~43,63) `#MySQL #install #허브` `DBMS/MySQL/installation/`
+- [[2026-06-13_(MySQL-관리자-쿼리-모음)]] : 🗂️**허브** — admin 기초·계정/권한·세션진단 개별문서 목차(05,18,19,47~54) `#MySQL #admin #허브` `DBMS/MySQL/admin/`
 - [[2026-06-13_(MySQL-Performance-Schema-활용)]] : PS 활성화·초기화, 접속/세션 모니터링, digest SQL분석, sys뷰, 인덱스·테이블 I/O, 프로파일링(stage 추적), 메모리분석, InnoDB튜닝, 오버헤드 — 구버전(2026-06-12) 통합 `#MySQL #performance_schema #sys #성능분석` `DBMS/쿼리튜닝/`
 - [[2026-06-13-01_(MySQL-Binary-Log-Position-복제)]] : Master Binary Log 파일/위치 기반 복제. 초기 데이터 동기화(mysqldump/cold backup), Slave 설정, 검증. `#MySQL #replication` `DBMS/MySQL/replication/`
 - [[2026-06-13-02_(MySQL-GTID-기반-복제)]] : GTID(Global Transaction ID)로 유일한 트랜잭션 식별. MASTER_AUTO_POSITION으로 자동 위치 결정, 중복 실행 방지, mysql.gtid_executed 테이블. `#MySQL #GTID #replication` `DBMS/MySQL/replication/`
@@ -97,6 +98,7 @@
 - [[2026-06-13-21_(MySQL-Character-Set-설정)]] : Character Set 불일치는 데이터 손상·복제 오류 초래. Server/Database/Table/Column 레벨 개별 설정 가능. utf8mb4 권장(emoji·다국어). `#MySQL #Schema` `DBMS/MySQL/`
 - [[2026-06-13-22_(MySQL-미커밋-세션-조회)]] : COMMIT하지 않은 트랜잭션은 락 유지하여 쿼리 블로킹. INFORMATION_SCHEMA.INNODB_TRX로 조회·강제 종료. `#MySQL #Transaction` `DBMS/MySQL/admin/`
 - [[2026-06-13-23_(MySQL-Deadlock-분석-및-해결)]] : Deadlock은 다중 트랜잭션이 서로 락 대기. InnoDB 자동 감지·롤백. SHOW ENGINE INNODB STATUS로 분석. `#MySQL #Lock` `DBMS/MySQL/lock/`
+- [[2026-06-13-24_(MySQL-InnoDB-Lock-모니터링)]] : InnoDB Lock 실시간 모니터링, performance_schema.data_locks·성능 스키마 활용. `#MySQL #Lock #모니터링` `DBMS/MySQL/lock/`
 - [[2026-06-13-25_(MySQL-Index-최적화)]] : 적절한 인덱스로 쿼리 성능 10배 향상. 선택도(Cardinality)·조건·정렬 순서로 복합 인덱스 설계. `#MySQL #Indexing` `DBMS/MySQL/`
 - [[2026-06-13-26_(MySQL-Redo-Log-및-로그버퍼-설정)]] : innodb_flush_log_at_trx_commit(0/1/2) 내구성·성능 조절, log_file_size·log_buffer_size 파라미터. `#MySQL #InnoDB #redo_log` `DBMS/MySQL/innodb/`
 - [[2026-06-13-27_(MySQL-Redo-Log-아카이빙)]] : MySQL 8.0 redo log 아카이빙. archive_dirs 설정, archive_start/stop, chmod 700 필수, 시작 세션 유지 필요. `#MySQL #InnoDB #redo_log` `DBMS/MySQL/innodb/`
