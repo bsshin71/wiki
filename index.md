@@ -103,6 +103,10 @@
 - [[2026-06-13-28_(MySQL-Redo-Log-활성화-비활성화)]] : 대량 적재 시 redo log 비활성화로 시간 단축(8.0+). 비정상 종료 시 innodb_force_recovery=6 필요. `#MySQL #InnoDB #redo_log` `DBMS/MySQL/innodb/`
 - [[2026-06-13-29_(MySQL-Undo-로그-관리)]] : undo 사용량·파일 조회, 테이블스페이스 추가/삭제(INACTIVE), 자동/수동 truncate 공간 회수. `#MySQL #InnoDB #undo` `DBMS/MySQL/innodb/`
 - [[2026-06-13-30_(MySQL-Change-Buffer)]] : 세컨더리 인덱스 변경 버퍼링. innodb_change_buffering(all/inserts/...) 설정, ibuf0ibuf 메모리 조회. `#MySQL #InnoDB #change_buffer` `DBMS/MySQL/innodb/`
+- [[2026-06-13-31_(MySQL-Slave-추가-CLONE-플러그인)]] : MySQL 8.0 CLONE 플러그인으로 Slave 물리 구성. Donor/Recipient 권한, CLONE INSTANCE, clone_progress, UUID 충돌 시 auto.cnf 삭제. `#MySQL #replication #CLONE` `DBMS/MySQL/replication/`
+- [[2026-06-13-32_(MySQL-Slave-추가-XtraBackup-GTID)]] : XtraBackup 물리백업+GTID로 Slave 구성. xtrabackup_binlog_info의 GTID→gtid_purged, copy-back, AUTO_POSITION. `#MySQL #replication #XtraBackup #GTID` `DBMS/MySQL/replication/`
+- [[2026-06-13-33_(MySQL-Slave-추가-mysqldump)]] : 논리백업(mysqldump --master-data=2)으로 Slave 구성. 덤프 내 gtid_purged 자동 설정, 소량 데이터 적합. `#MySQL #replication #mysqldump` `DBMS/MySQL/replication/`
+- [[2026-06-13-34_(MySQL-Replication-재설정)]] : 복제 깨짐 시 Master/Slave GTID 전체 리셋 후 mysqldump 재동기화 10단계. RESET MASTER로 gtid_executed 비우기. `#MySQL #replication #재설정` `DBMS/MySQL/replication/`
 - [[2026-06-02_(Linux-고정-IP-설정)]] : CentOS/RHEL ifcfg 파일로 고정 IP 설정, nmcli 강제 적용, DHCP 덮어쓰기 방지 `#Linux #네트워크 #IP고정` `시스템/`
 
 ---
@@ -192,3 +196,10 @@
 - `2026-06-12-리두로그 활성화 및 비활성화 - BigDataTeam.md` → [[2026-06-13-28_(MySQL-Redo-Log-활성화-비활성화)]]
 - `2026-06-12-mysql undo 관리 - BigDataTeam.md` → [[2026-06-13-29_(MySQL-Undo-로그-관리)]]
 - `2026-06-12-체인지버퍼 - BigDataTeam.md` → [[2026-06-13-30_(MySQL-Change-Buffer)]]
+
+**배치 7 (Replication 나머지, 2026-06-13)** — 5개 (4 신규 + 1 병합)
+- `2026-06-12-slave 추가방법(cone statement) - BigDataTeam.md` → [[2026-06-13-31_(MySQL-Slave-추가-CLONE-플러그인)]]
+- `2026-06-12-slave 추가방법(gtid based) - BigDataTeam.md` → [[2026-06-13-32_(MySQL-Slave-추가-XtraBackup-GTID)]]
+- `2026-06-12-slave 추가방법(mysqldump) - BigDataTeam.md` → [[2026-06-13-33_(MySQL-Slave-추가-mysqldump)]]
+- `2026-06-12-replication 재설정 방법 - BigDataTeam.md` → [[2026-06-13-34_(MySQL-Replication-재설정)]]
+- `2026-06-12-semi replication - BigDataTeam.md` → [[2026-06-13-03_(MySQL-Semi-Sync-복제)]] (기존 문서에 병합)

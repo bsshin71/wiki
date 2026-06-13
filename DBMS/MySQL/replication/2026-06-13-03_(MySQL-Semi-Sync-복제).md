@@ -2,7 +2,7 @@
 
 - **카테고리**: #DBMS #MySQL #Replication
 - **작성일**: 2026-06-13
-- **참조 원본**: [[2026-06-12-03. semi sync replication - BigDataTeam.md]]
+- **참조 원본**: [[2026-06-12-03. semi sync replication - BigDataTeam.md]], [[2026-06-12-semi replication - BigDataTeam]]
 
 ## 1. 핵심 요약
 
@@ -252,7 +252,57 @@ FROM performance_schema.global_status;
 
 ---
 
-## 12. 연관 개념
+## 12. 전체 my.cnf 예시 (Semi-Sync + GTID 결합)
+
+운영 환경에서는 Semi-Sync를 GTID 복제와 함께 구성합니다. `server-id`는 서버마다 달라야 합니다.
+
+```ini
+# ===== Master (server-id=1) =====
+[mysqld]
+# replication
+log-bin=mysql-bin
+log_slave_updates = slave_only
+gtid_mode=ON
+session_track_gtids=OWN_GTID
+enforce_gtid_consistency=ON
+server-id=1
+
+rpl_semi_sync_master_enabled=1
+rpl_semi_sync_master_timeout=1000   # 1s
+rpl_semi_sync_slave_enabled=1       # 양방향 대비
+
+binlog_format=row
+binlog_do_db=DBBOS
+
+# consistency (선택)
+innodb_flush_log_at_trx_commit=1
+sync_binlog=1
+
+# ===== Slave =====
+# server-id=2  (Master와 달라야 함), 나머지는 동일
+```
+
+---
+
+## 13. 선택적 복제 필터링 (replicate-do / rewrite)
+
+특정 DB·테이블만 복제하거나 DB명을 바꿔 복제할 수 있습니다.
+
+```ini
+# Slave 측 my.cnf — DBBOS → DB_EXEC 로 이름 바꿔 특정 테이블만 복제
+replicate-rewrite-db="DBBOS->DB_EXEC"
+replicate-do-db="DB_EXEC"
+replicate-do-table="DB_EXEC.CUST_MM"
+replicate-do-table="DB_EXEC.ACC_MM"
+replicate-do-table="DB_EXEC.ORD_RULE_LM"
+# ... 필요한 테이블만 나열
+```
+
+> 복제 계정 생성 / CHANGE MASTER / 상태 확인 명령은 [[2026-06-13-04_(MySQL-복제-명령어-모음)]] 참조.
+
+---
+
+## 14. 연관 개념
 
 - [[2026-06-13-01_(MySQL-Binary-Log-Position-복제)]]
 - [[2026-06-13-02_(MySQL-GTID-기반-복제)]]
