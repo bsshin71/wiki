@@ -162,6 +162,11 @@
 - [[2026-06-14-K16_(Kafka-kcat-kafkacat-도구)]] : kcat 설치, -P/-C/-L/-Q 모드, -f 포맷 문자열, connect-offsets 조회, offset/timestamp 쿼리. `#kafka #utility #kcat` `kafka/`
 - [[2026-06-14-K17_(Kafka-UI-tool-provectus)]] : provectus kafka-ui docker compose(8989), BOOTSTRAPSERVERS 실제IP, docker 데몬 에러 대처. `#kafka #UI #docker` `kafka/`
 - [[2026-06-14-K18_(Kafka-모니터링-Prometheus-Alertmanager)]] : JMX/node exporter→Prometheus→Alertmanager, rules.yml(BrokerState·Controller·UncleanLeader). `#kafka #monitoring #prometheus` `kafka/`
+- [[2026-06-14-ES01_(Elasticsearch-시스템-구조-클러스터-노드-샤드)]] : Cluster/Node(cluster.name 바인딩), 마스터/데이터 노드, Primary/Replica 샤드, 젠 디스커버리(유니캐스트 권장). `#elasticsearch #cluster #shard` `elasticsearch/`
+- [[2026-06-14-ES02_(Elasticsearch-Cluster-구축-아키텍처)]] : 마스터3+데이터증설(split brain 방지), Hot-Warm(SSD/SATA) 아키텍처. `#elasticsearch #아키텍처 #hot-warm` `elasticsearch/`
+- [[2026-06-14-ES03_(Elasticsearch-Cluster-Shard-수-확인-및-증가)]] : 전체 shard=노드수×max_shards_per_node(1000), health·_cat/indices 확인, 상한 변경. `#elasticsearch #shard` `elasticsearch/`
+- [[2026-06-14-ES04_(Elasticsearch-API-Key-연결)]] : _security/api_key 발급(role_descriptors), Authorization ApiKey 헤더로 curl index/bulk/query. `#elasticsearch #apikey #security` `elasticsearch/`
+- [[2026-06-14-ES05_(Elasticsearch-Dev-Tools-DSL-조회)]] : Kibana Dev Tools로 _cluster/health, _cat/shards·indices·aliases 조회. `#elasticsearch #DSL #devtools` `elasticsearch/`
 - [[2026-06-02_(Linux-고정-IP-설정)]] : CentOS/RHEL ifcfg 파일로 고정 IP 설정, nmcli 강제 적용, DHCP 덮어쓰기 방지 `#Linux #네트워크 #IP고정` `시스템/`
 
 ---
@@ -339,6 +344,15 @@
 - `2026-06-13- alertmanager 를 이용한 alert - BigDataTeam.md` → [[2026-06-14-K18_(Kafka-모니터링-Prometheus-Alertmanager)]]
 
 > ✅ **raw/kafka/ 20개 전량 처리 완료** (배치 2~5, K01~K18 18개 문서 / 병합 2건).
+
+### raw/elasticsearch/ (Elasticsearch, 2026-06-14 신규 · 24건)
+
+**배치 6 (ES 설치·클러스터·구조)** — 5개
+- `2026-06-14-Elasticsearch 시스템 구조 - BigDataTeam.md` → [[2026-06-14-ES01_(Elasticsearch-시스템-구조-클러스터-노드-샤드)]]
+- `2026-06-14-Elasticsearch Cluster 구축 - BigDataTeam.md` → [[2026-06-14-ES02_(Elasticsearch-Cluster-구축-아키텍처)]]
+- `2026-06-14-cluster shard 수 확인 및 증가 - BigDataTeam.md` → [[2026-06-14-ES03_(Elasticsearch-Cluster-Shard-수-확인-및-증가)]]
+- `2026-06-14-api key 를 통한 연결 - BigDataTeam.md` → [[2026-06-14-ES04_(Elasticsearch-API-Key-연결)]]
+- `2026-06-14-DEV TOOL - BigDataTeam.md` → [[2026-06-14-ES05_(Elasticsearch-Dev-Tools-DSL-조회)]]
 
 **배치 14 (Schema·성능·커널·백업스크립트 + Performance 중복정리, 2026-06-13)** — 8개 (5 신규, 3 기존 Performance 문서 커버)
 - `2026-06-12-mysql partition 관리 - BigDataTeam.md` → [[2026-06-13-60_(MySQL-파티션-관리)]]
