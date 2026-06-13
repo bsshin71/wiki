@@ -154,6 +154,11 @@
 - [[2026-06-14-K08_(Kafka-Zookeeper-properties-설정)]] : tickTime·initLimit·syncLimit·dataDir(/tmp 금지)·clientPort·server.N 앙상블. `#kafka #config #zookeeper` `kafka/`
 - [[2026-06-14-K09_(Kafka-기동-순서-모듈)]] : 기본(zookeeper→kafka→schema-registry)→추가(connect) 기동 순서. `#kafka #install #start` `kafka/`
 - [[2026-06-14-K10_(Kafka-Topic-Producer-Consumer-명령어)]] : kafka-topics 생성/조회/파티션(늘리기만), console producer/consumer, group id 분리. `#kafka #command` `kafka/`
+- [[2026-06-14-K11_(Kafka-Elasticsearch-Sink-Connector)]] : ElasticsearchSinkConnector, topics.regex 멀티토픽, TimestampRouter로 날짜별 인덱스, schema.ignore. `#kafka #connect #elasticsearch` `kafka/`
+- [[2026-06-14-K12_(Kafka-S3-Sink-Connector)]] : S3SinkConnector, TimeBasedPartitioner 날짜경로, path.format escape, RegexRouter null 이슈. `#kafka #connect #s3` `kafka/`
+- [[2026-06-14-K13_(Kafka-Camel-SFTP-Sink-Connector-SMT)]] : CamelSftpSinkConnector 일자별 디렉토리, 커스텀 SMT(AppendNewline·SetFileNameFromTask), 관리 스크립트. `#kafka #connect #sftp` `kafka/`
+- [[2026-06-14-K14_(Kafka-JSON-Schema-Registry-활용)]] : Schema Registry(8081) JSON Schema 등록/조회 REST, console producer/consumer, ES sink 연계. `#kafka #schema-registry` `kafka/`
+- [[2026-06-14-K15_(Kafka-성능-튜닝-커널-디스크-GC)]] : 커널(swappiness·net buffer)·디스크(xfs noatime)·G1 GC·모니터링 Metric. `#kafka #튜닝` `kafka/`
 - [[2026-06-02_(Linux-고정-IP-설정)]] : CentOS/RHEL ifcfg 파일로 고정 IP 설정, nmcli 강제 적용, DHCP 덮어쓰기 방지 `#Linux #네트워크 #IP고정` `시스템/`
 
 ---
@@ -315,6 +320,14 @@
 - `2026-06-13-zookeeper property - BigDataTeam.md` → [[2026-06-14-K08_(Kafka-Zookeeper-properties-설정)]]
 - `2026-06-13-kafka start - BigDataTeam.md` → [[2026-06-14-K09_(Kafka-기동-순서-모듈)]]
 - `2026-06-13-kafka command - BigDataTeam.md` → [[2026-06-14-K10_(Kafka-Topic-Producer-Consumer-명령어)]]
+
+**배치 4 (Kafka sink connector·tool)** — 6개 (5 신규, tunning 2건 병합)
+- `2026-06-13-elasticsearch  sink connector - BigDataTeam.md` → [[2026-06-14-K11_(Kafka-Elasticsearch-Sink-Connector)]]
+- `2026-06-13-s3 sink connector - BigDataTeam.md` → [[2026-06-14-K12_(Kafka-S3-Sink-Connector)]]
+- `2026-06-13-camel sftp sink connector - BigDataTeam.md` → [[2026-06-14-K13_(Kafka-Camel-SFTP-Sink-Connector-SMT)]]
+- `2026-06-13-json schema - BigDataTeam.md` → [[2026-06-14-K14_(Kafka-JSON-Schema-Registry-활용)]]
+- `2026-06-13-kafka tunning - BigDataTeam.md` → [[2026-06-14-K15_(Kafka-성능-튜닝-커널-디스크-GC)]]
+- `2026-06-13-kafka tunning 가이드문서 - BigDataTeam.md` → [[2026-06-14-K15_(Kafka-성능-튜닝-커널-디스크-GC)]] (참고자료 섹션 병합)
 
 **배치 14 (Schema·성능·커널·백업스크립트 + Performance 중복정리, 2026-06-13)** — 8개 (5 신규, 3 기존 Performance 문서 커버)
 - `2026-06-12-mysql partition 관리 - BigDataTeam.md` → [[2026-06-13-60_(MySQL-파티션-관리)]]
