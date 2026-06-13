@@ -132,6 +132,11 @@
 - [[2026-06-13-57_(MySQL-Update-지연-사례-레코드락-commit-지연)]] : Update 지연2 — Lock_time≈20s, X,REC_NOT_GAP 레코드락, 다중 서버 중복 실행+앱 webhook commit 지연. `#MySQL #lock #장애분석` `DBMS/MySQL/lock/`
 - [[2026-06-13-58_(MySQL-멀티-소스-복제-구성)]] : 다중 소스→1 replica, 채널별 CHANGE MASTER FOR CHANNEL, GTID 합산 gtid_purged, semi-sync 불가(Bug#102994). `#MySQL #replication #multi_source` `DBMS/MySQL/replication/`
 - [[2026-06-13-59_(MySQL-Slave-gtid_executed-Master와-일치시키기)]] : RESET MASTER→gtid_purged 수동설정→AUTO_POSITION 재연결로 Slave GTID 동기화. `#MySQL #replication #GTID` `DBMS/MySQL/replication/`
+- [[2026-06-13-60_(MySQL-파티션-관리)]] : RANGE 파티션 생성·조회, MAXVALUE REORGANIZE로 구간 추가, DROP/REMOVE PARTITIONING, EXCHANGE PARTITION 테이블 교체. `#MySQL #partition` `DBMS/MySQL/`
+- [[2026-06-13-61_(MySQL-Timezone-설정)]] : CONVERT_TZ NULL·ERROR 1298 원인은 mysql.time_zone 테이블 비어있음. mysql_tzinfo_to_sql로 zoneinfo 적재. `#MySQL #timezone` `DBMS/MySQL/`
+- [[2026-06-13-62_(MySQL-데이터-Load-Bulk-Insert-성능-개선)]] : 대량 적재 8기법 — binlog/autocommit/제약 OFF, multi-value INSERT, PK순서, LOAD DATA(20배), flush 설정. `#MySQL #bulk_insert #성능` `DBMS/쿼리튜닝/`
+- [[2026-06-13-63_(MySQL-성능-최적화-커널-파라미터)]] : Linux sysctl(file-max·swappiness·dirty·net backlog·aio) + limits.conf nofile MySQL 서버 튜닝. `#MySQL #install #kernel` `DBMS/MySQL/installation/`
+- [[2026-06-13-64_(MySQL-증분-백업-자동화-스크립트-LSN기반)]] : lastbackupinfo로 last_lsn 전달하는 증분백업 스크립트, 복구 순서(마지막만 롤백), PXB-2406 버그(8.0.23-16+). `#MySQL #backup #script` `DBMS/MySQL/backup/`
 - [[2026-06-02_(Linux-고정-IP-설정)]] : CentOS/RHEL ifcfg 파일로 고정 IP 설정, nmcli 강제 적용, DHCP 덮어쓰기 방지 `#Linux #네트워크 #IP고정` `시스템/`
 
 ---
@@ -268,3 +273,13 @@
 - `2026-06-12-Update 문 지연2 - BigDataTeam.md` → [[2026-06-13-57_(MySQL-Update-지연-사례-레코드락-commit-지연)]]
 - `2026-06-12-멀티 소스 복제 구성 - BigDataTeam.md` → [[2026-06-13-58_(MySQL-멀티-소스-복제-구성)]]
 - `2026-06-12-slave 의 gtid_executed 를 master와 일치시키기 - BigDataTeam.md` → [[2026-06-13-59_(MySQL-Slave-gtid_executed-Master와-일치시키기)]]
+
+**배치 14 (Schema·성능·커널·백업스크립트 + Performance 중복정리, 2026-06-13)** — 8개 (5 신규, 3 기존 Performance 문서 커버)
+- `2026-06-12-mysql partition 관리 - BigDataTeam.md` → [[2026-06-13-60_(MySQL-파티션-관리)]]
+- `2026-06-12-MySQL timezone 설정 - BigDataTeam.md` → [[2026-06-13-61_(MySQL-Timezone-설정)]]
+- `2026-06-12-데이터 Load 성능 올리기 - BigDataTeam.md` → [[2026-06-13-62_(MySQL-데이터-Load-Bulk-Insert-성능-개선)]]
+- `2026-06-12-성능 최적화를 위한 주요 커널파라미터 - BigDataTeam.md` → [[2026-06-13-63_(MySQL-성능-최적화-커널-파라미터)]]
+- `2026-06-12-증분백업script(V8) - BigDataTeam.md` → [[2026-06-13-64_(MySQL-증분-백업-자동화-스크립트-LSN기반)]]
+- `2026-06-12-MySQL Performance_schema 활용 - BigDataTeam.md` → [[2026-06-13_(MySQL-Performance-Schema-활용)]] (2.5단계: 제목 90%+ 일치, 기존 문서가 이미 커버 — 중복 생성 금지)
+- `2026-06-12-MySQL 성능 튜닝 - BigDataTeam.md` → [[2026-06-13_(MySQL-Performance-Schema-활용)]] (기존 문서 참조 원본, 커버됨)
+- `2026-06-12-Performance 스키마를 이용한 프로파일링 - BigDataTeam.md` → [[2026-06-13_(MySQL-Performance-Schema-활용)]] (기존 문서 참조 원본, 커버됨)
