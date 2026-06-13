@@ -159,6 +159,9 @@
 - [[2026-06-14-K13_(Kafka-Camel-SFTP-Sink-Connector-SMT)]] : CamelSftpSinkConnector 일자별 디렉토리, 커스텀 SMT(AppendNewline·SetFileNameFromTask), 관리 스크립트. `#kafka #connect #sftp` `kafka/`
 - [[2026-06-14-K14_(Kafka-JSON-Schema-Registry-활용)]] : Schema Registry(8081) JSON Schema 등록/조회 REST, console producer/consumer, ES sink 연계. `#kafka #schema-registry` `kafka/`
 - [[2026-06-14-K15_(Kafka-성능-튜닝-커널-디스크-GC)]] : 커널(swappiness·net buffer)·디스크(xfs noatime)·G1 GC·모니터링 Metric. `#kafka #튜닝` `kafka/`
+- [[2026-06-14-K16_(Kafka-kcat-kafkacat-도구)]] : kcat 설치, -P/-C/-L/-Q 모드, -f 포맷 문자열, connect-offsets 조회, offset/timestamp 쿼리. `#kafka #utility #kcat` `kafka/`
+- [[2026-06-14-K17_(Kafka-UI-tool-provectus)]] : provectus kafka-ui docker compose(8989), BOOTSTRAPSERVERS 실제IP, docker 데몬 에러 대처. `#kafka #UI #docker` `kafka/`
+- [[2026-06-14-K18_(Kafka-모니터링-Prometheus-Alertmanager)]] : JMX/node exporter→Prometheus→Alertmanager, rules.yml(BrokerState·Controller·UncleanLeader). `#kafka #monitoring #prometheus` `kafka/`
 - [[2026-06-02_(Linux-고정-IP-설정)]] : CentOS/RHEL ifcfg 파일로 고정 IP 설정, nmcli 강제 적용, DHCP 덮어쓰기 방지 `#Linux #네트워크 #IP고정` `시스템/`
 
 ---
@@ -328,6 +331,14 @@
 - `2026-06-13-json schema - BigDataTeam.md` → [[2026-06-14-K14_(Kafka-JSON-Schema-Registry-활용)]]
 - `2026-06-13-kafka tunning - BigDataTeam.md` → [[2026-06-14-K15_(Kafka-성능-튜닝-커널-디스크-GC)]]
 - `2026-06-13-kafka tunning 가이드문서 - BigDataTeam.md` → [[2026-06-14-K15_(Kafka-성능-튜닝-커널-디스크-GC)]] (참고자료 섹션 병합)
+
+**배치 5 (Kafka 도구·모니터링, 마지막)** — 4개 (3 신규, kcat 2건 병합)
+- `2026-06-13-kcat(kafkacat) - BigDataTeam.md` → [[2026-06-14-K16_(Kafka-kcat-kafkacat-도구)]]
+- `2026-06-13-kafkacat - BigDataTeam.md` → [[2026-06-14-K16_(Kafka-kcat-kafkacat-도구)]] (설치 변형 병합)
+- `2026-06-13-kafka-ui tool - BigDataTeam.md` → [[2026-06-14-K17_(Kafka-UI-tool-provectus)]]
+- `2026-06-13- alertmanager 를 이용한 alert - BigDataTeam.md` → [[2026-06-14-K18_(Kafka-모니터링-Prometheus-Alertmanager)]]
+
+> ✅ **raw/kafka/ 20개 전량 처리 완료** (배치 2~5, K01~K18 18개 문서 / 병합 2건).
 
 **배치 14 (Schema·성능·커널·백업스크립트 + Performance 중복정리, 2026-06-13)** — 8개 (5 신규, 3 기존 Performance 문서 커버)
 - `2026-06-12-mysql partition 관리 - BigDataTeam.md` → [[2026-06-13-60_(MySQL-파티션-관리)]]
