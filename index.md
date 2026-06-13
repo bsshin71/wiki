@@ -127,6 +127,11 @@
 - [[2026-06-13-52_(MySQL-오래-수행중인-TX-찾기)]] : History List Length(undo) 개념·문제, 장시간/미커밋 트랜잭션·대량변경 쿼리 조회(sys.session, INNODB_TRX). `#MySQL #admin #트랜잭션` `DBMS/MySQL/admin/`
 - [[2026-06-13-53_(MySQL-에러-유발-클라이언트-프로세스-찾기)]] : events_errors_summary→socket_instances→netstat로 에러 유발 세션의 IP·port·OS 프로세스 역추적. `#MySQL #admin #문제해결` `DBMS/MySQL/admin/`
 - [[2026-06-13-54_(MySQL-쿼리-로깅-general-slow-log)]] : general_log/slow_query_log 켜기·log_output(FILE/TABLE), long_query_time, Percona 확장(rate_limit·global_control). `#MySQL #admin #로깅` `DBMS/MySQL/admin/`
+- [[2026-06-13-55_(MySQL-블로킹-세션-조회-누가-누구를-막는지)]] : data_lock_waits 조인·sys.schema_table_lock_waits로 blocking↔waiting 세션 조회, sql_kill_blocking_connection, KILL 조치. `#MySQL #lock #blocking` `DBMS/MySQL/lock/`
+- [[2026-06-13-56_(MySQL-Update-지연-사례-디스크-커밋-지연)]] : 단순 PK Update 지연 장애 — data_locks 전부 GRANTED, waiting for handler commit, iostat %util 포화로 락 아닌 디스크 커밋 지연. `#MySQL #lock #장애분석` `DBMS/MySQL/lock/`
+- [[2026-06-13-57_(MySQL-Update-지연-사례-레코드락-commit-지연)]] : Update 지연2 — Lock_time≈20s, X,REC_NOT_GAP 레코드락, 다중 서버 중복 실행+앱 webhook commit 지연. `#MySQL #lock #장애분석` `DBMS/MySQL/lock/`
+- [[2026-06-13-58_(MySQL-멀티-소스-복제-구성)]] : 다중 소스→1 replica, 채널별 CHANGE MASTER FOR CHANNEL, GTID 합산 gtid_purged, semi-sync 불가(Bug#102994). `#MySQL #replication #multi_source` `DBMS/MySQL/replication/`
+- [[2026-06-13-59_(MySQL-Slave-gtid_executed-Master와-일치시키기)]] : RESET MASTER→gtid_purged 수동설정→AUTO_POSITION 재연결로 Slave GTID 동기화. `#MySQL #replication #GTID` `DBMS/MySQL/replication/`
 - [[2026-06-02_(Linux-고정-IP-설정)]] : CentOS/RHEL ifcfg 파일로 고정 IP 설정, nmcli 강제 적용, DHCP 덮어쓰기 방지 `#Linux #네트워크 #IP고정` `시스템/`
 
 ---
@@ -256,3 +261,10 @@
 - `2026-06-12-오래 수행중인 TX 찾기 - BigDataTeam.md` → [[2026-06-13-52_(MySQL-오래-수행중인-TX-찾기)]]
 - `2026-06-12-에러를 일으키는 client 프로세스 찾기 - BigDataTeam.md` → [[2026-06-13-53_(MySQL-에러-유발-클라이언트-프로세스-찾기)]]
 - `2026-06-12-쿼리 로깅하기 - BigDataTeam.md` → [[2026-06-13-54_(MySQL-쿼리-로깅-general-slow-log)]]
+
+**배치 13 (Lock 지연사례 + Replication, 2026-06-13)** — 5개
+- `2026-06-12-누가누구를 막고 있는지 보기 - BigDataTeam.md` → [[2026-06-13-55_(MySQL-블로킹-세션-조회-누가-누구를-막는지)]]
+- `2026-06-12-단순 Update문 지연사례 분석 - BigDataTeam.md` → [[2026-06-13-56_(MySQL-Update-지연-사례-디스크-커밋-지연)]]
+- `2026-06-12-Update 문 지연2 - BigDataTeam.md` → [[2026-06-13-57_(MySQL-Update-지연-사례-레코드락-commit-지연)]]
+- `2026-06-12-멀티 소스 복제 구성 - BigDataTeam.md` → [[2026-06-13-58_(MySQL-멀티-소스-복제-구성)]]
+- `2026-06-12-slave 의 gtid_executed 를 master와 일치시키기 - BigDataTeam.md` → [[2026-06-13-59_(MySQL-Slave-gtid_executed-Master와-일치시키기)]]
