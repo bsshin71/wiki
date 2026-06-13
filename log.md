@@ -17,3 +17,8 @@
 - **2026-06-12**: 일괄 ingest 13개 문서 추가 — Oracle(모니터링·쿼리튜닝·spool), PostgreSQL(RPM설치·모니터링·객체조회·운영유틸·EXPLAIN·pgBackRest·pgvector·MinTool4PG), MySQL(데이터이관), 시스템(Linux 고정IP). 36개 raw 파일 → 13개 wiki 문서로 그룹화.
 - **2026-06-12**: `wiki/DBMS/PostgreSQL/admin/` 서브폴더 생성 — #PostgreSQL #admin 문서 3개 도달로 트리거. 모니터링·객체조회·운영유틸리티 3개 문서 이동. (ingest 시 트리거 누락 건 사후 보정)
 - **2026-06-13**: MySQL 일괄 ingest 7개 문서 추가 — raw/clippings/mysql/ 하위 71개 파일 처리. Lock·Replication·XtraBackup백업복구·Percona설치·Performance Schema·관리자쿼리·InnoDB구조설정. sub-folder 트리거 미충족(각 태그 2개 미만).
+- **2026-06-13**: MySQL 7개 문서 디테일 재작성 — 병합 과정 디테일 손실 보완(쿼리 전문·옵션·장애사례·버전차이 복원). ingest.md에 "병합 시 디테일 보존" 지침 추가.
+- **2026-06-13**: 원본 관리 규칙 변경 — raw/ 원본 **archived 이동 폐지, 최초 위치 유지**. archived 113개 원본을 raw/(루트·clippings·clippings/mysql·pdf)로 복원. 처리/미처리 추적을 index.md "📥 원본 처리 현황" 섹션으로 전환. ingest.md·CLAUDE.md·시스템 가이드 일괄 반영.
+- **2026-06-13**: graphify 그래프 재빌드 — 67→353 nodes, 9→33 communities. 최근 24개 문서 반영으로 graphify-query 정상 작동 복구(이전 stale 그래프로 "No matching nodes" 반환 문제 해결).
+- **2026-06-13**: 토큰 절감 규칙 3종 추가 — ① 검색 시 "핵심 요약" 섹션만 스캔 ② ingest 시 graphify 필수 활용 ③ 문서 병합 최소화(1 raw→1 wiki, 제목 유사도 90%+ 예외). CLAUDE.md·system_prompt.md·ingest.md 반영.
+- **2026-06-13**: 최상위 카테고리 3개 신설 — `wiki/kafka/`, `wiki/elasticsearch/`, `wiki/airflow/`. 분류 우선순위 10단계로 확장.
