@@ -119,6 +119,10 @@
 - [[2026-06-13-44_(MySQL-시점-복구-PITR)]] : 전체 백업+백업 이후 binlog 재적용. xtrabackup_binlog_info position, mysqlbinlog --start/stop-position, 복구 테스트 검증. `#MySQL #backup #PITR` `DBMS/MySQL/backup/`
 - [[2026-06-13-45_(MySQL-백업-복구-시나리오)]] : 상황별 복구 4사례 — 단일테이블(DISCARD/IMPORT), 온라인/아카이브 binlog 시점복구, 실수 DROP 복구(drop 구문 주석), qpress 압축복구 검증. `#MySQL #backup #복구` `DBMS/MySQL/backup/`
 - [[2026-06-13-46_(MySQL-긴급장애-복구-innodb_force_recovery)]] : InnoDB 자동복구 실패 시 force_recovery(1~6) 강제기동 후 mysqldump 재구축. 값별 모드·손상유형별 적용순서. `#MySQL #backup #장애복구` `DBMS/MySQL/backup/`
+- [[2026-06-13-47_(MySQL-User-계정-생성-옵션)]] : CREATE USER 옵션 — IDENTIFIED WITH, PASSWORD EXPIRE/HISTORY/REUSE/REQUIRE, ACCOUNT LOCK 비밀번호 정책. `#MySQL #admin #user` `DBMS/MySQL/admin/`
+- [[2026-06-13-48_(MySQL-권한-관리-체계)]] : 권한 범위(전역/DB/객체)·특성(Static/Dynamic)·역할(관리자/백업/서비스). GRANT 예시, 도구별 백업계정 최소권한. `#MySQL #admin #권한` `DBMS/MySQL/admin/`
+- [[2026-06-13-49_(MySQL-sys-schema-접근-권한-부여)]] : 일반 유저 sys schema 사용 위한 SELECT *.* + sys.* EXECUTE + sys_config INSERT/UPDATE 권한. `#MySQL #admin #sys_schema` `DBMS/MySQL/admin/`
+- [[2026-06-13-50_(MySQL-특정-유저-접속-차단)]] : 계정 삭제 없이 차단 5가지 — mysql_no_login, Host변경, 권한회수, AFTER CONNECT 트리거, my.cnf. `#MySQL #admin #접속차단` `DBMS/MySQL/admin/`
 - [[2026-06-02_(Linux-고정-IP-설정)]] : CentOS/RHEL ifcfg 파일로 고정 IP 설정, nmcli 강제 적용, DHCP 덮어쓰기 방지 `#Linux #네트워크 #IP고정` `시스템/`
 
 ---
@@ -236,3 +240,9 @@
 - `2026-06-12-백업 복구 시나리오 - BigDataTeam.md` → [[2026-06-13-45_(MySQL-백업-복구-시나리오)]]
 - `2026-06-12-백업 복구 테스트 - BigDataTeam.md` → [[2026-06-13-45_(MySQL-백업-복구-시나리오)]] (qpress 압축복구 검증 섹션 병합)
 - `2026-06-12-긴급장애 복구 - BigDataTeam.md` → [[2026-06-13-46_(MySQL-긴급장애-복구-innodb_force_recovery)]]
+
+**배치 11 (권한/계정 관리, 2026-06-13)** — 4개
+- `2026-06-12-mysql user 생성 - BigDataTeam.md` → [[2026-06-13-47_(MySQL-User-계정-생성-옵션)]]
+- `2026-06-12-mysql 권한 관리 - BigDataTeam.md` → [[2026-06-13-48_(MySQL-권한-관리-체계)]]
+- `2026-06-12-sys schema 접근 권한 부여 - BigDataTeam.md` → [[2026-06-13-49_(MySQL-sys-schema-접근-권한-부여)]]
+- `2026-06-12-특정유저의 접속차단 - BigDataTeam.md` → [[2026-06-13-50_(MySQL-특정-유저-접속-차단)]]
