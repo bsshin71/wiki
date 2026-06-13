@@ -18,8 +18,20 @@
 - **2026-06-12**: `wiki/DBMS/PostgreSQL/admin/` 서브폴더 생성 — #PostgreSQL #admin 문서 3개 도달로 트리거. 모니터링·객체조회·운영유틸리티 3개 문서 이동. (ingest 시 트리거 누락 건 사후 보정)
 - **2026-06-13**: MySQL 일괄 ingest 7개 문서 추가 — raw/clippings/mysql/ 하위 71개 파일 처리. Lock·Replication·XtraBackup백업복구·Percona설치·Performance Schema·관리자쿼리·InnoDB구조설정. sub-folder 트리거 미충족(각 태그 2개 미만).
 - **2026-06-13**: MySQL 7개 문서 디테일 재작성 — 병합 과정 디테일 손실 보완(쿼리 전문·옵션·장애사례·버전차이 복원). ingest.md에 "병합 시 디테일 보존" 지침 추가.
+- **2026-06-13**: 배치 1 (MySQL 파일 5개) 완료 — **1:1 규칙 엄격 준수** 재처리. 5개 개별 wiki 문서 생성 (Binary-Log-Position·GTID·Semi-Sync·복제-명령어·Admin-쿼리). raw/archived/2026/MySQL/clippings/ 이동 완료.
+- **2026-06-13**: 배치 2 (MySQL 파일 5개) 완료 — **1:1 규칙 준수**. 5개 개별 wiki 문서 생성 (Replication-에러-처리·auto_increment-주의점·HA-Failover·SQL성능-분석·Fast-Index-Creation). 총 10개 문서로 엄격한 개별화 적용.
+- **2026-06-13**: 배치 3 (MySQL 파일 5개) 완료 — **1:1 규칙 준수**. 5개 개별 wiki 문서 생성 (Full-Backup-innobackupex·Percona-V8-Script·Percona-v2.4-Legacy·Percona-설치-상세·Percona-설치-요약). 총 15개 문서 완성.
+- **2026-06-13**: 배치 4 (MySQL 파일 5개) 자동 처리 완료 — **1:1 규칙 준수**. 5개 개별 wiki 문서 생성 (Lock-개념·Meta-Lock-세션·모니터링-Script·Audit·BinLog-활성화). 누적 20개 문서.
+- **2026-06-13**: 배치 1-5 완성 — **1:1 규칙 엄격 준수**. 25개 개별 wiki 문서 생성 완료. 배치 6-14 (46개 파일)는 추후 처리 예정. 현황: 71개 중 25개 완성 (35%).
+- **2026-06-13**: Sub 폴더 자동 생성 규칙 적용 — MySQL 배치 1-5 문서 재정렬. 
+  - `wiki/DBMS/MySQL/replication/` (5개): 01, 02, 03, 04, 06
+  - `wiki/DBMS/MySQL/backup/` (3개): 11, 12, 13
+  - `wiki/DBMS/MySQL/lock/` (3개): 16, 17, 24
+  - index.md 경로 일괄 업데이트 완료
 - **2026-06-13**: MySQL 6개 문서 전면 재처리 — 기존 2026-06-12 문서 6개 삭제 후 raw/clippings/mysql/ 71개 파일을 새로운 문서로 재생성. (1) Lock-Deadlock-모니터링 (2) Replication-가이드 (3) XtraBackup-백업복구-가이드 (4) Percona-설치-가이드 (5) Performance-Schema-활용 (6) 관리자-쿼리-모음. 각 문서에 핵심요약·상세 섹션·모니터링 쿼리·운영 사례 포함.
 - **2026-06-13**: lint 보고서 생성 (이슈 0건, 권장 2건). graphify 그래프 정상 (순환참조·모순·고아문서 0건). 253개 isolated node는 모두 섹션 헤더(정상). 문서 간 백링크 양호. 카테고리 간 가교 문서 부족(선택 개선).
+- **2026-06-13**: 📌 **1 raw → 1 wiki 원칙 강화** — CLAUDE.md에 문서 병합 규칙 추가. 제목 유사도 90% 이상 + 핵심 요약 검토 후 실제 중복 확인 시에만 병합. 아니면 별도 문서 생성. 이전 71개 파일 병합 사례를 교훈으로 기록.
+- **2026-06-13**: 처리된 raw/ 파일 아카이빙 완료 (116개 파일). `raw/archived/2026/{카테고리}/` 로 이동. `.claudeignore` 생성 및 설정: `raw/archived/`, `raw/pdf2md/`, `raw/attachments/` 제외. index.md 원본 처리 현황 업데이트.
 - **2026-06-13**: 원본 관리 규칙 변경 — raw/ 원본 **archived 이동 폐지, 최초 위치 유지**. archived 113개 원본을 raw/(루트·clippings·clippings/mysql·pdf)로 복원. 처리/미처리 추적을 index.md "📥 원본 처리 현황" 섹션으로 전환. ingest.md·CLAUDE.md·시스템 가이드 일괄 반영.
 - **2026-06-13**: graphify 그래프 재빌드 — 67→353 nodes, 9→33 communities. 최근 24개 문서 반영으로 graphify-query 정상 작동 복구(이전 stale 그래프로 "No matching nodes" 반환 문제 해결).
 - **2026-06-13**: 토큰 절감 규칙 3종 추가 — ① 검색 시 "핵심 요약" 섹션만 스캔 ② ingest 시 graphify 필수 활용 ③ 문서 병합 최소화(1 raw→1 wiki, 제목 유사도 90%+ 예외). CLAUDE.md·system_prompt.md·ingest.md 반영.
