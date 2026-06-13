@@ -390,6 +390,6 @@ WHERE NAME IN (
 
 ## 11. 연관 개념
 
-- [[2026-06-12_(MySQL-Performance-Schema-활용)]]
+- [[2026-06-13_(MySQL-Performance-Schema-활용)]]
 - [[2026-06-12_(MySQL-Replication-가이드)]]
 - [[2026-06-02_(MySQL-데이터이관-Shell-스크립트)]]

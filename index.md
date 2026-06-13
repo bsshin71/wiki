@@ -73,7 +73,7 @@
 - [[2026-06-13_(MySQL-Replication-가이드)]] : Binary Log Position / GTID 기반 복제 설정, Slave 추가(XtraBackup), Semi-Sync, 상황별 조치 — 13개 소스 통합 `#MySQL #replication #GTID` `DBMS/MySQL/replication/`
 - [[2026-06-13_(MySQL-XtraBackup-백업복구-가이드)]] : Full/증분/시점 복구, innodb_force_recovery 긴급 장애 복구 — 14개 소스 통합 `#MySQL #backup #XtraBackup` `DBMS/MySQL/backup/`
 - [[2026-06-13_(MySQL-Percona-설치-가이드)]] : RHEL/Rocky에 Percona Server RPM 설치, 운영용 my.cnf 전체 예시 — 8개 소스 통합 `#MySQL #Percona #install` `DBMS/MySQL/installation/`
-- [[2026-06-13_(MySQL-Performance-Schema-활용)]] : sys 스키마 활용 SQL 성능 분석·인덱스 분석·메모리 분석·InnoDB 튜닝 — 8개 소스 통합 `#MySQL #performance_schema #성능분석` `DBMS/쿼리튜닝/`
+- [[2026-06-13_(MySQL-Performance-Schema-활용)]] : PS 활성화·초기화, 접속/세션 모니터링, digest SQL분석, sys뷰, 인덱스·테이블 I/O, 프로파일링(stage 추적), 메모리분석, InnoDB튜닝, 오버헤드 — 구버전(2026-06-12) 통합 `#MySQL #performance_schema #sys #성능분석` `DBMS/쿼리튜닝/`
 - [[2026-06-13-01_(MySQL-Binary-Log-Position-복제)]] : Master Binary Log 파일/위치 기반 복제. 초기 데이터 동기화(mysqldump/cold backup), Slave 설정, 검증. `#MySQL #replication` `DBMS/MySQL/replication/`
 - [[2026-06-13-02_(MySQL-GTID-기반-복제)]] : GTID(Global Transaction ID)로 유일한 트랜잭션 식별. MASTER_AUTO_POSITION으로 자동 위치 결정, 중복 실행 방지, mysql.gtid_executed 테이블. `#MySQL #GTID #replication` `DBMS/MySQL/replication/`
 - [[2026-06-13-03_(MySQL-Semi-Sync-복제)]] : Slave Relay Log 기록 ACK 후 Master 응답. 안전성 > 성능, Semi-Sync 플러그인 설정, timeout 관리, 모니터링. `#MySQL #replication` `DBMS/MySQL/replication/`

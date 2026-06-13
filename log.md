@@ -44,6 +44,8 @@
   - (2) system_prompt.md: "반드시 매 ingest마다 실행" 강조
   - (3) **.claude/commands/ingest.md**: **7단계 Sub 폴더 자동 생성 규칙 추가** (원래 1-6단계만 있었음)
   - 결과: ingest 후 sub 폴더 규칙 적용이 이제 **필수 3-파일 통합 지침**으로 강제됨
+- **2026-06-13**: MySQL-Performance-Schema 중복 문서 병합 — `2026-06-12_(MySQL-Performance-Schema-활용)`(구버전, index.md 미등록 고아) + `2026-06-13_` 버전을 하나로 통합. 원인: 2026-06-13 전면 재처리 시 구버전 삭제 누락 + ingest에 중복 제목 검사 단계 부재. 통합본은 2026-06-13 버전을 베이스로 구버전의 프로파일링·sys상세뷰·메모리분석 흡수, Index/Fast-Index/digest심화는 백링크 처리. 구버전 삭제, Lock-Deadlock 문서 백링크 수정.
+- **2026-06-13**: ingest 중복 방지 단계 신설 — **2.5단계 "중복/유사 제목 검사" 추가**. 신규 문서 작성 전 index.md에서 제목 90%+ 유사 문서 존재 여부 확인 의무화. `--confirm` 재처리 시 기존 동일 제목 문서 자동 감지·교체. ingest.md·CLAUDE.md·system_prompt.md 반영.
 - **2026-06-13**: ingest·lint 프로세스 통합 리팩토링 — **CLAUDE.md 대폭 축약 & 스킬 파일 단일 소스화**.
   - **ingest 리팩토링**: CLAUDE.md 130줄 → 40줄 축약
     - `.claude/commands/ingest.md`: Single Source of Truth (1-7단계)
