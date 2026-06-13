@@ -69,16 +69,16 @@
 - [[2026-06-02_(PostgreSQL-pgvector-설치)]] : pgvector 확장 설치·벡터 테이블 생성·유사도 검색·IVFFlat/HNSW 인덱스 `#PostgreSQL #AI-RAG #pgvector` `DBMS/PostgreSQL/`
 - [[2026-06-02_(PostgreSQL-MinTool4PG-DBA-도구)]] : Windows Terminal 환경용 PostgreSQL DBA 스크립트 도구 설치 및 pgpass.conf 설정 `#PostgreSQL #DBA #Windows` `DBMS/PostgreSQL/`
 - [[2026-06-02_(MySQL-데이터이관-Shell-스크립트)]] : mysqldump 기반 테이블 단위 INSERT/REPLACE 이관 Shell 스크립트 `#MySQL #migration` `DBMS/MySQL/`
-- [[2026-06-13_(MySQL-Lock-Deadlock-모니터링)]] : Lock 개념·종류·모니터링 쿼리·장애 사례(Update 지연이 Lock이 아닌 경우) — 8개 소스 통합 `#MySQL #lock #모니터링` `DBMS/MySQL/`
-- [[2026-06-13_(MySQL-Replication-가이드)]] : Binary Log Position / GTID 기반 복제 설정, Slave 추가(XtraBackup), Semi-Sync, 상황별 조치 — 13개 소스 통합 `#MySQL #replication #GTID` `DBMS/MySQL/`
-- [[2026-06-13_(MySQL-XtraBackup-백업복구-가이드)]] : Full/증분/시점 복구, innodb_force_recovery 긴급 장애 복구 — 14개 소스 통합 `#MySQL #backup #XtraBackup` `DBMS/MySQL/`
-- [[2026-06-13_(MySQL-Percona-설치-가이드)]] : RHEL/Rocky에 Percona Server RPM 설치, 운영용 my.cnf 전체 예시 — 8개 소스 통합 `#MySQL #Percona #install` `DBMS/MySQL/`
+- [[2026-06-13_(MySQL-Lock-Deadlock-모니터링)]] : Lock 개념·종류·모니터링 쿼리·장애 사례(Update 지연이 Lock이 아닌 경우) — 8개 소스 통합 `#MySQL #lock #모니터링` `DBMS/MySQL/lock/`
+- [[2026-06-13_(MySQL-Replication-가이드)]] : Binary Log Position / GTID 기반 복제 설정, Slave 추가(XtraBackup), Semi-Sync, 상황별 조치 — 13개 소스 통합 `#MySQL #replication #GTID` `DBMS/MySQL/replication/`
+- [[2026-06-13_(MySQL-XtraBackup-백업복구-가이드)]] : Full/증분/시점 복구, innodb_force_recovery 긴급 장애 복구 — 14개 소스 통합 `#MySQL #backup #XtraBackup` `DBMS/MySQL/backup/`
+- [[2026-06-13_(MySQL-Percona-설치-가이드)]] : RHEL/Rocky에 Percona Server RPM 설치, 운영용 my.cnf 전체 예시 — 8개 소스 통합 `#MySQL #Percona #install` `DBMS/MySQL/installation/`
 - [[2026-06-13_(MySQL-Performance-Schema-활용)]] : sys 스키마 활용 SQL 성능 분석·인덱스 분석·메모리 분석·InnoDB 튜닝 — 8개 소스 통합 `#MySQL #performance_schema #성능분석` `DBMS/쿼리튜닝/`
 - [[2026-06-13-01_(MySQL-Binary-Log-Position-복제)]] : Master Binary Log 파일/위치 기반 복제. 초기 데이터 동기화(mysqldump/cold backup), Slave 설정, 검증. `#MySQL #replication` `DBMS/MySQL/replication/`
 - [[2026-06-13-02_(MySQL-GTID-기반-복제)]] : GTID(Global Transaction ID)로 유일한 트랜잭션 식별. MASTER_AUTO_POSITION으로 자동 위치 결정, 중복 실행 방지, mysql.gtid_executed 테이블. `#MySQL #GTID #replication` `DBMS/MySQL/replication/`
 - [[2026-06-13-03_(MySQL-Semi-Sync-복제)]] : Slave Relay Log 기록 ACK 후 Master 응답. 안전성 > 성능, Semi-Sync 플러그인 설정, timeout 관리, 모니터링. `#MySQL #replication` `DBMS/MySQL/replication/`
 - [[2026-06-13-04_(MySQL-복제-명령어-모음)]] : Master/Slave 상태 확인, CHANGE MASTER TO, SHOW SLAVE STATUS, 에러 처리, GTID 관리 명령어 정리. `#MySQL #replication` `DBMS/MySQL/replication/`
-- [[2026-06-13-05_(MySQL-Admin-쿼리-기초)]] : 버전 확인, DB/테이블/파티션 용량, 인덱스 분석(미사용), Primary Key 조회, Slow Query 로그, 연결 관리. `#MySQL #admin #모니터링` `DBMS/MySQL/`
+- [[2026-06-13-05_(MySQL-Admin-쿼리-기초)]] : 버전 확인, DB/테이블/파티션 용량, 인덱스 분석(미사용), Primary Key 조회, Slow Query 로그, 연결 관리. `#MySQL #admin #모니터링` `DBMS/MySQL/admin/`
 - [[2026-06-13-06_(MySQL-Replication-에러-처리-및-복구)]] : Slave 복제 중단 에러 원인 분석. GTID 건너뛰기(SET gtid_next), Position 기반 skip_counter, 전체 복제 재구성. 예방 체크리스트. `#MySQL #replication` `DBMS/MySQL/replication/`
 - [[2026-06-13-07_(MySQL-auto_increment-주의점-및-최적화)]] : PK/UNIQUE 속성 필수, 증가값 감소 불가, InnoDB 재시작 시 MAX+1로 초기화. Rollback 후 채번값 건너뜀. Replication 불동기화. Failover 위험. `#MySQL #schema` `DBMS/MySQL/`
 - [[2026-06-13-08_(MySQL-HA-Failover-테스트-전략)]] : ProxySQL·MHA·PMM 아키텍처. Client/Server 테스트. Simple Insert & 주문 부하 테스트. Master 강제 종료 & failover 검증. 체크리스트. `#MySQL #HA` `DBMS/MySQL/`
@@ -87,13 +87,17 @@
 - [[2026-06-13-11_(MySQL-Full-Backup-복구-innobackupex)]] : innobackupex full backup/recovery. LSN 추적, InnoDB+non-InnoDB. --apply-log prepare, --copy-back restore. 에러 처리(권한, socket). `#MySQL #Backup` `DBMS/MySQL/backup/`
 - [[2026-06-13-12_(MySQL-Percona-V8-Full-Backup-스크립트)]] : V8 사용자(BACKUP_ADMIN 권한), --compress-threads(v8.0.35+), 병렬백업, 스트림 전송, Archive Binlog 백업. Crontab 설정. `#MySQL #Backup` `DBMS/MySQL/backup/`
 - [[2026-06-13-13_(MySQL-Percona-v2.4-Legacy-Backup-스크립트)]] : innobackupex 레거시, RELOAD 권한만 필요, --apply-log, MySQL 5.6/5.7 호환. MyISAM --no-lock 주의. `#MySQL #Backup` `DBMS/MySQL/backup/`
-- [[2026-06-13-14_(MySQL-Percona-설치-상세-가이드)]] : 사용자/그룹 생성, 디렉터리 설정. compat-openssl10 의존성 해결. RPM 설치 순서. 커널 파라미터(ulimit). 초기 보안 설정. `#MySQL #Installation` `DBMS/MySQL/`
-- [[2026-06-13-15_(MySQL-Percona-설치-요약-체크리스트)]] : 설치 요약 (5단계, ~25분). 사전 준비 → 의존성 → RPM 설치 → 초기화 → 검증. 빠른 참고용 체크리스트. `#MySQL #Installation` `DBMS/MySQL/`
+- [[2026-06-13-14_(MySQL-Percona-설치-상세-가이드)]] : 사용자/그룹 생성, 디렉터리 설정. compat-openssl10 의존성 해결. RPM 설치 순서. 커널 파라미터(ulimit). 초기 보안 설정. `#MySQL #Installation` `DBMS/MySQL/installation/`
+- [[2026-06-13-15_(MySQL-Percona-설치-요약-체크리스트)]] : 설치 요약 (5단계, ~25분). 사전 준비 → 의존성 → RPM 설치 → 초기화 → 검증. 빠른 참고용 체크리스트. `#MySQL #Installation` `DBMS/MySQL/installation/`
 - [[2026-06-13-16_(MySQL-Lock-개념-및-분석)]] : Record/Gap/Next-Key/Table/MDL 락. LOCK_MODE 해석(IX/IS/S/X/MDL_EXCLUSIVE). data_locks 조회. 원인 쿼리 판단. `#MySQL #Lock` `DBMS/MySQL/lock/`
 - [[2026-06-13-17_(MySQL-Meta-Lock-세션-조회)]] : MDL 홀더 찾기. DDL 블로킹 원인 분석. ALTER/DROP 실패 시 세션 종료. `#MySQL #Lock` `DBMS/MySQL/lock/`
 - [[2026-06-13-18_(MySQL-모니터링-Shell-스크립트)]] : mymon 스크립트. Threads, Questions, Slow_queries, Replication lag. 실시간 모니터링. `#MySQL #Monitoring` `DBMS/MySQL/`
 - [[2026-06-13-19_(MySQL-Audit-로깅)]] : Percona Audit Plugin. 쿼리/로그인 기록(XML/JSON). GDPR/SOX 규정 준수. `#MySQL #Audit` `DBMS/MySQL/`
 - [[2026-06-13-20_(MySQL-Binary-Log-활성화-비활성화)]] : sql_log_bin=OFF (SESSION). Master/Slave 주의. 선택적 로깅(binlog_do_db/binlog_ignore_db). `#MySQL #BinLog` `DBMS/MySQL/`
+- [[2026-06-13-21_(MySQL-Character-Set-설정)]] : Character Set 불일치는 데이터 손상·복제 오류 초래. Server/Database/Table/Column 레벨 개별 설정 가능. utf8mb4 권장(emoji·다국어). `#MySQL #Schema` `DBMS/MySQL/`
+- [[2026-06-13-22_(MySQL-미커밋-세션-조회)]] : COMMIT하지 않은 트랜잭션은 락 유지하여 쿼리 블로킹. INFORMATION_SCHEMA.INNODB_TRX로 조회·강제 종료. `#MySQL #Transaction` `DBMS/MySQL/admin/`
+- [[2026-06-13-23_(MySQL-Deadlock-분석-및-해결)]] : Deadlock은 다중 트랜잭션이 서로 락 대기. InnoDB 자동 감지·롤백. SHOW ENGINE INNODB STATUS로 분석. `#MySQL #Lock` `DBMS/MySQL/lock/`
+- [[2026-06-13-25_(MySQL-Index-최적화)]] : 적절한 인덱스로 쿼리 성능 10배 향상. 선택도(Cardinality)·조건·정렬 순서로 복합 인덱스 설계. `#MySQL #Indexing` `DBMS/MySQL/`
 - [[2026-06-02_(Linux-고정-IP-설정)]] : CentOS/RHEL ifcfg 파일로 고정 IP 설정, nmcli 강제 적용, DHCP 덮어쓰기 방지 `#Linux #네트워크 #IP고정` `시스템/`
 
 ---

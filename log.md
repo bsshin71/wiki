@@ -36,3 +36,23 @@
 - **2026-06-13**: graphify 그래프 재빌드 — 67→353 nodes, 9→33 communities. 최근 24개 문서 반영으로 graphify-query 정상 작동 복구(이전 stale 그래프로 "No matching nodes" 반환 문제 해결).
 - **2026-06-13**: 토큰 절감 규칙 3종 추가 — ① 검색 시 "핵심 요약" 섹션만 스캔 ② ingest 시 graphify 필수 활용 ③ 문서 병합 최소화(1 raw→1 wiki, 제목 유사도 90%+ 예외). CLAUDE.md·system_prompt.md·ingest.md 반영.
 - **2026-06-13**: 최상위 카테고리 3개 신설 — `wiki/kafka/`, `wiki/elasticsearch/`, `wiki/airflow/`. 분류 우선순위 10단계로 확장.
+- **2026-06-13**: MySQL 문서 Sub 폴더 재분류 완료 — 루트의 미분류 문서들을 적절한 sub 폴더로 이동. (1) admin/: 3개 (관리자-쿼리-모음, 05, 22) (2) backup/: 4개 (11, 12, 13, XtraBackup-가이드) (3) installation/: 3개 (Percona-설치-가이드, 14, 15) (4) lock/: 5개 (16, 17, 24, Deadlock-모니터링, 23) (5) replication/: 6개 (01, 02, 03, 04, 06, Replication-가이드). index.md 경로 일괄 업데이트 완료. 파일명 오류 수정 (25번).
+  - 이동 대상: 2026-06-13_(MySQL-Lock-Deadlock-모니터링), 2026-06-13_(MySQL-Replication-가이드), 2026-06-13_(MySQL-XtraBackup-백업복구-가이드), 2026-06-13_(MySQL-Percona-설치-가이드), 2026-06-13_(MySQL-관리자-쿼리-모음), 2026-06-13-05, 2026-06-13-14, 2026-06-13-15, 2026-06-13-22, 2026-06-13-23
+  - index.md 추가등록: 21, 22, 23, 25번 문서
+- **2026-06-13**: ingest 명령어 sub 폴더 규칙 강화 — **3개 파일 통합 업데이트**. 
+  - (1) CLAUDE.md: 실행 흐름 7단계 명확화, Step 1-4 구체화, 필수 체크리스트 추가
+  - (2) system_prompt.md: "반드시 매 ingest마다 실행" 강조
+  - (3) **.claude/commands/ingest.md**: **7단계 Sub 폴더 자동 생성 규칙 추가** (원래 1-6단계만 있었음)
+  - 결과: ingest 후 sub 폴더 규칙 적용이 이제 **필수 3-파일 통합 지침**으로 강제됨
+- **2026-06-13**: ingest·lint 프로세스 통합 리팩토링 — **CLAUDE.md 대폭 축약 & 스킬 파일 단일 소스화**.
+  - **ingest 리팩토링**: CLAUDE.md 130줄 → 40줄 축약
+    - `.claude/commands/ingest.md`: Single Source of Truth (1-7단계)
+    - system_prompt.md: ingest.md 필수 참조 명시
+  - **lint 리팩토링**: CLAUDE.md 140줄 → 10줄 축약 + graphify 규칙 통합
+    - `.claude/commands/lint.md`: Single Source of Truth (1-5단계)
+    - system_prompt.md: lint.md 필수 참조 명시
+    - graphify 활용 규칙 CLAUDE.md에서 축약 (15줄 → 13줄)
+  - 결과: 
+    - CLAUDE.md: 간결한 개요만 (역할 명확화)
+    - ingest.md, lint.md: 실행 지침 통합 (중복 제거)
+    - 유지보수 용이, AI 참고 파일 명확
