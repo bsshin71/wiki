@@ -98,6 +98,11 @@
 - [[2026-06-13-22_(MySQL-미커밋-세션-조회)]] : COMMIT하지 않은 트랜잭션은 락 유지하여 쿼리 블로킹. INFORMATION_SCHEMA.INNODB_TRX로 조회·강제 종료. `#MySQL #Transaction` `DBMS/MySQL/admin/`
 - [[2026-06-13-23_(MySQL-Deadlock-분석-및-해결)]] : Deadlock은 다중 트랜잭션이 서로 락 대기. InnoDB 자동 감지·롤백. SHOW ENGINE INNODB STATUS로 분석. `#MySQL #Lock` `DBMS/MySQL/lock/`
 - [[2026-06-13-25_(MySQL-Index-최적화)]] : 적절한 인덱스로 쿼리 성능 10배 향상. 선택도(Cardinality)·조건·정렬 순서로 복합 인덱스 설계. `#MySQL #Indexing` `DBMS/MySQL/`
+- [[2026-06-13-26_(MySQL-Redo-Log-및-로그버퍼-설정)]] : innodb_flush_log_at_trx_commit(0/1/2) 내구성·성능 조절, log_file_size·log_buffer_size 파라미터. `#MySQL #InnoDB #redo_log` `DBMS/MySQL/innodb/`
+- [[2026-06-13-27_(MySQL-Redo-Log-아카이빙)]] : MySQL 8.0 redo log 아카이빙. archive_dirs 설정, archive_start/stop, chmod 700 필수, 시작 세션 유지 필요. `#MySQL #InnoDB #redo_log` `DBMS/MySQL/innodb/`
+- [[2026-06-13-28_(MySQL-Redo-Log-활성화-비활성화)]] : 대량 적재 시 redo log 비활성화로 시간 단축(8.0+). 비정상 종료 시 innodb_force_recovery=6 필요. `#MySQL #InnoDB #redo_log` `DBMS/MySQL/innodb/`
+- [[2026-06-13-29_(MySQL-Undo-로그-관리)]] : undo 사용량·파일 조회, 테이블스페이스 추가/삭제(INACTIVE), 자동/수동 truncate 공간 회수. `#MySQL #InnoDB #undo` `DBMS/MySQL/innodb/`
+- [[2026-06-13-30_(MySQL-Change-Buffer)]] : 세컨더리 인덱스 변경 버퍼링. innodb_change_buffering(all/inserts/...) 설정, ibuf0ibuf 메모리 조회. `#MySQL #InnoDB #change_buffer` `DBMS/MySQL/innodb/`
 - [[2026-06-02_(Linux-고정-IP-설정)]] : CentOS/RHEL ifcfg 파일로 고정 IP 설정, nmcli 강제 적용, DHCP 덮어쓰기 방지 `#Linux #네트워크 #IP고정` `시스템/`
 
 ---
@@ -178,3 +183,12 @@
 
 **→ [[2026-06-13_(MySQL-관리자-쿼리-모음)]]**
 - `2026-06-12-mysql user 생성 - BigDataTeam.md`, `2026-06-12-mysql 권한 관리 - BigDataTeam.md`, `2026-06-12-sys schema 접근 권한 부여 - BigDataTeam.md`, `2026-06-12-MySQL Audit - BigDataTeam.md`, `2026-06-12-특정유저의 접속차단 - BigDataTeam.md`, `2026-06-12-03. MySQL admin 쿼리 - BigDataTeam.md`, `2026-06-12-기 실행된 쿼리내역 확인 - BigDataTeam.md`, `2026-06-12-오래 수행중인 TX 찾기 - BigDataTeam.md`, `2026-06-12-에러를 일으키는 client 프로세스 찾기 - BigDataTeam.md`, `2026-06-12-쿼리 로깅하기 - BigDataTeam.md`
+
+### raw/archived/2026/MySQL/clippings/ (1:1 개별 재처리 — 배치 6~)
+
+**배치 6 (InnoDB 구조, 2026-06-13)** — 5개
+- `2026-06-12-리두로그 및 로그버퍼 - BigDataTeam.md` → [[2026-06-13-26_(MySQL-Redo-Log-및-로그버퍼-설정)]]
+- `2026-06-12-리두로그 아카이빙 - BigDataTeam.md` → [[2026-06-13-27_(MySQL-Redo-Log-아카이빙)]]
+- `2026-06-12-리두로그 활성화 및 비활성화 - BigDataTeam.md` → [[2026-06-13-28_(MySQL-Redo-Log-활성화-비활성화)]]
+- `2026-06-12-mysql undo 관리 - BigDataTeam.md` → [[2026-06-13-29_(MySQL-Undo-로그-관리)]]
+- `2026-06-12-체인지버퍼 - BigDataTeam.md` → [[2026-06-13-30_(MySQL-Change-Buffer)]]
