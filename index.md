@@ -82,7 +82,7 @@
 - [[2026-06-13-05_(MySQL-Admin-쿼리-기초)]] : 버전 확인, DB/테이블/파티션 용량, 인덱스 분석(미사용), Primary Key 조회, Slow Query 로그, 연결 관리. `#MySQL #admin #모니터링` `DBMS/MySQL/admin/`
 - [[2026-06-13-06_(MySQL-Replication-에러-처리-및-복구)]] : Slave 복제 중단 에러 원인 분석. GTID 건너뛰기(SET gtid_next), Position 기반 skip_counter, 전체 복제 재구성. 예방 체크리스트. `#MySQL #replication` `DBMS/MySQL/replication/`
 - [[2026-06-13-07_(MySQL-auto_increment-주의점-및-최적화)]] : PK/UNIQUE 속성 필수, 증가값 감소 불가, InnoDB 재시작 시 MAX+1로 초기화. Rollback 후 채번값 건너뜀. Replication 불동기화. Failover 위험. `#MySQL #schema` `DBMS/MySQL/`
-- [[2026-06-13-08_(MySQL-HA-Failover-테스트-전략)]] : ProxySQL·MHA·PMM 아키텍처. Client/Server 테스트. Simple Insert & 주문 부하 테스트. Master 강제 종료 & failover 검증. 체크리스트. `#MySQL #HA` `DBMS/MySQL/`
+- [[2026-06-13-08_(MySQL-HA-Failover-테스트-전략)]] : ProxySQL·MHA·PMM 아키텍처. Client/Server 테스트. Simple Insert & 주문 부하 테스트. Master 강제 종료 & failover 검증. 체크리스트. `#MySQL #HA` `DBMS/MySQL/ha/`
 - [[2026-06-13-09_(MySQL-SQL성능-분석-Performance-Schema)]] : events_statements_summary_by_digest 활용. 느린 쿼리·정렬 최적화·인덱스 분석·에러 감지. sort_buffer_size, tmp_table_size 튜닝. `#MySQL #Performance` `DBMS/MySQL/`
 - [[2026-06-13-10_(MySQL-Fast-Index-Creation-최적화)]] : expand_fast_index_creation 활성화. sql_log_bin=OFF. 버퍼풀 크기 조정. 550M 테이블: 5시간 → 4시간 (20% 개선). Secondary Index 30% 개선. `#MySQL #Indexing` `DBMS/MySQL/`
 - [[2026-06-13-11_(MySQL-Full-Backup-복구-innobackupex)]] : innobackupex full backup/recovery. LSN 추적, InnoDB+non-InnoDB. --apply-log prepare, --copy-back restore. 에러 처리(권한, socket). `#MySQL #Backup` `DBMS/MySQL/backup/`
@@ -139,6 +139,11 @@
 - [[2026-06-13-62_(MySQL-데이터-Load-Bulk-Insert-성능-개선)]] : 대량 적재 8기법 — binlog/autocommit/제약 OFF, multi-value INSERT, PK순서, LOAD DATA(20배), flush 설정. `#MySQL #bulk_insert #성능` `DBMS/쿼리튜닝/`
 - [[2026-06-13-63_(MySQL-성능-최적화-커널-파라미터)]] : Linux sysctl(file-max·swappiness·dirty·net backlog·aio) + limits.conf nofile MySQL 서버 튜닝. `#MySQL #install #kernel` `DBMS/MySQL/installation/`
 - [[2026-06-13-64_(MySQL-증분-백업-자동화-스크립트-LSN기반)]] : lastbackupinfo로 last_lsn 전달하는 증분백업 스크립트, 복구 순서(마지막만 롤백), PXB-2406 버그(8.0.23-16+). `#MySQL #backup #script` `DBMS/MySQL/backup/`
+- [[2026-06-14-65_(MySQL-MHA-설치-RedHat8)]] : MHA Node/Manager Perl 설치, RHEL8 모듈 보충, MySQL 8.0 버전'-' 파싱 코드수정, SSH·VIP·계정 설정. `#MySQL #HA #MHA` `DBMS/MySQL/ha/`
+- [[2026-06-14-66_(MySQL-MHA-구축-post-install-설정)]] : config·VIP 전환 스크립트·8.0 syntax 코드수정·purge relay log·failover 알람, manager.sh 편의 스크립트. `#MySQL #HA #MHA` `DBMS/MySQL/ha/`
+- [[2026-06-14-67_(MySQL-ProxySQL-MHA-연동-VIP-Failover)]] : MHA failover 시 master_ip_failover로 VIP 이동, app reconnect로 무손실, GTID failover 단계별 로그. `#MySQL #HA #ProxySQL` `DBMS/MySQL/ha/`
+- [[2026-06-14-68_(MySQL-Orchestrator-설치-및-특징)]] : 토폴로지 시각화·GUI 리팩토링·자동복구, repository DB, 웹 UI(3000), MHA 대비 data loss 가능성. `#MySQL #HA #orchestrator` `DBMS/MySQL/ha/`
+- [[2026-06-14-69_(MySQL-Orchestrator-Failover)]] : Recover 필터 설정, Master 장애 자동 승격, 양방향 복제 기반 원복(복잡→수동권장). `#MySQL #HA #orchestrator` `DBMS/MySQL/ha/`
 - [[2026-06-02_(Linux-고정-IP-설정)]] : CentOS/RHEL ifcfg 파일로 고정 IP 설정, nmcli 강제 적용, DHCP 덮어쓰기 방지 `#Linux #네트워크 #IP고정` `시스템/`
 
 ---
@@ -275,6 +280,15 @@
 - `2026-06-12-Update 문 지연2 - BigDataTeam.md` → [[2026-06-13-57_(MySQL-Update-지연-사례-레코드락-commit-지연)]]
 - `2026-06-12-멀티 소스 복제 구성 - BigDataTeam.md` → [[2026-06-13-58_(MySQL-멀티-소스-복제-구성)]]
 - `2026-06-12-slave 의 gtid_executed 를 master와 일치시키기 - BigDataTeam.md` → [[2026-06-13-59_(MySQL-Slave-gtid_executed-Master와-일치시키기)]]
+
+### raw/mysql/ (MySQL HA, 2026-06-14 신규 · 5건)
+
+**배치 1 (MySQL HA: MHA·ProxySQL·Orchestrator)** — 5개
+- `2026-06-14-MHA 설치 on Redhat8 - BigDataTeam.md` → [[2026-06-14-65_(MySQL-MHA-설치-RedHat8)]]
+- `2026-06-14-MHA 구축(post install 위주) - BigDataTeam.md` → [[2026-06-14-66_(MySQL-MHA-구축-post-install-설정)]]
+- `2026-06-14-ProxySQL과 MHA연동 - BigDataTeam.md` → [[2026-06-14-67_(MySQL-ProxySQL-MHA-연동-VIP-Failover)]]
+- `2026-06-14-Orchestrator 설치 및 특징 - BigDataTeam.md` → [[2026-06-14-68_(MySQL-Orchestrator-설치-및-특징)]]
+- `2026-06-14-Orchestrator Failover - BigDataTeam.md` → [[2026-06-14-69_(MySQL-Orchestrator-Failover)]]
 
 **배치 14 (Schema·성능·커널·백업스크립트 + Performance 중복정리, 2026-06-13)** — 8개 (5 신규, 3 기존 Performance 문서 커버)
 - `2026-06-12-mysql partition 관리 - BigDataTeam.md` → [[2026-06-13-60_(MySQL-파티션-관리)]]
