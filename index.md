@@ -183,6 +183,11 @@
 - [[2026-06-14-ES19_(Elasticsearch-ElastAlert-알림-도구)]] : ES 쿼리 기반 알림(이메일/Slack/Webhook), YAML 룰, Docker(jertel/elastalert2) 구동. `#elasticsearch #elastalert #monitoring` `elasticsearch/`
 - [[2026-06-14-ES20_(Elasticsearch-테스트용-Index-구성-실습-Rollover-Ngram)]] : Date Math seed→ISM rollover policy→template(rollover_alias+ngram) 통합 실습. `#elasticsearch #ISM #실습` `elasticsearch/`
 - [[2026-06-14-ES21_(Elasticsearch-운영-오류-Primary-Shard-not-active)]] : unavailable_shards_exception 진단(allocation/explain), 미할당 원인·조치 + 학습 PDF. `#elasticsearch #오류` `elasticsearch/`
+- [[2026-06-14-PG01_(PostgreSQL-소스-컴파일-설치)]] : configure/make 소스설치, RHEL 8.4 PG15+ make 무한루프(8.9 업그레이드), initdb·systemd·pg_hba·방화벽. `#PostgreSQL #install #소스설치` `DBMS/PostgreSQL/`
+- [[2026-06-14-PG02_(PostgreSQL-아키텍처-및-특징)]] : Relation/Tuple 용어, Limits, MySQL vs PG 비교, MVCC dead tuple·Vacuum 필요. `#PostgreSQL #구조 #MVCC` `DBMS/PostgreSQL/`
+- [[2026-06-14-PG03_(PostgreSQL-구동-및-종료-pg_ctl)]] : pg_ctl start/stop/restart/reload, shutdown mode(smart/fast/immediate). `#PostgreSQL #pg_ctl` `DBMS/PostgreSQL/`
+- [[2026-06-14-PG04_(PostgreSQL-데이터베이스-관리)]] : CREATE/ALTER/DROP DATABASE, template0/1, LC_COLLATE 한글정렬 이슈. `#PostgreSQL #database #admin` `DBMS/PostgreSQL/`
+- [[2026-06-14-PG05_(PostgreSQL-사용자-Role-관리)]] : Role=user/group 통합, 속성(SUPERUSER 등), REASSIGN/DROP OWNED 객체 이양. `#PostgreSQL #role #admin` `DBMS/PostgreSQL/`
 - [[2026-06-02_(Linux-고정-IP-설정)]] : CentOS/RHEL ifcfg 파일로 고정 IP 설정, nmcli 강제 적용, DHCP 덮어쓰기 방지 `#Linux #네트워크 #IP고정` `시스템/`
 
 ---
@@ -398,6 +403,15 @@
 - `2026-06-14-Elasticsearch 참고자료 - BigDataTeam.md` → [[2026-06-14-ES21_(Elasticsearch-운영-오류-Primary-Shard-not-active)]] (학습 PDF 자료 섹션 병합)
 
 > ✅ **raw/elasticsearch/ 24개 전량 처리 완료** (배치 6~10, ES01~ES21 21개 문서 / 병합 3건).
+
+### raw/postgresql/ (PostgreSQL, 2026-06-13~14 신규 · 31건)
+
+**배치 11 (PG 설치·기초)** — 5개
+- `2026-06-13-Posgresql  소스설치(new) - BigDataTeam.md` → [[2026-06-14-PG01_(PostgreSQL-소스-컴파일-설치)]]
+- `2026-06-13-Postgres 아키텍쳐 및 특징 - BigDataTeam.md` → [[2026-06-14-PG02_(PostgreSQL-아키텍처-및-특징)]]
+- `2026-06-13-postgresql 구동 및 종료 - BigDataTeam.md` → [[2026-06-14-PG03_(PostgreSQL-구동-및-종료-pg_ctl)]]
+- `2026-06-13-postgresql 데이터베이스 관리 - BigDataTeam.md` → [[2026-06-14-PG04_(PostgreSQL-데이터베이스-관리)]]
+- `2026-06-13-postgresql 사용자 관리 - BigDataTeam.md` → [[2026-06-14-PG05_(PostgreSQL-사용자-Role-관리)]]
 
 **배치 14 (Schema·성능·커널·백업스크립트 + Performance 중복정리, 2026-06-13)** — 8개 (5 신규, 3 기존 Performance 문서 커버)
 - `2026-06-12-mysql partition 관리 - BigDataTeam.md` → [[2026-06-13-60_(MySQL-파티션-관리)]]
