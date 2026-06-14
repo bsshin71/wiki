@@ -69,3 +69,5 @@ curl -X DELETE http://$HOST:$PORT/connectors/$NAME
 - [[2026-06-14-K01_(Kafka-Connect-설치-confluent-hub)]]
 - [[2026-06-14-K03_(Kafka-Connect-Property-분산모드-설정)]]
 - [[2026-06-13-02_(MySQL-GTID-기반-복제)]]
+- [[2026-06-13-01_(MySQL-Binary-Log-Position-복제)]] — Debezium이 캡처하는 MySQL binlog
+- [[2026-06-13-20_(MySQL-Binary-Log-활성화-비활성화)]] — CDC 전제: binlog 활성화

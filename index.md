@@ -27,8 +27,12 @@
 | 프로그래밍 | 프로그래밍/ | 프로그래밍 언어·도구 관련 문서 |
 | DBMS | DBMS/ | DB 공통 |
 | PostgreSQL | DBMS/PostgreSQL/ | PostgreSQL 관련 문서 |
-| PostgreSQL/admin | DBMS/PostgreSQL/admin/ | PostgreSQL 운영·모니터링·관리 쿼리 문서 |
-| MySQL | DBMS/MySQL/ | MySQL 관련 문서 |
+| PostgreSQL/install | DBMS/PostgreSQL/install/ | 설치·아키텍처·구동 |
+| PostgreSQL/admin | DBMS/PostgreSQL/admin/ | DB·role·schema·권한·객체 관리 |
+| PostgreSQL/monitoring | DBMS/PostgreSQL/monitoring/ | 모니터링·세션·문제진단 |
+| PostgreSQL/replication | DBMS/PostgreSQL/replication/ | 복제·Patroni HA |
+| PostgreSQL/maintenance | DBMS/PostgreSQL/maintenance/ | 파티션·pg_cron·vacuum·백업 |
+| MySQL | DBMS/MySQL/ | MySQL 관련 문서 (replication/backup/lock/admin/installation/innodb/ha) |
 | Oracle | DBMS/Oracle/ | Oracle 관련 문서 |
 | Oracle/install | DBMS/Oracle/install/ | Oracle 설치·구성 관련 문서 |
 | Altibase | DBMS/Altibase/ | Altibase 관련 문서 |
@@ -36,8 +40,14 @@
 | DW | DBMS/DW/ | 데이터웨어하우스 / 분석 관련 문서 |
 | (공통) | DBMS/(공통)/ | DB 공통 개념 문서 |
 | ML(AI) | ML(AI)/ | ML·AI·딥러닝 관련 문서 (독립 최상위) |
-| kafka | kafka/ | Apache Kafka 관련 문서 (독립 최상위) |
-| elasticsearch | elasticsearch/ | Elasticsearch 관련 문서 (독립 최상위) |
+| kafka | kafka/ | Apache Kafka (connect/core/tools) |
+| kafka/connect | kafka/connect/ | Kafka Connect·커넥터·CDC |
+| kafka/core | kafka/core/ | 브로커·zookeeper·설치·명령 |
+| kafka/tools | kafka/tools/ | kcat·UI·튜닝·모니터링 |
+| elasticsearch | elasticsearch/ | Elasticsearch (cluster/index/query) |
+| elasticsearch/cluster | elasticsearch/cluster/ | 클러스터·구조·연결·운영 |
+| elasticsearch/index | elasticsearch/index/ | 인덱스 관리·ISM·rollover |
+| elasticsearch/query | elasticsearch/query/ | 검색·쿼리·nested |
 | airflow | airflow/ | Apache Airflow 관련 문서 (독립 최상위) |
 | 기타(ETC) | 기타(ETC)/ | 위 카테고리에 속하지 않는 기타 문서 |
 
@@ -47,7 +57,7 @@
 
 > 형식: `[[문서명]]` : 설명 `#태그1 #태그2` `경로`
 
-- [[2026-06-08_(Advanced-SQL-PostgreSQL)]] : Oracle→PG 전환 관점의 Advanced SQL 실습 가이드 — INDEX·분석함수·ROLLUP·계층질의·이행 체크리스트 `#PostgreSQL #AdvancedSQL #Oracle이행` `DBMS/PostgreSQL/`
+- [[2026-06-08_(Advanced-SQL-PostgreSQL)]] : Oracle→PG 전환 관점의 Advanced SQL 실습 가이드 — INDEX·분석함수·ROLLUP·계층질의·이행 체크리스트 `#PostgreSQL #AdvancedSQL #Oracle이행` `DBMS/쿼리튜닝/`
 - [[2026-06-05_(Oracle-유저-생성하기)]] : Oracle 19c 사용자 계정 생성 4단계 절차 및 ORA-65096 에러 대처 `#Oracle #install` `DBMS/Oracle/install/`
 - [[2026-06-05_(Oracle-19c-Rocky-Linux-설치-가이드)]] : Rocky Linux 9.7에서 Oracle 19c 설치 시 GCC 11+ 충돌 해결 마스터 가이드 `#Oracle #install` `DBMS/Oracle/install/`
 - [[2026-06-05_(Oracle-리스너-등록)]] : 동적 등록(자동)과 정적 등록(listener.ora 수동) 비교 및 사용 시나리오 `#Oracle #install` `DBMS/Oracle/install/`
@@ -60,12 +70,12 @@
 - [[2026-06-02_(Oracle-모니터링-관리-쿼리-모음)]] : ASH·v$sql·Lock·Dictionary table 조회 쿼리 `#Oracle #admin #모니터링` `DBMS/Oracle/`
 - [[2026-06-02_(Oracle-쿼리튜닝-트러블슈팅)]] : Snapshot too old 원인·해결, SELECT 절 사용자 함수 병목 튜닝 4가지 방법 `#Oracle #쿼리튜닝 #tibero` `DBMS/쿼리튜닝/`
 - [[2026-06-02_(Oracle-spool-데이터-Export)]] : SQL*Plus spool을 이용한 테이블 데이터 Export 스크립트 `#Oracle #export #spool` `DBMS/Oracle/`
-- [[2026-06-02_(PostgreSQL-RPM-설치-가이드)]] : RHEL/Rocky Linux에서 공식 RPM으로 PG16·PG18 설치 절차 및 데이터 경로 변경 `#PostgreSQL #install` `DBMS/PostgreSQL/`
+- [[2026-06-02_(PostgreSQL-RPM-설치-가이드)]] : RHEL/Rocky Linux에서 공식 RPM으로 PG16·PG18 설치 절차 및 데이터 경로 변경 `#PostgreSQL #install` `DBMS/PostgreSQL/install/`
 - [[2026-06-02_(PostgreSQL-모니터링-쿼리-모음)]] : pg_stat_statements·pg_stat_activity·Block 관계·Cache Hit 비율 조회 `#PostgreSQL #admin #모니터링` `DBMS/PostgreSQL/admin/`
 - [[2026-06-02_(PostgreSQL-객체-용량-조회-쿼리-모음)]] : DB 용량·Tablespace·Index·파티션·제약조건 조회 쿼리 모음 `#PostgreSQL #admin` `DBMS/PostgreSQL/admin/`
 - [[2026-06-02_(PostgreSQL-운영-유틸리티-모음)]] : psql 명령어·파라미터 조회/변경·Auto Vacuum·테스트 데이터 생성 `#PostgreSQL #admin #psql` `DBMS/PostgreSQL/admin/`
 - [[2026-06-02_(PostgreSQL-EXPLAIN-실행계획-가이드)]] : EXPLAIN 옵션 비교표·실행계획 노드·BUFFERS 해석·pg_hint_plan 힌트 `#PostgreSQL #쿼리튜닝 #EXPLAIN` `DBMS/쿼리튜닝/`
-- [[2026-06-02_(PostgreSQL-pgBackRest-백업-가이드)]] : Stanza 생성→전체 백업→증분 백업→crontab 자동화, Tablespace 주의사항 `#PostgreSQL #backup` `DBMS/PostgreSQL/`
+- [[2026-06-02_(PostgreSQL-pgBackRest-백업-가이드)]] : Stanza 생성→전체 백업→증분 백업→crontab 자동화, Tablespace 주의사항 `#PostgreSQL #backup` `DBMS/PostgreSQL/maintenance/`
 - [[2026-06-02_(PostgreSQL-pgvector-설치)]] : pgvector 확장 설치·벡터 테이블 생성·유사도 검색·IVFFlat/HNSW 인덱스 `#PostgreSQL #AI-RAG #pgvector` `DBMS/PostgreSQL/`
 - [[2026-06-02_(PostgreSQL-MinTool4PG-DBA-도구)]] : Windows Terminal 환경용 PostgreSQL DBA 스크립트 도구 설치 및 pgpass.conf 설정 `#PostgreSQL #DBA #Windows` `DBMS/PostgreSQL/`
 - [[2026-06-02_(MySQL-데이터이관-Shell-스크립트)]] : mysqldump 기반 테이블 단위 INSERT/REPLACE 이관 Shell 스크립트 `#MySQL #migration` `DBMS/MySQL/`
@@ -144,63 +154,75 @@
 - [[2026-06-14-67_(MySQL-ProxySQL-MHA-연동-VIP-Failover)]] : MHA failover 시 master_ip_failover로 VIP 이동, app reconnect로 무손실, GTID failover 단계별 로그. `#MySQL #HA #ProxySQL` `DBMS/MySQL/ha/`
 - [[2026-06-14-68_(MySQL-Orchestrator-설치-및-특징)]] : 토폴로지 시각화·GUI 리팩토링·자동복구, repository DB, 웹 UI(3000), MHA 대비 data loss 가능성. `#MySQL #HA #orchestrator` `DBMS/MySQL/ha/`
 - [[2026-06-14-69_(MySQL-Orchestrator-Failover)]] : Recover 필터 설정, Master 장애 자동 승격, 양방향 복제 기반 원복(복잡→수동권장). `#MySQL #HA #orchestrator` `DBMS/MySQL/ha/`
-- [[2026-06-14-K01_(Kafka-Connect-설치-confluent-hub)]] : confluent-hub install로 커넥터 설치, worker 설정 plugin.path 자동 추가. `#kafka #connect` `kafka/`
-- [[2026-06-14-K02_(Kafka-Connect-설정-Debezium-CDC)]] : Debezium MySQL source/sink 커넥터 REST 등록, unwrap·RegexRouter, sink timestamp custom converter. `#kafka #connect #debezium` `kafka/`
-- [[2026-06-14-K03_(Kafka-Connect-Property-분산모드-설정)]] : connect-distributed.properties(bootstrap·group·내부토픽·plugin.path), NOT_ENOUGH_REPLICAS 해결. `#kafka #connect #config` `kafka/`
-- [[2026-06-14-K04_(Kafka-Connector-인증서-truststore-등록)]] : JVM cacerts/별도 truststore.jks에 keytool 인증서 등록, Connect 재시작. `#kafka #connect #SSL` `kafka/`
-- [[2026-06-14-K05_(Kafka-Connect-Sink-Connector-시작-offset-제어)]] : kafka-consumer-groups로 connect-<커넥터> offset --to-latest reset, LAG 조회. `#kafka #connect #offset` `kafka/`
-- [[2026-06-14-K06_(Kafka-설치-Apache-Confluent-Debezium-CDC)]] : Apache/Confluent 설치, JDK11, confluent-hub Debezium 설치, source/sink connector, CDC DB계정. `#kafka #install #debezium` `kafka/`
-- [[2026-06-14-K07_(Kafka-Broker-server.properties-설정)]] : broker.id·listeners·log.dirs·retention·내부토픽 replication factor(운영 3 권장). `#kafka #config #broker` `kafka/`
-- [[2026-06-14-K08_(Kafka-Zookeeper-properties-설정)]] : tickTime·initLimit·syncLimit·dataDir(/tmp 금지)·clientPort·server.N 앙상블. `#kafka #config #zookeeper` `kafka/`
-- [[2026-06-14-K09_(Kafka-기동-순서-모듈)]] : 기본(zookeeper→kafka→schema-registry)→추가(connect) 기동 순서. `#kafka #install #start` `kafka/`
-- [[2026-06-14-K10_(Kafka-Topic-Producer-Consumer-명령어)]] : kafka-topics 생성/조회/파티션(늘리기만), console producer/consumer, group id 분리. `#kafka #command` `kafka/`
-- [[2026-06-14-K11_(Kafka-Elasticsearch-Sink-Connector)]] : ElasticsearchSinkConnector, topics.regex 멀티토픽, TimestampRouter로 날짜별 인덱스, schema.ignore. `#kafka #connect #elasticsearch` `kafka/`
-- [[2026-06-14-K12_(Kafka-S3-Sink-Connector)]] : S3SinkConnector, TimeBasedPartitioner 날짜경로, path.format escape, RegexRouter null 이슈. `#kafka #connect #s3` `kafka/`
-- [[2026-06-14-K13_(Kafka-Camel-SFTP-Sink-Connector-SMT)]] : CamelSftpSinkConnector 일자별 디렉토리, 커스텀 SMT(AppendNewline·SetFileNameFromTask), 관리 스크립트. `#kafka #connect #sftp` `kafka/`
-- [[2026-06-14-K14_(Kafka-JSON-Schema-Registry-활용)]] : Schema Registry(8081) JSON Schema 등록/조회 REST, console producer/consumer, ES sink 연계. `#kafka #schema-registry` `kafka/`
-- [[2026-06-14-K15_(Kafka-성능-튜닝-커널-디스크-GC)]] : 커널(swappiness·net buffer)·디스크(xfs noatime)·G1 GC·모니터링 Metric. `#kafka #튜닝` `kafka/`
-- [[2026-06-14-K16_(Kafka-kcat-kafkacat-도구)]] : kcat 설치, -P/-C/-L/-Q 모드, -f 포맷 문자열, connect-offsets 조회, offset/timestamp 쿼리. `#kafka #utility #kcat` `kafka/`
-- [[2026-06-14-K17_(Kafka-UI-tool-provectus)]] : provectus kafka-ui docker compose(8989), BOOTSTRAPSERVERS 실제IP, docker 데몬 에러 대처. `#kafka #UI #docker` `kafka/`
-- [[2026-06-14-K18_(Kafka-모니터링-Prometheus-Alertmanager)]] : JMX/node exporter→Prometheus→Alertmanager, rules.yml(BrokerState·Controller·UncleanLeader). `#kafka #monitoring #prometheus` `kafka/`
-- [[2026-06-14-ES01_(Elasticsearch-시스템-구조-클러스터-노드-샤드)]] : Cluster/Node(cluster.name 바인딩), 마스터/데이터 노드, Primary/Replica 샤드, 젠 디스커버리(유니캐스트 권장). `#elasticsearch #cluster #shard` `elasticsearch/`
-- [[2026-06-14-ES02_(Elasticsearch-Cluster-구축-아키텍처)]] : 마스터3+데이터증설(split brain 방지), Hot-Warm(SSD/SATA) 아키텍처. `#elasticsearch #아키텍처 #hot-warm` `elasticsearch/`
-- [[2026-06-14-ES03_(Elasticsearch-Cluster-Shard-수-확인-및-증가)]] : 전체 shard=노드수×max_shards_per_node(1000), health·_cat/indices 확인, 상한 변경. `#elasticsearch #shard` `elasticsearch/`
-- [[2026-06-14-ES04_(Elasticsearch-API-Key-연결)]] : _security/api_key 발급(role_descriptors), Authorization ApiKey 헤더로 curl index/bulk/query. `#elasticsearch #apikey #security` `elasticsearch/`
-- [[2026-06-14-ES05_(Elasticsearch-Dev-Tools-DSL-조회)]] : Kibana Dev Tools로 _cluster/health, _cat/shards·indices·aliases 조회. `#elasticsearch #DSL #devtools` `elasticsearch/`
-- [[2026-06-14-ES06_(Elasticsearch-Index-관련-명령-매핑-Field삭제-Rollover)]] : 인덱스 리스트·매핑 조회, Field 삭제(reindex→update_by_query remove→재생성), rollover 강제. `#elasticsearch #index #reindex` `elasticsearch/`
-- [[2026-06-14-ES07_(Elasticsearch-Index-상태-진단-조회)]] : _cat/indices·shards, UNASSIGNED 원인 allocation/explain, ISM explain. `#elasticsearch #index #allocation` `elasticsearch/`
-- [[2026-06-14-ES08_(Elasticsearch-Index-Rename-reindex)]] : _reindex로 새 이름 복사 후 원본 삭제, 여러 인덱스 합치기(conflicts proceed). `#elasticsearch #rename #reindex` `elasticsearch/`
-- [[2026-06-14-ES09_(Elasticsearch-인덱스-구성-방안-ISM-Policy)]] : 날짜rotation vs 단일index+rollover 비교, ISM Policy(hot→cold 전이) hot-warm 라이프사이클. `#elasticsearch #ISM #policy` `elasticsearch/`
-- [[2026-06-14-ES10_(Elasticsearch-Hot-Warm-Delete-ISM-Rollover-구성)]] : hot(rollover)→warm(migration)→delete ISM policy + rollover index_template + seed index 구성 순서. `#elasticsearch #ISM #hot-warm` `elasticsearch/`
-- [[2026-06-14-ES11_(Elasticsearch-Rollover-Alias-개념)]] : alias가 write 인덱스 지칭, 조건(max_size/docs/age) 충족 시 새 인덱스 전환, alias로 일관 조회. `#elasticsearch #rollover #alias` `elasticsearch/`
-- [[2026-06-14-ES12_(Elasticsearch-ISM-Policy-Update-동시성제어)]] : seq_no·primary_term 조회 후 if_seq_no&if_primary_term으로 낙관적 update. `#elasticsearch #ISM #policy` `elasticsearch/`
-- [[2026-06-14-ES13_(Elasticsearch-Index명-날짜함수-Date-Math)]] : Date Math 인덱스명(now/d{yyyyMMdd}), URL percent-encoding, -000001 패턴+write alias. `#elasticsearch #date_math` `elasticsearch/`
-- [[2026-06-14-ES14_(Elasticsearch-ISM-History-비활성화-및-정리)]] : history.enabled=false로 ism history 생성 차단, 기존 history 자동삭제 policy. `#elasticsearch #ISM #history` `elasticsearch/`
-- [[2026-06-14-ES15_(Elasticsearch-Like-검색-Wildcard-Ngram)]] : inverted index·tokenizer 한계, wildcard 패턴매칭, ngram analyzer(min/max_gram) 부분검색. `#elasticsearch #FTS #ngram` `elasticsearch/`
-- [[2026-06-14-ES16_(Elasticsearch-Nested-Object-Array-조회)]] : object array는 nested 매핑 필수(pair 결합), nested 쿼리(path+query), bool+ngram 복합쿼리. `#elasticsearch #nested #조회` `elasticsearch/`
-- [[2026-06-14-ES17_(Elasticsearch-조건-filtering-update_by_query)]] : bool.filter+painless로 _update_by_query, shrink read_only 인덱스 writable 전환 후 update. `#elasticsearch #update_by_query` `elasticsearch/`
-- [[2026-06-14-ES18_(Elasticsearch-인덱스-생성-데이터-추가-조회-기본)]] : PUT index(settings/mappings), _doc 색인, dynamic mapping, _search·_mapping, text vs keyword. `#elasticsearch #기본` `elasticsearch/`
-- [[2026-06-14-ES19_(Elasticsearch-ElastAlert-알림-도구)]] : ES 쿼리 기반 알림(이메일/Slack/Webhook), YAML 룰, Docker(jertel/elastalert2) 구동. `#elasticsearch #elastalert #monitoring` `elasticsearch/`
-- [[2026-06-14-ES20_(Elasticsearch-테스트용-Index-구성-실습-Rollover-Ngram)]] : Date Math seed→ISM rollover policy→template(rollover_alias+ngram) 통합 실습. `#elasticsearch #ISM #실습` `elasticsearch/`
-- [[2026-06-14-ES21_(Elasticsearch-운영-오류-Primary-Shard-not-active)]] : unavailable_shards_exception 진단(allocation/explain), 미할당 원인·조치 + 학습 PDF. `#elasticsearch #오류` `elasticsearch/`
-- [[2026-06-14-PG01_(PostgreSQL-소스-컴파일-설치)]] : configure/make 소스설치, RHEL 8.4 PG15+ make 무한루프(8.9 업그레이드), initdb·systemd·pg_hba·방화벽. `#PostgreSQL #install #소스설치` `DBMS/PostgreSQL/`
-- [[2026-06-14-PG02_(PostgreSQL-아키텍처-및-특징)]] : Relation/Tuple 용어, Limits, MySQL vs PG 비교, MVCC dead tuple·Vacuum 필요. `#PostgreSQL #구조 #MVCC` `DBMS/PostgreSQL/`
-- [[2026-06-14-PG03_(PostgreSQL-구동-및-종료-pg_ctl)]] : pg_ctl start/stop/restart/reload, shutdown mode(smart/fast/immediate). `#PostgreSQL #pg_ctl` `DBMS/PostgreSQL/`
-- [[2026-06-14-PG04_(PostgreSQL-데이터베이스-관리)]] : CREATE/ALTER/DROP DATABASE, template0/1, LC_COLLATE 한글정렬 이슈. `#PostgreSQL #database #admin` `DBMS/PostgreSQL/`
-- [[2026-06-14-PG05_(PostgreSQL-사용자-Role-관리)]] : Role=user/group 통합, 속성(SUPERUSER 등), REASSIGN/DROP OWNED 객체 이양. `#PostgreSQL #role #admin` `DBMS/PostgreSQL/`
-- [[2026-06-14-PG06_(PostgreSQL-스키마-관리-search_path)]] : 스키마 개념·벤더 용어 비교, CREATE/ALTER/DROP SCHEMA, search_path 탐색·DB 기본스키마 변경. `#PostgreSQL #schema` `DBMS/PostgreSQL/`
-- [[2026-06-14-PG07_(PostgreSQL-권한-관리-GRANT)]] : privilege 종류·객체별 부여권한, GRANT/WITH GRANT·ADMIN OPTION, role 멤버십·SET ROLE. `#PostgreSQL #권한 #GRANT` `DBMS/PostgreSQL/`
-- [[2026-06-14-PG08_(PostgreSQL-세션-관리-연결제어)]] : pg_stat_activity 조회, CONNECTION LIMIT·max_connections, pg_cancel/terminate_backend. `#PostgreSQL #session` `DBMS/PostgreSQL/`
-- [[2026-06-14-PG09_(PostgreSQL-테이블스페이스-관리)]] : 물리저장 위치 추상화, CREATE(LOCATION $PGDATA 금지)·ALTER·DROP TABLESPACE. `#PostgreSQL #tablespace` `DBMS/PostgreSQL/`
-- [[2026-06-14-PG10_(PostgreSQL-시퀀스-관리)]] : CREATE SEQUENCE(CACHE·OWNED BY), nextval/setval 함수, ALTER/DROP, 의존성 조회. `#PostgreSQL #sequence` `DBMS/PostgreSQL/`
-- [[2026-06-14-PG11_(PostgreSQL-pg_partman-파티션-자동관리)]] : create_parent·retention 자동 파티션, run_maintenance, default 적체 복구, crontab 등록. `#PostgreSQL #partition #pg_partman` `DBMS/PostgreSQL/`
-- [[2026-06-14-PG12_(PostgreSQL-pg_cron-batch-스케줄링)]] : shared_preload_libraries·TCP(.pgpass), cron.schedule(_in_database), job 관리·이력 정리. `#PostgreSQL #pg_cron #batch` `DBMS/PostgreSQL/`
-- [[2026-06-14-PG13_(PostgreSQL-Online-파티션-테이블-재구성)]] : 신규 파티션테이블→사전이관→LOCK rename switch, 시퀀스 리셋·권한 재부여, DO 블록 일괄 생성. `#PostgreSQL #partition #online` `DBMS/PostgreSQL/`
+- [[2026-06-14-Kafka-개요-허브]] : 🗂️**허브** — kafka connect/core/tools 18개 문서 목차. `#kafka #허브` `kafka/`
+- [[2026-06-14-Elasticsearch-개요-허브]] : 🗂️**허브** — elasticsearch cluster/index/query 21개 문서 목차. `#elasticsearch #허브` `elasticsearch/`
+- [[2026-06-14-PostgreSQL-개요-허브]] : 🗂️**허브** — PostgreSQL install/admin/monitoring/replication/maintenance 문서 목차. `#PostgreSQL #허브` `DBMS/PostgreSQL/`
+- [[2026-06-14-K01_(Kafka-Connect-설치-confluent-hub)]] : confluent-hub install로 커넥터 설치, worker 설정 plugin.path 자동 추가. `#kafka #connect` `kafka/connect/`
+- [[2026-06-14-K02_(Kafka-Connect-설정-Debezium-CDC)]] : Debezium MySQL source/sink 커넥터 REST 등록, unwrap·RegexRouter, sink timestamp custom converter. `#kafka #connect #debezium` `kafka/connect/`
+- [[2026-06-14-K03_(Kafka-Connect-Property-분산모드-설정)]] : connect-distributed.properties(bootstrap·group·내부토픽·plugin.path), NOT_ENOUGH_REPLICAS 해결. `#kafka #connect #config` `kafka/connect/`
+- [[2026-06-14-K04_(Kafka-Connector-인증서-truststore-등록)]] : JVM cacerts/별도 truststore.jks에 keytool 인증서 등록, Connect 재시작. `#kafka #connect #SSL` `kafka/connect/`
+- [[2026-06-14-K05_(Kafka-Connect-Sink-Connector-시작-offset-제어)]] : kafka-consumer-groups로 connect-<커넥터> offset --to-latest reset, LAG 조회. `#kafka #connect #offset` `kafka/connect/`
+- [[2026-06-14-K06_(Kafka-설치-Apache-Confluent-Debezium-CDC)]] : Apache/Confluent 설치, JDK11, confluent-hub Debezium 설치, source/sink connector, CDC DB계정. `#kafka #install #debezium` `kafka/core/`
+- [[2026-06-14-K07_(Kafka-Broker-server.properties-설정)]] : broker.id·listeners·log.dirs·retention·내부토픽 replication factor(운영 3 권장). `#kafka #config #broker` `kafka/core/`
+- [[2026-06-14-K08_(Kafka-Zookeeper-properties-설정)]] : tickTime·initLimit·syncLimit·dataDir(/tmp 금지)·clientPort·server.N 앙상블. `#kafka #config #zookeeper` `kafka/core/`
+- [[2026-06-14-K09_(Kafka-기동-순서-모듈)]] : 기본(zookeeper→kafka→schema-registry)→추가(connect) 기동 순서. `#kafka #install #start` `kafka/core/`
+- [[2026-06-14-K10_(Kafka-Topic-Producer-Consumer-명령어)]] : kafka-topics 생성/조회/파티션(늘리기만), console producer/consumer, group id 분리. `#kafka #command` `kafka/core/`
+- [[2026-06-14-K11_(Kafka-Elasticsearch-Sink-Connector)]] : ElasticsearchSinkConnector, topics.regex 멀티토픽, TimestampRouter로 날짜별 인덱스, schema.ignore. `#kafka #connect #elasticsearch` `kafka/connect/`
+- [[2026-06-14-K12_(Kafka-S3-Sink-Connector)]] : S3SinkConnector, TimeBasedPartitioner 날짜경로, path.format escape, RegexRouter null 이슈. `#kafka #connect #s3` `kafka/connect/`
+- [[2026-06-14-K13_(Kafka-Camel-SFTP-Sink-Connector-SMT)]] : CamelSftpSinkConnector 일자별 디렉토리, 커스텀 SMT(AppendNewline·SetFileNameFromTask), 관리 스크립트. `#kafka #connect #sftp` `kafka/connect/`
+- [[2026-06-14-K14_(Kafka-JSON-Schema-Registry-활용)]] : Schema Registry(8081) JSON Schema 등록/조회 REST, console producer/consumer, ES sink 연계. `#kafka #schema-registry` `kafka/connect/`
+- [[2026-06-14-K15_(Kafka-성능-튜닝-커널-디스크-GC)]] : 커널(swappiness·net buffer)·디스크(xfs noatime)·G1 GC·모니터링 Metric. `#kafka #튜닝` `kafka/tools/`
+- [[2026-06-14-K16_(Kafka-kcat-kafkacat-도구)]] : kcat 설치, -P/-C/-L/-Q 모드, -f 포맷 문자열, connect-offsets 조회, offset/timestamp 쿼리. `#kafka #utility #kcat` `kafka/tools/`
+- [[2026-06-14-K17_(Kafka-UI-tool-provectus)]] : provectus kafka-ui docker compose(8989), BOOTSTRAPSERVERS 실제IP, docker 데몬 에러 대처. `#kafka #UI #docker` `kafka/tools/`
+- [[2026-06-14-K18_(Kafka-모니터링-Prometheus-Alertmanager)]] : JMX/node exporter→Prometheus→Alertmanager, rules.yml(BrokerState·Controller·UncleanLeader). `#kafka #monitoring #prometheus` `kafka/tools/`
+- [[2026-06-14-ES01_(Elasticsearch-시스템-구조-클러스터-노드-샤드)]] : Cluster/Node(cluster.name 바인딩), 마스터/데이터 노드, Primary/Replica 샤드, 젠 디스커버리(유니캐스트 권장). `#elasticsearch #cluster #shard` `elasticsearch/cluster/`
+- [[2026-06-14-ES02_(Elasticsearch-Cluster-구축-아키텍처)]] : 마스터3+데이터증설(split brain 방지), Hot-Warm(SSD/SATA) 아키텍처. `#elasticsearch #아키텍처 #hot-warm` `elasticsearch/cluster/`
+- [[2026-06-14-ES03_(Elasticsearch-Cluster-Shard-수-확인-및-증가)]] : 전체 shard=노드수×max_shards_per_node(1000), health·_cat/indices 확인, 상한 변경. `#elasticsearch #shard` `elasticsearch/cluster/`
+- [[2026-06-14-ES04_(Elasticsearch-API-Key-연결)]] : _security/api_key 발급(role_descriptors), Authorization ApiKey 헤더로 curl index/bulk/query. `#elasticsearch #apikey #security` `elasticsearch/cluster/`
+- [[2026-06-14-ES05_(Elasticsearch-Dev-Tools-DSL-조회)]] : Kibana Dev Tools로 _cluster/health, _cat/shards·indices·aliases 조회. `#elasticsearch #DSL #devtools` `elasticsearch/cluster/`
+- [[2026-06-14-ES06_(Elasticsearch-Index-관련-명령-매핑-Field삭제-Rollover)]] : 인덱스 리스트·매핑 조회, Field 삭제(reindex→update_by_query remove→재생성), rollover 강제. `#elasticsearch #index #reindex` `elasticsearch/index/`
+- [[2026-06-14-ES07_(Elasticsearch-Index-상태-진단-조회)]] : _cat/indices·shards, UNASSIGNED 원인 allocation/explain, ISM explain. `#elasticsearch #index #allocation` `elasticsearch/index/`
+- [[2026-06-14-ES08_(Elasticsearch-Index-Rename-reindex)]] : _reindex로 새 이름 복사 후 원본 삭제, 여러 인덱스 합치기(conflicts proceed). `#elasticsearch #rename #reindex` `elasticsearch/index/`
+- [[2026-06-14-ES09_(Elasticsearch-인덱스-구성-방안-ISM-Policy)]] : 날짜rotation vs 단일index+rollover 비교, ISM Policy(hot→cold 전이) hot-warm 라이프사이클. `#elasticsearch #ISM #policy` `elasticsearch/index/`
+- [[2026-06-14-ES10_(Elasticsearch-Hot-Warm-Delete-ISM-Rollover-구성)]] : hot(rollover)→warm(migration)→delete ISM policy + rollover index_template + seed index 구성 순서. `#elasticsearch #ISM #hot-warm` `elasticsearch/index/`
+- [[2026-06-14-ES11_(Elasticsearch-Rollover-Alias-개념)]] : alias가 write 인덱스 지칭, 조건(max_size/docs/age) 충족 시 새 인덱스 전환, alias로 일관 조회. `#elasticsearch #rollover #alias` `elasticsearch/index/`
+- [[2026-06-14-ES12_(Elasticsearch-ISM-Policy-Update-동시성제어)]] : seq_no·primary_term 조회 후 if_seq_no&if_primary_term으로 낙관적 update. `#elasticsearch #ISM #policy` `elasticsearch/index/`
+- [[2026-06-14-ES13_(Elasticsearch-Index명-날짜함수-Date-Math)]] : Date Math 인덱스명(now/d{yyyyMMdd}), URL percent-encoding, -000001 패턴+write alias. `#elasticsearch #date_math` `elasticsearch/index/`
+- [[2026-06-14-ES14_(Elasticsearch-ISM-History-비활성화-및-정리)]] : history.enabled=false로 ism history 생성 차단, 기존 history 자동삭제 policy. `#elasticsearch #ISM #history` `elasticsearch/index/`
+- [[2026-06-14-ES15_(Elasticsearch-Like-검색-Wildcard-Ngram)]] : inverted index·tokenizer 한계, wildcard 패턴매칭, ngram analyzer(min/max_gram) 부분검색. `#elasticsearch #FTS #ngram` `elasticsearch/query/`
+- [[2026-06-14-ES16_(Elasticsearch-Nested-Object-Array-조회)]] : object array는 nested 매핑 필수(pair 결합), nested 쿼리(path+query), bool+ngram 복합쿼리. `#elasticsearch #nested #조회` `elasticsearch/query/`
+- [[2026-06-14-ES17_(Elasticsearch-조건-filtering-update_by_query)]] : bool.filter+painless로 _update_by_query, shrink read_only 인덱스 writable 전환 후 update. `#elasticsearch #update_by_query` `elasticsearch/query/`
+- [[2026-06-14-ES18_(Elasticsearch-인덱스-생성-데이터-추가-조회-기본)]] : PUT index(settings/mappings), _doc 색인, dynamic mapping, _search·_mapping, text vs keyword. `#elasticsearch #기본` `elasticsearch/query/`
+- [[2026-06-14-ES19_(Elasticsearch-ElastAlert-알림-도구)]] : ES 쿼리 기반 알림(이메일/Slack/Webhook), YAML 룰, Docker(jertel/elastalert2) 구동. `#elasticsearch #elastalert #monitoring` `elasticsearch/cluster/`
+- [[2026-06-14-ES20_(Elasticsearch-테스트용-Index-구성-실습-Rollover-Ngram)]] : Date Math seed→ISM rollover policy→template(rollover_alias+ngram) 통합 실습. `#elasticsearch #ISM #실습` `elasticsearch/index/`
+- [[2026-06-14-ES21_(Elasticsearch-운영-오류-Primary-Shard-not-active)]] : unavailable_shards_exception 진단(allocation/explain), 미할당 원인·조치 + 학습 PDF. `#elasticsearch #오류` `elasticsearch/cluster/`
+- [[2026-06-14-PG01_(PostgreSQL-소스-컴파일-설치)]] : configure/make 소스설치, RHEL 8.4 PG15+ make 무한루프(8.9 업그레이드), initdb·systemd·pg_hba·방화벽. `#PostgreSQL #install #소스설치` `DBMS/PostgreSQL/install/`
+- [[2026-06-14-PG02_(PostgreSQL-아키텍처-및-특징)]] : Relation/Tuple 용어, Limits, MySQL vs PG 비교, MVCC dead tuple·Vacuum 필요. `#PostgreSQL #구조 #MVCC` `DBMS/PostgreSQL/install/`
+- [[2026-06-14-PG03_(PostgreSQL-구동-및-종료-pg_ctl)]] : pg_ctl start/stop/restart/reload, shutdown mode(smart/fast/immediate). `#PostgreSQL #pg_ctl` `DBMS/PostgreSQL/install/`
+- [[2026-06-14-PG04_(PostgreSQL-데이터베이스-관리)]] : CREATE/ALTER/DROP DATABASE, template0/1, LC_COLLATE 한글정렬 이슈. `#PostgreSQL #database #admin` `DBMS/PostgreSQL/admin/`
+- [[2026-06-14-PG05_(PostgreSQL-사용자-Role-관리)]] : Role=user/group 통합, 속성(SUPERUSER 등), REASSIGN/DROP OWNED 객체 이양. `#PostgreSQL #role #admin` `DBMS/PostgreSQL/admin/`
+- [[2026-06-14-PG06_(PostgreSQL-스키마-관리-search_path)]] : 스키마 개념·벤더 용어 비교, CREATE/ALTER/DROP SCHEMA, search_path 탐색·DB 기본스키마 변경. `#PostgreSQL #schema` `DBMS/PostgreSQL/admin/`
+- [[2026-06-14-PG07_(PostgreSQL-권한-관리-GRANT)]] : privilege 종류·객체별 부여권한, GRANT/WITH GRANT·ADMIN OPTION, role 멤버십·SET ROLE. `#PostgreSQL #권한 #GRANT` `DBMS/PostgreSQL/admin/`
+- [[2026-06-14-PG08_(PostgreSQL-세션-관리-연결제어)]] : pg_stat_activity 조회, CONNECTION LIMIT·max_connections, pg_cancel/terminate_backend. `#PostgreSQL #session` `DBMS/PostgreSQL/monitoring/`
+- [[2026-06-14-PG09_(PostgreSQL-테이블스페이스-관리)]] : 물리저장 위치 추상화, CREATE(LOCATION $PGDATA 금지)·ALTER·DROP TABLESPACE. `#PostgreSQL #tablespace` `DBMS/PostgreSQL/admin/`
+- [[2026-06-14-PG10_(PostgreSQL-시퀀스-관리)]] : CREATE SEQUENCE(CACHE·OWNED BY), nextval/setval 함수, ALTER/DROP, 의존성 조회. `#PostgreSQL #sequence` `DBMS/PostgreSQL/admin/`
+- [[2026-06-14-PG11_(PostgreSQL-pg_partman-파티션-자동관리)]] : create_parent·retention 자동 파티션, run_maintenance, default 적체 복구, crontab 등록. `#PostgreSQL #partition #pg_partman` `DBMS/PostgreSQL/maintenance/`
+- [[2026-06-14-PG12_(PostgreSQL-pg_cron-batch-스케줄링)]] : shared_preload_libraries·TCP(.pgpass), cron.schedule(_in_database), job 관리·이력 정리. `#PostgreSQL #pg_cron #batch` `DBMS/PostgreSQL/maintenance/`
+- [[2026-06-14-PG13_(PostgreSQL-Online-파티션-테이블-재구성)]] : 신규 파티션테이블→사전이관→LOCK rename switch, 시퀀스 리셋·권한 재부여, DO 블록 일괄 생성. `#PostgreSQL #partition #online` `DBMS/PostgreSQL/maintenance/`
 - [[2026-06-14-PG14_(PostgreSQL-pg_dump-테이블-DDL-추출)]] : pg_get_tabledef(15+)·pg_dump --schema-only(14-)로 테이블 DDL 추출. `#PostgreSQL #pg_dump #DDL` `DBMS/PostgreSQL/`
-- [[2026-06-14-PG15_(PostgreSQL-복제-방식-물리-논리)]] : 물리(log shipping/streaming)·논리(pub/sub) 복제 방식·특징·제약 비교. `#PostgreSQL #replication #WAL` `DBMS/PostgreSQL/`
-- [[2026-06-14-PG16_(PostgreSQL-복제-구성-실습-Streaming-Logical)]] : wal_level·pg_basebackup -R(standby.signal), publication/subscription, pg_stat_replication 확인. `#PostgreSQL #replication #실습` `DBMS/PostgreSQL/`
-- [[2026-06-14-PG17_(PostgreSQL-AutoVacuum-설정-및-튜닝)]] : autovacuum 변수·실행조건(threshold+scale_factor, freeze age), dead tuple 모니터링·cost/worker 튜닝. `#PostgreSQL #autovacuum #튜닝` `DBMS/PostgreSQL/`
-- [[2026-06-14-PG18_(PostgreSQL-Patroni-HA-구성)]] : Patroni+etcd+HAProxy HA 자동 failover, etcd/HAProxy 이중화 고려. `#PostgreSQL #HA #patroni` `DBMS/PostgreSQL/`
+- [[2026-06-14-PG15_(PostgreSQL-복제-방식-물리-논리)]] : 물리(log shipping/streaming)·논리(pub/sub) 복제 방식·특징·제약 비교. `#PostgreSQL #replication #WAL` `DBMS/PostgreSQL/replication/`
+- [[2026-06-14-PG16_(PostgreSQL-복제-구성-실습-Streaming-Logical)]] : wal_level·pg_basebackup -R(standby.signal), publication/subscription, pg_stat_replication 확인. `#PostgreSQL #replication #실습` `DBMS/PostgreSQL/replication/`
+- [[2026-06-14-PG17_(PostgreSQL-AutoVacuum-설정-및-튜닝)]] : autovacuum 변수·실행조건(threshold+scale_factor, freeze age), dead tuple 모니터링·cost/worker 튜닝. `#PostgreSQL #autovacuum #튜닝` `DBMS/PostgreSQL/maintenance/`
+- [[2026-06-14-PG18_(PostgreSQL-Patroni-HA-구성)]] : Patroni+etcd+HAProxy HA 자동 failover, etcd/HAProxy 이중화 고려. `#PostgreSQL #HA #patroni` `DBMS/PostgreSQL/replication/`
+- [[2026-06-14-PG19_(PostgreSQL-모니터링-시스템뷰-pg_stat_activity)]] : pg_stat_activity 컬럼·state·wait_event_type·backend_type 레퍼런스. `#PostgreSQL #모니터링` `DBMS/PostgreSQL/monitoring/`
+- [[2026-06-14-PG20_(PostgreSQL-상황별-모니터링-쿼리)]] : DB/테이블/인덱스 용량, active·5분초과 쿼리, pg_blocking_pids·pg_locks lock wait. `#PostgreSQL #모니터링` `DBMS/PostgreSQL/monitoring/`
+- [[2026-06-14-PG21_(PostgreSQL-문제상황-Index-Bloating-Deadlock)]] : 인덱스 블로팅 REINDEX+VACUUM ANALYZE, deadlock 자동감지·로그 분석·예방. `#PostgreSQL #장애해결` `DBMS/PostgreSQL/monitoring/`
+- [[2026-06-14-PG22_(PostgreSQL-too-many-connections-오류)]] : 연결한도 초과 원인(누수·풀러), CONNECTION LIMIT·max_connections 상향, PgBouncer. `#PostgreSQL #error #connection` `DBMS/PostgreSQL/monitoring/`
+- [[2026-06-14-PG23_(PostgreSQL-mysql_fdw-MySQL-연동)]] : mysql_fdw 외부테이블로 MySQL 조회·이관, SERVER/USER MAPPING, 변환 view. `#PostgreSQL #FDW #mysql_fdw` `DBMS/PostgreSQL/`
+- [[2026-06-14-PG24_(PostgreSQL-psql-메타명령어-레퍼런스)]] : \d·\dt·\du·\l·\c·\e·\set 등 psql 백슬래시 명령 레퍼런스 + 학습 PDF. `#PostgreSQL #psql` `DBMS/PostgreSQL/admin/`
+- [[2026-06-14-PG25_(PostgreSQL-Access-Privileges-표기-해석)]] : \l/\dp의 user=권한/부여자 표기, =c(PUBLIC), arwdDxt 권한문자 해석. `#PostgreSQL #권한` `DBMS/PostgreSQL/admin/`
+- [[2026-06-14-PG26_(PostgreSQL-Citus-분산-샤딩)]] : Citus scale-out hash 샤딩, Coordinator/Worker 구조, HA·백업 별도. `#PostgreSQL #citus #sharding` `DBMS/PostgreSQL/`
+- [[2026-06-14-PG27_(PostgreSQL-Vacuum-개념-MVCC-XID-Wraparound-Freeze)]] : MVCC dead tuple, XID 4바이트 wraparound, freeze·relfrozenxid·age로 wraparound 방지. `#PostgreSQL #vacuum #XID` `DBMS/PostgreSQL/maintenance/`
 - [[2026-06-02_(Linux-고정-IP-설정)]] : CentOS/RHEL ifcfg 파일로 고정 IP 설정, nmcli 강제 적용, DHCP 덮어쓰기 방지 `#Linux #네트워크 #IP고정` `시스템/`
 
 ---
@@ -446,6 +468,25 @@
 - `2026-06-14-AutoVacuum 튜닝 작업 - BigDataTeam.md` → [[2026-06-14-PG17_(PostgreSQL-AutoVacuum-설정-및-튜닝)]]
 - `2026-06-14-AutoVacuum 설정 변수 - BigDataTeam.md` → [[2026-06-14-PG17_(PostgreSQL-AutoVacuum-설정-및-튜닝)]] (설정변수 표 병합)
 - `2026-06-14-Patroni - BigDataTeam.md` → [[2026-06-14-PG18_(PostgreSQL-Patroni-HA-구성)]]
+
+**배치 15 (PG 모니터링·연동)** — 5개
+- `2026-06-14-모니터링 주요 시스템 뷰, 함수 - BigDataTeam.md` → [[2026-06-14-PG19_(PostgreSQL-모니터링-시스템뷰-pg_stat_activity)]]
+- `2026-06-14-상황별 모니터링 쿼리 - BigDataTeam.md` → [[2026-06-14-PG20_(PostgreSQL-상황별-모니터링-쿼리)]]
+- `2026-06-14-문제 상황 시나리오 - BigDataTeam.md` → [[2026-06-14-PG21_(PostgreSQL-문제상황-Index-Bloating-Deadlock)]]
+- `2026-06-14-pq too many connections for role  XXX - BigDataTeam.md` → [[2026-06-14-PG22_(PostgreSQL-too-many-connections-오류)]]
+- `2026-06-14-FDW 를 활용한 mysql 과의 연동 - BigDataTeam.md` → [[2026-06-14-PG23_(PostgreSQL-mysql_fdw-MySQL-연동)]]
+
+**배치 16 (PG psql·권한표기·Citus)** — 4개 (3 신규, 참고자료 병합)
+- `2026-06-13-psql 명령어 - BigDataTeam.md` → [[2026-06-14-PG24_(PostgreSQL-psql-메타명령어-레퍼런스)]]
+- `2026-06-14-postgresql 참고자료 - BigDataTeam.md` → [[2026-06-14-PG24_(PostgreSQL-psql-메타명령어-레퍼런스)]] (학습 PDF 자료 병합)
+- `2026-06-13-access privileges 해석 - BigDataTeam.md` → [[2026-06-14-PG25_(PostgreSQL-Access-Privileges-표기-해석)]]
+- `2026-06-14-Citus 를 활용한 DB 샤딩 - BigDataTeam.md` → [[2026-06-14-PG26_(PostgreSQL-Citus-분산-샤딩)]]
+
+**배치 17 (PG Vacuum 개념, 최종)** — 1개 (PDF 변환)
+- `postgresql-Vacuum-개념.pdf` → (변환) `raw/pdf2md/postgresql-Vacuum-개념.md` → [[2026-06-14-PG27_(PostgreSQL-Vacuum-개념-MVCC-XID-Wraparound-Freeze)]]
+
+> ✅ **raw/postgresql/ 31개 전량 처리 완료** (배치 11~17, PG01~PG27 27개 문서 / 병합·PDF변환 포함).
+> 🎉 **2026-06-13~14 신규 raw 80개 전량 처리 완료** (MySQL HA 5 · Kafka 20 · Elasticsearch 24 · PostgreSQL 31).
 
 **배치 14 (Schema·성능·커널·백업스크립트 + Performance 중복정리, 2026-06-13)** — 8개 (5 신규, 3 기존 Performance 문서 커버)
 - `2026-06-12-mysql partition 관리 - BigDataTeam.md` → [[2026-06-13-60_(MySQL-파티션-관리)]]

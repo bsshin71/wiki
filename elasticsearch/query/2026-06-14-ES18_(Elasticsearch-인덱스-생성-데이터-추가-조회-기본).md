@@ -60,3 +60,4 @@ GET /movie/_mapping
 - [[2026-06-14-ES15_(Elasticsearch-Like-검색-Wildcard-Ngram)]]
 - [[2026-06-14-ES16_(Elasticsearch-Nested-Object-Array-조회)]]
 - [[2026-06-14-ES05_(Elasticsearch-Dev-Tools-DSL-조회)]]
+- [[2026-06-14-K11_(Kafka-Elasticsearch-Sink-Connector)]] — Kafka→ES 적재 소스(파이프라인)

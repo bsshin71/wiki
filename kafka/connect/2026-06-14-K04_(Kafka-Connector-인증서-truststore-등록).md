@@ -58,3 +58,4 @@ keytool -delete -alias elasticsearch-ca \
 
 - [[2026-06-14-K03_(Kafka-Connect-Property-분산모드-설정)]]
 - [[2026-06-14-K02_(Kafka-Connect-설정-Debezium-CDC)]]
+- [[2026-06-14-ES04_(Elasticsearch-API-Key-연결)]] — ES 연동 시 인증서·API Key
