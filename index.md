@@ -188,6 +188,19 @@
 - [[2026-06-14-PG03_(PostgreSQL-구동-및-종료-pg_ctl)]] : pg_ctl start/stop/restart/reload, shutdown mode(smart/fast/immediate). `#PostgreSQL #pg_ctl` `DBMS/PostgreSQL/`
 - [[2026-06-14-PG04_(PostgreSQL-데이터베이스-관리)]] : CREATE/ALTER/DROP DATABASE, template0/1, LC_COLLATE 한글정렬 이슈. `#PostgreSQL #database #admin` `DBMS/PostgreSQL/`
 - [[2026-06-14-PG05_(PostgreSQL-사용자-Role-관리)]] : Role=user/group 통합, 속성(SUPERUSER 등), REASSIGN/DROP OWNED 객체 이양. `#PostgreSQL #role #admin` `DBMS/PostgreSQL/`
+- [[2026-06-14-PG06_(PostgreSQL-스키마-관리-search_path)]] : 스키마 개념·벤더 용어 비교, CREATE/ALTER/DROP SCHEMA, search_path 탐색·DB 기본스키마 변경. `#PostgreSQL #schema` `DBMS/PostgreSQL/`
+- [[2026-06-14-PG07_(PostgreSQL-권한-관리-GRANT)]] : privilege 종류·객체별 부여권한, GRANT/WITH GRANT·ADMIN OPTION, role 멤버십·SET ROLE. `#PostgreSQL #권한 #GRANT` `DBMS/PostgreSQL/`
+- [[2026-06-14-PG08_(PostgreSQL-세션-관리-연결제어)]] : pg_stat_activity 조회, CONNECTION LIMIT·max_connections, pg_cancel/terminate_backend. `#PostgreSQL #session` `DBMS/PostgreSQL/`
+- [[2026-06-14-PG09_(PostgreSQL-테이블스페이스-관리)]] : 물리저장 위치 추상화, CREATE(LOCATION $PGDATA 금지)·ALTER·DROP TABLESPACE. `#PostgreSQL #tablespace` `DBMS/PostgreSQL/`
+- [[2026-06-14-PG10_(PostgreSQL-시퀀스-관리)]] : CREATE SEQUENCE(CACHE·OWNED BY), nextval/setval 함수, ALTER/DROP, 의존성 조회. `#PostgreSQL #sequence` `DBMS/PostgreSQL/`
+- [[2026-06-14-PG11_(PostgreSQL-pg_partman-파티션-자동관리)]] : create_parent·retention 자동 파티션, run_maintenance, default 적체 복구, crontab 등록. `#PostgreSQL #partition #pg_partman` `DBMS/PostgreSQL/`
+- [[2026-06-14-PG12_(PostgreSQL-pg_cron-batch-스케줄링)]] : shared_preload_libraries·TCP(.pgpass), cron.schedule(_in_database), job 관리·이력 정리. `#PostgreSQL #pg_cron #batch` `DBMS/PostgreSQL/`
+- [[2026-06-14-PG13_(PostgreSQL-Online-파티션-테이블-재구성)]] : 신규 파티션테이블→사전이관→LOCK rename switch, 시퀀스 리셋·권한 재부여, DO 블록 일괄 생성. `#PostgreSQL #partition #online` `DBMS/PostgreSQL/`
+- [[2026-06-14-PG14_(PostgreSQL-pg_dump-테이블-DDL-추출)]] : pg_get_tabledef(15+)·pg_dump --schema-only(14-)로 테이블 DDL 추출. `#PostgreSQL #pg_dump #DDL` `DBMS/PostgreSQL/`
+- [[2026-06-14-PG15_(PostgreSQL-복제-방식-물리-논리)]] : 물리(log shipping/streaming)·논리(pub/sub) 복제 방식·특징·제약 비교. `#PostgreSQL #replication #WAL` `DBMS/PostgreSQL/`
+- [[2026-06-14-PG16_(PostgreSQL-복제-구성-실습-Streaming-Logical)]] : wal_level·pg_basebackup -R(standby.signal), publication/subscription, pg_stat_replication 확인. `#PostgreSQL #replication #실습` `DBMS/PostgreSQL/`
+- [[2026-06-14-PG17_(PostgreSQL-AutoVacuum-설정-및-튜닝)]] : autovacuum 변수·실행조건(threshold+scale_factor, freeze age), dead tuple 모니터링·cost/worker 튜닝. `#PostgreSQL #autovacuum #튜닝` `DBMS/PostgreSQL/`
+- [[2026-06-14-PG18_(PostgreSQL-Patroni-HA-구성)]] : Patroni+etcd+HAProxy HA 자동 failover, etcd/HAProxy 이중화 고려. `#PostgreSQL #HA #patroni` `DBMS/PostgreSQL/`
 - [[2026-06-02_(Linux-고정-IP-설정)]] : CentOS/RHEL ifcfg 파일로 고정 IP 설정, nmcli 강제 적용, DHCP 덮어쓰기 방지 `#Linux #네트워크 #IP고정` `시스템/`
 
 ---
@@ -412,6 +425,27 @@
 - `2026-06-13-postgresql 구동 및 종료 - BigDataTeam.md` → [[2026-06-14-PG03_(PostgreSQL-구동-및-종료-pg_ctl)]]
 - `2026-06-13-postgresql 데이터베이스 관리 - BigDataTeam.md` → [[2026-06-14-PG04_(PostgreSQL-데이터베이스-관리)]]
 - `2026-06-13-postgresql 사용자 관리 - BigDataTeam.md` → [[2026-06-14-PG05_(PostgreSQL-사용자-Role-관리)]]
+
+**배치 12 (PG 객체·권한 관리)** — 5개
+- `2026-06-13-postgresql 스키마 관리 - BigDataTeam.md` → [[2026-06-14-PG06_(PostgreSQL-스키마-관리-search_path)]]
+- `2026-06-13-postgresql 권한 관리 - BigDataTeam.md` → [[2026-06-14-PG07_(PostgreSQL-권한-관리-GRANT)]]
+- `2026-06-13-postgresql 세션 관리 - BigDataTeam.md` → [[2026-06-14-PG08_(PostgreSQL-세션-관리-연결제어)]]
+- `2026-06-13-postgresql 테이블스페이스 관리 - BigDataTeam.md` → [[2026-06-14-PG09_(PostgreSQL-테이블스페이스-관리)]]
+- `2026-06-13-postgresql 시퀀스 관리 - BigDataTeam.md` → [[2026-06-14-PG10_(PostgreSQL-시퀀스-관리)]]
+
+**배치 13 (PG 파티션·운영)** — 5개 (4 신규, pg_cron 2건 병합)
+- `2026-06-13-pg_partman 을 통한 파티션 자동생성,삭제 관리 - BigDataTeam.md` → [[2026-06-14-PG11_(PostgreSQL-pg_partman-파티션-자동관리)]]
+- `2026-06-13-pg_cron 을 통한 batch 작업 - BigDataTeam.md` → [[2026-06-14-PG12_(PostgreSQL-pg_cron-batch-스케줄링)]]
+- `2026-06-13-Postgres admin pg_cron - BigDataTeam.md` → [[2026-06-14-PG12_(PostgreSQL-pg_cron-batch-스케줄링)]] (동일내용 병합)
+- `2026-06-13-online 파티션 테이블 schema 변경 - BigDataTeam.md` → [[2026-06-14-PG13_(PostgreSQL-Online-파티션-테이블-재구성)]]
+- `2026-06-13-pg_dump 명령 - BigDataTeam.md` → [[2026-06-14-PG14_(PostgreSQL-pg_dump-테이블-DDL-추출)]]
+
+**배치 14 (PG 복제·Vacuum·HA)** — 5개 (4 신규, AutoVacuum 2건 병합)
+- `2026-06-14-Postgres replication - BigDataTeam.md` → [[2026-06-14-PG15_(PostgreSQL-복제-방식-물리-논리)]]
+- `2026-06-14-Replication 테스트 - BigDataTeam.md` → [[2026-06-14-PG16_(PostgreSQL-복제-구성-실습-Streaming-Logical)]]
+- `2026-06-14-AutoVacuum 튜닝 작업 - BigDataTeam.md` → [[2026-06-14-PG17_(PostgreSQL-AutoVacuum-설정-및-튜닝)]]
+- `2026-06-14-AutoVacuum 설정 변수 - BigDataTeam.md` → [[2026-06-14-PG17_(PostgreSQL-AutoVacuum-설정-및-튜닝)]] (설정변수 표 병합)
+- `2026-06-14-Patroni - BigDataTeam.md` → [[2026-06-14-PG18_(PostgreSQL-Patroni-HA-구성)]]
 
 **배치 14 (Schema·성능·커널·백업스크립트 + Performance 중복정리, 2026-06-13)** — 8개 (5 신규, 3 기존 Performance 문서 커버)
 - `2026-06-12-mysql partition 관리 - BigDataTeam.md` → [[2026-06-13-60_(MySQL-파티션-관리)]]
