@@ -1,115 +1,0 @@
-# 📝 위키 업데이트 로그
-
-- **2026-06-16**: `2026-06-16_(Oracle-주요-힌트-레퍼런스).md` 추가 — Oracle SQL 힌트 레퍼런스. 최적화 목표·액세스 방식·조인순서/방식·서브쿼리 팩토링·쿼리 변환·병렬 처리·기타 8개 분류 30+ 힌트 목록. OT01·OT04 연관 개념 백링크 추가.
-
-- **2026-06-05**: 위키 시스템 구축 완료 — CLAUDE.md, wiki/index.md, wiki/log.md, .schema/ 파일 및 전체 폴더 구조 초기화.
-- **2026-06-05**: `2026-06-05_(Oracle-유저-생성하기).md` 추가 — Oracle 19c 사용자 계정 생성 절차 (sysdba 접속, _ORACLE_SCRIPT 설정, CREATE USER, GRANT), ORA-65096 에러 대처법.
-- **2026-06-05**: `2026-06-05_(Oracle-19c-Rocky-Linux-설치-가이드).md` 추가 — Rocky Linux 9.7 환경에서 Oracle 19.3.0.0 설치 시 GCC 11+ / libpthread 충돌 해결 전 과정 (심볼릭 링크 패치, ins_rdbms.mk 수정, 수동 relink).
-- **2026-06-05**: `2026-06-05_(Oracle-리스너-등록).md` 추가 — Oracle 리스너 동적 등록(LREG 자동)과 정적 등록(listener.ora 수동) 차이 및 사용 시나리오 정리.
-- **2026-06-05**: `wiki/DBMS/Oracle/install/` 서브폴더 생성 — #Oracle #install 문서 3개→4개 도달로 트리거. 기존 문서 3개 이동 및 `2026-06-05_(Oracle-DBCA-NETCA-가이드).md` 신규 추가.
-- **2026-06-08**: `2026-06-08_(Advanced-SQL-PostgreSQL).md` 추가 — Oracle Advanced SQL 교육 과정 PostgreSQL 이식판. INDEX/IS NULL 차이, TOP-n, 조인·서브쿼리, ROLLUP·CUBE, 분석함수, 계층질의(WITH RECURSIVE), 정규식, Oracle→PG 이행 가이드 포함.
-- **2026-06-08**: `2026-06-08_(Advanced-SQL-PostgreSQL).md` 재처리 — `--confirm` 강제 재처리 테스트. PDF 재변환(421,419 chars) 및 wiki 문서 덮어쓰기 완료.
-- **2026-06-12**: `2026-06-05_(Claudian-Smart-Connections-MCP-설정가이드).md` 추가 — Obsidian+Claudian 환경 Smart Connections MCP 설정. nvm 심볼릭 링크 함정·Node v20 요구사항·mcp.json 직접 편집 방법 정리.
-- **2026-06-12**: `2026-06-05_(Claudian-GitHub-MCP-설정가이드).md` 추가 — Obsidian+Claudian 환경 GitHub MCP 설정. PAT 발급·npx-cli.js 절대경로·보안 주의사항(mcp.json git 제외) 정리.
-- **2026-06-12**: `2026-06-12_(LLMWiki-Graphify-통합-설정-로그).md` 추가 — graphify 도입 배경·설치·출력경로 문제 해결(robocopy 왕복)·wrapper BAT 3종·CLAUDE.md 변경사항·첫 /lint 결과 기록.
-- **2026-06-12**: `2026-06-12_(Obsidian-Git-플러그인-연동가이드).md` 추가 — wiki/ 폴더만 GitHub Private 레포에 선택 동기화. Custom base path 설정·PAT 발급·첫 푸시 절차·자동 백업 설정.
-- **2026-06-12**: `wiki/ML(AI)/` 최상위 카테고리 신설 — 기존 `wiki/DBMS/MLAI/` 를 DBMS 하위에서 독립 카테고리로 승격. CLAUDE.md·system_prompt.md·index.md 카테고리 규칙 일괄 변경.
-- **2026-06-12**: `wiki/기타(ETC)/` 신설 — 주요 카테고리 4개 체계 확립 (1.시스템 2.프로그래밍 3.DBMS 4.기타(ETC)). CLAUDE.md·system_prompt.md·index.md 일괄 반영.
-- **2026-06-12**: `2026-06-12_(LLMWiki-시스템-전체-가이드).md` 추가 (ML(AI)/) — 폴더 구조·ingest/lint/query 프로세스·pdf2md·graphify 구축 과정·Obsidian 플러그인 5종 설정 통합 가이드.
-- **2026-06-12**: 일괄 ingest 13개 문서 추가 — Oracle(모니터링·쿼리튜닝·spool), PostgreSQL(RPM설치·모니터링·객체조회·운영유틸·EXPLAIN·pgBackRest·pgvector·MinTool4PG), MySQL(데이터이관), 시스템(Linux 고정IP). 36개 raw 파일 → 13개 wiki 문서로 그룹화.
-- **2026-06-12**: `wiki/DBMS/PostgreSQL/admin/` 서브폴더 생성 — #PostgreSQL #admin 문서 3개 도달로 트리거. 모니터링·객체조회·운영유틸리티 3개 문서 이동. (ingest 시 트리거 누락 건 사후 보정)
-- **2026-06-13**: MySQL 일괄 ingest 7개 문서 추가 — raw/clippings/mysql/ 하위 71개 파일 처리. Lock·Replication·XtraBackup백업복구·Percona설치·Performance Schema·관리자쿼리·InnoDB구조설정. sub-folder 트리거 미충족(각 태그 2개 미만).
-- **2026-06-13**: MySQL 7개 문서 디테일 재작성 — 병합 과정 디테일 손실 보완(쿼리 전문·옵션·장애사례·버전차이 복원). ingest.md에 "병합 시 디테일 보존" 지침 추가.
-- **2026-06-13**: 배치 1 (MySQL 파일 5개) 완료 — **1:1 규칙 엄격 준수** 재처리. 5개 개별 wiki 문서 생성 (Binary-Log-Position·GTID·Semi-Sync·복제-명령어·Admin-쿼리). raw/archived/2026/MySQL/clippings/ 이동 완료.
-- **2026-06-13**: 배치 2 (MySQL 파일 5개) 완료 — **1:1 규칙 준수**. 5개 개별 wiki 문서 생성 (Replication-에러-처리·auto_increment-주의점·HA-Failover·SQL성능-분석·Fast-Index-Creation). 총 10개 문서로 엄격한 개별화 적용.
-- **2026-06-13**: 배치 3 (MySQL 파일 5개) 완료 — **1:1 규칙 준수**. 5개 개별 wiki 문서 생성 (Full-Backup-innobackupex·Percona-V8-Script·Percona-v2.4-Legacy·Percona-설치-상세·Percona-설치-요약). 총 15개 문서 완성.
-- **2026-06-13**: 배치 4 (MySQL 파일 5개) 자동 처리 완료 — **1:1 규칙 준수**. 5개 개별 wiki 문서 생성 (Lock-개념·Meta-Lock-세션·모니터링-Script·Audit·BinLog-활성화). 누적 20개 문서.
-- **2026-06-13**: 배치 1-5 완성 — **1:1 규칙 엄격 준수**. 25개 개별 wiki 문서 생성 완료. 배치 6-14 (46개 파일)는 추후 처리 예정. 현황: 71개 중 25개 완성 (35%).
-- **2026-06-13**: Sub 폴더 자동 생성 규칙 적용 — MySQL 배치 1-5 문서 재정렬. 
-  - `wiki/DBMS/MySQL/replication/` (5개): 01, 02, 03, 04, 06
-  - `wiki/DBMS/MySQL/backup/` (3개): 11, 12, 13
-  - `wiki/DBMS/MySQL/lock/` (3개): 16, 17, 24
-  - index.md 경로 일괄 업데이트 완료
-- **2026-06-13**: MySQL 6개 문서 전면 재처리 — 기존 2026-06-12 문서 6개 삭제 후 raw/clippings/mysql/ 71개 파일을 새로운 문서로 재생성. (1) Lock-Deadlock-모니터링 (2) Replication-가이드 (3) XtraBackup-백업복구-가이드 (4) Percona-설치-가이드 (5) Performance-Schema-활용 (6) 관리자-쿼리-모음. 각 문서에 핵심요약·상세 섹션·모니터링 쿼리·운영 사례 포함.
-- **2026-06-13**: lint 보고서 생성 (이슈 0건, 권장 2건). graphify 그래프 정상 (순환참조·모순·고아문서 0건). 253개 isolated node는 모두 섹션 헤더(정상). 문서 간 백링크 양호. 카테고리 간 가교 문서 부족(선택 개선).
-- **2026-06-13**: 📌 **1 raw → 1 wiki 원칙 강화** — CLAUDE.md에 문서 병합 규칙 추가. 제목 유사도 90% 이상 + 핵심 요약 검토 후 실제 중복 확인 시에만 병합. 아니면 별도 문서 생성. 이전 71개 파일 병합 사례를 교훈으로 기록.
-- **2026-06-13**: 처리된 raw/ 파일 아카이빙 완료 (116개 파일). `raw/archived/2026/{카테고리}/` 로 이동. `.claudeignore` 생성 및 설정: `raw/archived/`, `raw/pdf2md/`, `raw/attachments/` 제외. index.md 원본 처리 현황 업데이트.
-- **2026-06-13**: 원본 관리 규칙 변경 — raw/ 원본 **archived 이동 폐지, 최초 위치 유지**. archived 113개 원본을 raw/(루트·clippings·clippings/mysql·pdf)로 복원. 처리/미처리 추적을 index.md "📥 원본 처리 현황" 섹션으로 전환. ingest.md·CLAUDE.md·시스템 가이드 일괄 반영.
-- **2026-06-13**: graphify 그래프 재빌드 — 67→353 nodes, 9→33 communities. 최근 24개 문서 반영으로 graphify-query 정상 작동 복구(이전 stale 그래프로 "No matching nodes" 반환 문제 해결).
-- **2026-06-13**: 토큰 절감 규칙 3종 추가 — ① 검색 시 "핵심 요약" 섹션만 스캔 ② ingest 시 graphify 필수 활용 ③ 문서 병합 최소화(1 raw→1 wiki, 제목 유사도 90%+ 예외). CLAUDE.md·system_prompt.md·ingest.md 반영.
-- **2026-06-13**: 최상위 카테고리 3개 신설 — `wiki/kafka/`, `wiki/elasticsearch/`, `wiki/airflow/`. 분류 우선순위 10단계로 확장.
-- **2026-06-13**: MySQL 문서 Sub 폴더 재분류 완료 — 루트의 미분류 문서들을 적절한 sub 폴더로 이동. (1) admin/: 3개 (관리자-쿼리-모음, 05, 22) (2) backup/: 4개 (11, 12, 13, XtraBackup-가이드) (3) installation/: 3개 (Percona-설치-가이드, 14, 15) (4) lock/: 5개 (16, 17, 24, Deadlock-모니터링, 23) (5) replication/: 6개 (01, 02, 03, 04, 06, Replication-가이드). index.md 경로 일괄 업데이트 완료. 파일명 오류 수정 (25번).
-  - 이동 대상: 2026-06-13_(MySQL-Lock-Deadlock-모니터링), 2026-06-13_(MySQL-Replication-가이드), 2026-06-13_(MySQL-XtraBackup-백업복구-가이드), 2026-06-13_(MySQL-Percona-설치-가이드), 2026-06-13_(MySQL-관리자-쿼리-모음), 2026-06-13-05, 2026-06-13-14, 2026-06-13-15, 2026-06-13-22, 2026-06-13-23
-  - index.md 추가등록: 21, 22, 23, 25번 문서
-- **2026-06-13**: ingest 명령어 sub 폴더 규칙 강화 — **3개 파일 통합 업데이트**. 
-  - (1) CLAUDE.md: 실행 흐름 7단계 명확화, Step 1-4 구체화, 필수 체크리스트 추가
-  - (2) system_prompt.md: "반드시 매 ingest마다 실행" 강조
-  - (3) **.claude/commands/ingest.md**: **7단계 Sub 폴더 자동 생성 규칙 추가** (원래 1-6단계만 있었음)
-  - 결과: ingest 후 sub 폴더 규칙 적용이 이제 **필수 3-파일 통합 지침**으로 강제됨
-- **2026-06-13**: 배치 8 (MySQL Backup/XtraBackup 나머지) 완료 — 원본 5개 → 4 신규(증분 2건 병합). 문서 35~38 생성(XtraBackup-동작원리·백업요소및옵션·설치및백업계정권한·증분백업및복구), 모두 `backup/` 폴더. `증분 백업 복구 테스트`(자동화 스크립트+crontab)는 `증분 백업`과 동일주제로 doc 38에 병합. 누적 38개. 미처리 잔여: 31개(배치 9~).
-- **2026-06-13**: 배치 7 (MySQL Replication 나머지 5개) 완료 — 4 신규 + 1 병합. 문서 31~34 생성(Slave-추가-CLONE·Slave-추가-XtraBackup-GTID·Slave-추가-mysqldump·Replication-재설정), 모두 `replication/` 폴더. `semi replication` 원본은 **2.5단계 중복검사로 기존 [[2026-06-13-03_(MySQL-Semi-Sync-복제)]]와 동일주제 판정** → 신규 생성 대신 전체 my.cnf·선택적 복제 필터링 내용 병합. 누적 34개. 미처리 잔여: 36개(배치 8~).
-- **2026-06-13**: 배치 6 (MySQL InnoDB 구조 5개) 완료 — **1:1 규칙 준수**. `wiki/DBMS/MySQL/innodb/` 서브폴더 신규 생성(#InnoDB 5개 트리거). 문서 26~30 생성: Redo-Log-및-로그버퍼·Redo-Log-아카이빙·Redo-Log-활성화비활성화·Undo-로그-관리·Change-Buffer. 누적 30개. 미처리 잔여: 41개(배치 7~).
-- **2026-06-13**: MySQL-Performance-Schema 중복 문서 병합 — `2026-06-12_(MySQL-Performance-Schema-활용)`(구버전, index.md 미등록 고아) + `2026-06-13_` 버전을 하나로 통합. 원인: 2026-06-13 전면 재처리 시 구버전 삭제 누락 + ingest에 중복 제목 검사 단계 부재. 통합본은 2026-06-13 버전을 베이스로 구버전의 프로파일링·sys상세뷰·메모리분석 흡수, Index/Fast-Index/digest심화는 백링크 처리. 구버전 삭제, Lock-Deadlock 문서 백링크 수정.
-- **2026-06-13**: ingest 중복 방지 단계 신설 — **2.5단계 "중복/유사 제목 검사" 추가**. 신규 문서 작성 전 index.md에서 제목 90%+ 유사 문서 존재 여부 확인 의무화. `--confirm` 재처리 시 기존 동일 제목 문서 자동 감지·교체. ingest.md·CLAUDE.md·system_prompt.md 반영.
-- **2026-06-13**: ingest·lint 프로세스 통합 리팩토링 — **CLAUDE.md 대폭 축약 & 스킬 파일 단일 소스화**.
-  - **ingest 리팩토링**: CLAUDE.md 130줄 → 40줄 축약
-    - `.claude/commands/ingest.md`: Single Source of Truth (1-7단계)
-    - system_prompt.md: ingest.md 필수 참조 명시
-  - **lint 리팩토링**: CLAUDE.md 140줄 → 10줄 축약 + graphify 규칙 통합
-    - `.claude/commands/lint.md`: Single Source of Truth (1-5단계)
-    - system_prompt.md: lint.md 필수 참조 명시
-    - graphify 활용 규칙 CLAUDE.md에서 축약 (15줄 → 13줄)
-  - 결과: 
-    - CLAUDE.md: 간결한 개요만 (역할 명확화)
-    - ingest.md, lint.md: 실행 지침 통합 (중복 제거)
-    - 유지보수 용이, AI 참고 파일 명확
-- **2026-06-13**: `/ingest 배치 9` (Percona/설치 나머지) — raw/archived/2026/MySQL/clippings/ 5개 1:1 개별 처리. 39_(8.4 vs 8.0 비교), 40_(devel 환경), 41_(datadir/basedir 경로변경), 42_(8.0.40 패치), 43_(운영 표준 my.cnf) 신규 → `DBMS/MySQL/installation/`. 누적 43개. 미처리 잔여: 26개(배치 10~).
-- **2026-06-13**: `/ingest 배치 10` (백업/복구 시나리오) — raw/archived/2026/MySQL/clippings/ 5개 처리(3 신규, 테스트 2건 병합). 44_(시점 복구 PITR ← 시점복구+시점복구테스트), 45_(백업 복구 시나리오 ← 시나리오+백업복구테스트 qpress검증), 46_(긴급장애 복구 innodb_force_recovery) → `DBMS/MySQL/backup/`. 누적 46개. 미처리 잔여: 21개(배치 11~).
-- **2026-06-13**: `/ingest 배치 11` (권한/계정 관리) — raw/archived/2026/MySQL/clippings/ 4개 1:1 개별 처리. 47_(User 계정 생성 옵션), 48_(권한 관리 체계), 49_(sys schema 권한 부여), 50_(특정 유저 접속 차단) 신규 → `DBMS/MySQL/admin/`. 누적 50개. 미처리 잔여: 17개(배치 12~).
-- **2026-06-13**: `/ingest 배치 12` (admin 조회/진단) — raw/archived/2026/MySQL/clippings/ 4개 1:1 개별 처리. 51_(기 실행 쿼리 내역 확인), 52_(오래 수행중인 TX 찾기), 53_(에러 유발 클라이언트 프로세스 찾기), 54_(쿼리 로깅 general/slow log) 신규 → `DBMS/MySQL/admin/`. 누적 54개. 미처리 잔여: 13개(배치 13~).
-- **2026-06-13**: `/ingest 배치 13` (Lock 지연사례 + Replication) — raw/archived/2026/MySQL/clippings/ 5개 1:1 개별 처리. 55_(블로킹 세션 조회), 56_(Update 지연-디스크 커밋), 57_(Update 지연-레코드락 commit) → `DBMS/MySQL/lock/`; 58_(멀티 소스 복제), 59_(Slave gtid_executed 일치) → `DBMS/MySQL/replication/`. 누적 59개. 미처리 잔여: 8개(배치 14~).
-- **2026-06-13**: `/ingest 배치 14` (마지막 — Schema·성능·커널·백업스크립트) — raw/archived/2026/MySQL/clippings/ 8개 처리(5 신규 + 3 기존 Performance 문서 커버). 60_(파티션 관리), 61_(Timezone 설정) → `DBMS/MySQL/`; 62_(데이터 Load Bulk Insert 성능) → `DBMS/쿼리튜닝/`; 63_(성능 최적화 커널 파라미터) → `DBMS/MySQL/installation/`; 64_(증분 백업 자동화 스크립트 LSN기반) → `DBMS/MySQL/backup/`. Performance_schema 활용·성능 튜닝·프로파일링 3개는 2.5단계 판정상 기존 [[2026-06-13_(MySQL-Performance-Schema-활용)]]가 이미 커버(중복 생성 안 함). 누적 64개. **MySQL clippings 71개 원본 1:1 재처리 전량 완료(미처리 0).**
-- **2026-06-13**: graphify 그래프 재빌드(1291 노드·1194 엣지·97 커뮤니티) 후 `/lint` 보고서 갱신 (이슈 18건). 핵심: 구 통합문서 5개 ↔ 1:1 개별문서 중복, index.md 인덱스 누락 2건(doc 24, 관리자-쿼리-모음).
-- **2026-06-14**: lint 후속조치 — 구 통합문서 5개(Lock·Deadlock, Replication-가이드, XtraBackup-백업복구, Percona-설치, 관리자-쿼리-모음)를 **허브(목차) 문서로 전환**(중복 본문 제거, 개별문서 링크 목록화). index.md에 관리자-쿼리-모음 허브 및 doc 24(InnoDB-Lock-모니터링) 등록(P1 해소). 허브 4종 설명 갱신.
-- **2026-06-14**: 신규 raw 80개 자동 배치처리 시작 (4개 새 폴더: elasticsearch24·kafka20·postgresql31·mysql5). **배치 1 (MySQL HA)** — raw/mysql/ 5개 1:1 처리: 65_(MHA 설치 RedHat8), 66_(MHA 구축 post-install), 67_(ProxySQL-MHA 연동 VIP Failover), 68_(Orchestrator 설치·특징), 69_(Orchestrator Failover) → `DBMS/MySQL/ha/` sub폴더 신규 생성. 기존 08(HA-Failover-테스트)도 ha/로 이동. 누적 개별문서 69개. 신규 잔여: 75개(배치 2~).
-- **2026-06-14**: **배치 2 (Kafka Connect)** — raw/kafka/ 5개 1:1 처리: K01_(Connect 설치 confluent-hub), K02_(Connect 설정 Debezium CDC), K03_(Connect Property 분산모드), K04_(Connector 인증서 truststore), K05_(Sink Connector offset 제어) → `kafka/`. 누적 개별문서 74개. 신규 잔여: 70개(Kafka 15·ES 24·PG 31).
-- **2026-06-14**: **배치 3 (Kafka 코어)** — raw/kafka/ 5개 1:1 처리: K06_(Kafka 설치 Apache/Confluent+Debezium CDC), K07_(Broker server.properties), K08_(Zookeeper properties), K09_(기동 순서 모듈), K10_(Topic/Producer/Consumer 명령어) → `kafka/`. 누적 개별문서 79개. 신규 잔여: 65개(Kafka 10·ES 24·PG 31).
-- **2026-06-14**: **배치 4 (Kafka sink/tool)** — raw/kafka/ 6개 처리(5 신규, tunning 2건 병합): K11_(ES Sink), K12_(S3 Sink), K13_(Camel SFTP Sink+SMT), K14_(JSON Schema Registry), K15_(성능 튜닝 ← tunning+tunning 가이드문서) → `kafka/`. 누적 개별문서 84개. 신규 잔여: 59개(Kafka 4·ES 24·PG 31).
-- **2026-06-14**: **배치 5 (Kafka 도구·모니터링, 마지막)** — raw/kafka/ 4개 처리(3 신규, kcat 2건 병합): K16_(kcat/kafkacat ← kcat+kafkacat), K17_(kafka-ui provectus), K18_(모니터링 Prometheus/Alertmanager) → `kafka/`. **raw/kafka/ 20개 전량 완료(K01~K18).** 누적 개별문서 87개. 신규 잔여: 55개(ES 24·PG 31).
-- **2026-06-14**: **배치 6 (Elasticsearch 시작 — 설치·클러스터·구조)** — raw/elasticsearch/ 5개 1:1 처리: ES01_(시스템 구조), ES02_(Cluster 구축 아키텍처), ES03_(Shard 수 확인·증가), ES04_(API Key 연결), ES05_(Dev Tools DSL 조회) → `elasticsearch/`. 누적 개별문서 92개. 신규 잔여: 50개(ES 19·PG 31).
-- **2026-06-14**: **배치 7 (ES 인덱스 관리)** — raw/elasticsearch/ 5개 처리(4 신규, 상태조회 2건 병합): ES06_(Index 관련 명령·매핑·Field삭제·Rollover), ES07_(Index 상태/진단 조회 ← 특정인덱스상태+index상태조회), ES08_(Index Rename reindex), ES09_(인덱스 구성 방안 ISM Policy) → `elasticsearch/`. 누적 개별문서 96개. 신규 잔여: 45개(ES 14·PG 31).
-- **2026-06-14**: **배치 8 (ES 라이프사이클·Rollover)** — raw/elasticsearch/ 5개 1:1 처리: ES10_(Hot-Warm-Delete ISM+Rollover 구성), ES11_(Rollover Alias 개념), ES12_(ISM Policy Update 동시성), ES13_(Index명 Date Math), ES14_(ISM History 비활성화) → `elasticsearch/`. 누적 개별문서 101개. 신규 잔여: 40개(ES 9·PG 31).
-- **2026-06-14**: **배치 9 (ES 쿼리·검색)** — raw/elasticsearch/ 5개 처리(4 신규, nested 2건 병합): ES15_(Like 검색 Wildcard·Ngram), ES16_(Nested/Object Array 조회 ← object array+nested query), ES17_(조건 filtering update_by_query), ES18_(인덱스 생성·데이터 추가·조회 기본) → `elasticsearch/`. 누적 개별문서 105개. 신규 잔여: 35개(ES 4·PG 31).
-- **2026-06-14**: **배치 10 (ES 도구·실습·오류, 마지막)** — raw/elasticsearch/ 4개 처리(3 신규, 참고자료 병합): ES19_(ElastAlert 알림 도구), ES20_(테스트용 Index 구성 실습 Rollover+Ngram), ES21_(운영 오류 Primary Shard not active ← 오류+참고자료) → `elasticsearch/`. **raw/elasticsearch/ 24개 전량 완료(ES01~ES21).** 누적 개별문서 108개. 신규 잔여: 31개(PostgreSQL).
-- **2026-06-14**: **배치 11 (PostgreSQL 시작 — 설치·기초)** — raw/postgresql/ 5개 1:1 처리: PG01_(소스 컴파일 설치), PG02_(아키텍처·특징), PG03_(구동·종료 pg_ctl), PG04_(데이터베이스 관리), PG05_(사용자 Role 관리) → `DBMS/PostgreSQL/`. 기존 RPM설치 문서와 구분(소스설치). 누적 개별문서 113개. 신규 잔여: 26개(PG, Vacuum PDF 포함).
-- **2026-06-14**: **배치 12 (PG 객체·권한 관리)** [rate_limit 실패 후 재수행] — raw/postgresql/ 5개 1:1 처리: PG06_(스키마 관리 search_path), PG07_(권한 관리 GRANT), PG08_(세션 관리 연결제어), PG09_(테이블스페이스 관리), PG10_(시퀀스 관리) → `DBMS/PostgreSQL/`. 누적 개별문서 118개. 신규 잔여: 21개(PG, Vacuum PDF 포함).
-- **2026-06-14**: **배치 13 (PG 파티션·운영)** — raw/postgresql/ 5개 처리(4 신규, pg_cron 2건 병합): PG11_(pg_partman 파티션 자동관리), PG12_(pg_cron batch 스케줄링 ← pg_cron batch+admin pg_cron 동일내용), PG13_(Online 파티션 테이블 재구성), PG14_(pg_dump 테이블 DDL 추출) → `DBMS/PostgreSQL/`. 누적 개별문서 122개. 신규 잔여: 16개(PG, Vacuum PDF 포함).
-- **2026-06-14**: **배치 14 (PG 복제·Vacuum·HA)** — raw/postgresql/ 5개 처리(4 신규, AutoVacuum 2건 병합): PG15_(복제 방식 물리/논리), PG16_(복제 구성 실습 Streaming/Logical), PG17_(AutoVacuum 설정·튜닝 ← 튜닝+설정변수), PG18_(Patroni HA 구성) → `DBMS/PostgreSQL/`. 누적 개별문서 126개. 신규 잔여: 11개(PG 모니터링/FDW/Citus 등 + Vacuum PDF).
-- **2026-06-14**: **배치 15 (PG 모니터링·연동)** — raw/postgresql/ 5개 1:1 처리: PG19_(모니터링 시스템뷰 pg_stat_activity), PG20_(상황별 모니터링 쿼리), PG21_(문제상황 Index Bloating·Deadlock), PG22_(too many connections 오류), PG23_(mysql_fdw MySQL 연동) → `DBMS/PostgreSQL/`. 누적 개별문서 131개. 신규 잔여: 6개(PG: psql 명령어·access privileges·Citus·참고자료 + Vacuum PDF).
-- **2026-06-14**: **배치 16 (PG psql·권한표기·Citus)** — raw/postgresql/ md 4개 처리(3 신규, 참고자료 병합): PG24_(psql 메타명령어 레퍼런스 ← psql 명령어+참고자료 PDF), PG25_(Access Privileges 표기 해석), PG26_(Citus 분산 샤딩) → `DBMS/PostgreSQL/`. **raw/postgresql/ md 30개 전량 완료.** 누적 개별문서 134개. 신규 잔여: 1건(postgresql-Vacuum-개념.pdf, 배치 17 pdf2md 변환 예정).
-- **2026-06-14**: **배치 17 (PG Vacuum 개념, 최종)** — postgresql-Vacuum-개념.pdf를 pdf2md 변환 후 PG27_(Vacuum 개념 MVCC·XID Wraparound·Freeze) 생성 → `DBMS/PostgreSQL/`. **🎉 2026-06-13~14 신규 raw 80개 전량 처리 완료** (MySQL HA 5·Kafka 20·Elasticsearch 24·PostgreSQL 31). 신규 개별문서 누적 80건(병합 약 17건 적용). 자동 배치 루프 종료. graphify-build 재빌드 권고.
-- **2026-06-14**: **Sub 폴더 일괄 정리 (Step 7 사후 적용)** — 야간 배치로 root에 집중됐던 신규 문서를 주제별 sub 폴더로 이동. kafka/ → connect(9)·core(5)·tools(4); elasticsearch/ → cluster(7)·index(10)·query(4); DBMS/PostgreSQL/ → install(4)·admin(11)·monitoring(5)·replication(3)·maintenance(6), root 잔류 5(pgvector·MinTool4PG·pg_dump·FDW·citus). index.md 경로 필드 66건 자동 갱신(파일시스템 기준, 고아 링크 0) + 전체 카테고리 표 sub 폴더 행 추가. 백링크는 Obsidian 위키링크라 경로 무관(영향 없음).
-- **2026-06-14**: graphify 재빌드(1713 노드·1545 엣지·168 커뮤니티, 168 파일) 후 `/lint` 보고서 생성 (이슈 14건). 핵심: sub 폴더 정리 정상 검증, 신규 카테고리(kafka·ES·PG) 허브 문서 부재(P1)·카테고리 간 교차참조 단절(P2).
-- **2026-06-14**: **lint 후속조치 (P1·P2)** — kafka·elasticsearch·PostgreSQL **개요 허브 문서 3종 생성**(sub 폴더별 전체 문서 목차) → 모든 leaf 문서가 허브에서 인바운드 링크 확보(고아/island 해소). 교차참조 브리지 추가: K02→MySQL binlog(01·20), ES18→K11, K04→ES04. index.md에 허브 3종 등록. graphify 재빌드(1753 노드·1581 엣지·172 커뮤니티).
-- **2026-06-14**: [run-batch 배치 1/16] Airflow 설치·기본 7개 문서 신규 생성 (AF01~AF07) — pip/Docker설치, 개발환경, SSHOperator usecase, 동시성제어, db clean, backfill. aw/clippings/airflow_0614/ 7건 처리.
-- **2026-06-14**: [run-batch 배치 2/16] Airflow Operator·연동 7개 문서 신규 생성 (AF08~AF14) — PostgresOperator/Hook, SSH 리턴 xcom, trigger rule, 파티션·백업 완료확인 DAG, ES 백업검증, MySQL→PG ETL. aw/clippings/airflow_0614/ 7건 처리. 이어서 airflow 14개 문서 sub 폴더 정리: irflow/install/(3)·irflow/admin/(4)·irflow/usecase/(7) 생성·이동, index.md 경로 일괄 갱신.
-- **2026-06-14**: [run-batch 배치 3/16] MySQL InnoDB·잠금 5개 문서 신규 (MS01~MS05) — AHI, InnoDB 아키텍처(innodb/), InnoDB Locking&Transaction Model·스토리지엔진 잠금·MySQL 엔진잠금(lock/). 기존 lock/innodb 문서와 1:1 분리(각도 상이)·백링크. aw/clippings/mysql_0614/ 5건 처리.
-- **2026-06-14**: [run-batch 배치 4/16] MySQL Full-Text·인덱스 5개 문서 신규 (MS06~MS10) — FBI+LIKE 한계, 생성칼럼+인덱스, FULLTEXT(MATCH AGAINST·ngram), ngram 장단점, online DDL 모니터링. DBMS/MySQL/index/ sub폴더 신설(MS06~09 4건 이동), MS10은 root. aw/clippings/mysql_0614/ 5건 처리.
-- **2026-06-14**: [run-batch 배치 5/16] MySQL Online DDL·대용량 5개 문서 신규 (MS11~MS15) — 대용량 DDL 주의·실패케이스, ALGORITHM(INSTANT/INPLACE/COPY), online 인덱스 추가절차, pt-osc, 대량삭제 스크립트. DBMS/MySQL/online-ddl/ sub폴더 신설(MS11~14 + MS10 이동, 5건), MS15는 root. aw/clippings/mysql_0614/ 5건 처리.
-- **2026-06-15**: [run-batch 배치 6/16] MySQL binlog·백업복구 5건 처리 — MS16(binlog 방식비교)·MS17(archiver daemon)·MS18(mysqlbinlog 사용법) → inlog/ sub폴더 신설, MS19(MariaDB flashback) → backup/. 백업 복구 시나리오는 기존 2026-06-13-45와 내용 동일로 처리현황 등록만(중복 문서 미생성). aw/clippings/mysql_0614/ 5건 처리.
-- **2026-06-15**: [run-batch 배치 7/16] MySQL 복제·이중화 5개 문서 신규 (MS20~MS24) — MTS 로그억제, 이중화 지연(LOGICAL_CLOCK), ALTER COLUMN 에러·GTID skip, GTID consistency 위반, MDL 폭주 패턴. replication/(MS20~23)·lock/(MS24). aw/clippings/mysql_0614/ 5건 처리.
-- **2026-06-15**: [run-batch 배치 8/16] MySQL CLI·모니터링 도구 7개 문서 신규 (MS25~MS31) — CLI auto-rehash, mysql_config_editor, mysqlpump, mytop, innotop, prompt → tools/ sub폴더 신설(6건), AWS RDS log 디스크 해소 → admin/. aw/clippings/mysql_0614/ 7건 처리.
-- **2026-06-15**: [run-batch 배치 9/16] MySQL 에러메시지 5개 문서 신규 (MS32~MS36) — ERROR 1292(sql_mode), MY-010288(conn attrs), MY-011370/355/202(keyring_file), MY-013360(native_password deprecated), MY-013712(keyring_component). troubleshooting/ sub폴더 신설(5건). aw/clippings/mysql_0614/ 5건 처리.
-- **2026-06-15**: [run-batch 배치 10/16] MySQL 기타 4개 문서 신규 (MS37~MS40) — Definer vs Invoker(admin/), LOAD DATA INFILE, pt-table-sync, Percona Toolkit 도구모음(tools/). aw/clippings/mysql_0614/ 4건 처리.
-- **2026-06-15**: [run-batch 배치 11/16] 공통 ELK 스택 5개 문서 신규 (DBELK01~05) — Docker Compose 구성, ES ILM·템플릿, Filebeat 수집, Logstash 파이프라인, ElastAlert 알림룰 → elasticsearch/ 폴더. aw/clippings/공통_0614/ 5건 처리.
-- **2026-06-15**: [run-batch 배치 12/16] 공통 모니터링·PMM 5개 문서 신규 (MON01~02, PMM03~05) — DB 로그 모니터링 아키텍처·장애 알림 설계(기타ETC/), PMM AlertManager·서버구축·Client 설치(DBMS/(공통)/PMM/). aw/clippings/공통_0614/ 5건 처리.
-- **2026-06-15**: [run-batch 배치 13/16] 쿼리튜닝 5개 문서 신규 (QT01~05) — LIKE 성능향상 비교, MySQL 실행계획·통계, 프로파일링·EXPLAIN, 쿼리힌트(SKIP_SCAN), 지연된조인·래터럴조인 → DBMS/쿼리튜닝/. aw/clippings/공통_0614/ 5건 처리.
-- **2026-06-15**: [run-batch 배치 14/16] 시스템 Docker 11개 문서 신규 (DCK01~11) — 오프라인 설치, 주요명령, Dockerfile, 이미지이관, Compose, 볼륨, 컨테이너 백업복원, 볼륨 백업복원, IP대역, 권한문제, KOSTA PDF. 시스템/Docker/ sub폴더 신설. PDF→pdf2md 변환 완료. aw/clippings/시스템_0614/ 11건(md 10 + pdf 1) 처리. (배치14 rate_limit 중단 후 재처리 완료)
-- **2026-06-15**: [run-batch 배치 15/16] 잔여 4건 처리 — archived MySQL 3건(auto_increment·binlog·charset) 기존 문서와 동일 원본으로 중복 처리현황 등록만, PostgreSQL RPM EL-7/PG11 신규 1건 생성(DBMS/PostgreSQL/install/). 85개 전체 원본 처리 완료.
-- **2026-06-15**: [run-batch 배치 16/16 - 최종] graphify 재빌드 완료 — 2340 nodes / 2087 edges / 253 communities. 신규 85개 raw 원본 전량 처리 완료 (14배치, 자동 루프 종료).
-- **2026-06-15**: PDF 참조 규칙 보강 — .schema/template_note.md에 PDF 원본 링크 필수 규칙 추가(참조원본 wikilink + 📄 원본 PDF 섹션). 기존 PDF 문서 2건 소급 적용: DCK11(KOSTA Docker 교재), PG27(PostgreSQL Vacuum). 각 문서에 [[파일명.pdf]] wikilink + pdf2md 변환본 경로 + 📄 원본 PDF 열기 섹션 추가.
-- **2026-06-15**: 문서 작성 규칙 추가 — 속성 단락 아래·핵심요약 위에 [[#섹션명]] 형식 목차 필수 삽입. .schema/template_note.md·CLAUDE.md 동시 반영.
-- **2026-06-15**: 2026-06-15_(LLM-Wiki-구축-과정-및-구조).md 생성 — Obsidian 플러그인·구축 단계·디렉토리 구조·Skills 원본 내용 최대 보존. 신규 목차 template 적용.
-- **2026-06-15**: aw/2026-06-15_LLM wiki 구축.md → aw/AI/ 이동. wiki 참조 문서(ML(AI)/2026-06-15_LLM-Wiki-구축) 참조 원본 경로 수정, index.md 처리현황 섹션명 갱신.
-- **2026-06-15**: Oracle 쿼리튜닝 4개 문서 생성 (OT01~04) — 12단계 실무 가이드, 실행계획 확인 방법, 플랜 해석, 19c 단계별 절차. raw/clippings/oracle/ 4건 처리. 원본 내용 최대 보존, 목차 포함.
-- **2026-06-15**: DBMS/쿼리튜닝/ 폴더 구조 개편 — (공통)/·MySQL/·Oracle/·PostgreSQL/ sub폴더 신설, 기존 14개 문서 재배치. index.md 경로 14건 일괄 갱신, 카테고리 테이블 추가. CLAUDE.md 분류 규칙 업데이트.
