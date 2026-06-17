@@ -1,5 +1,7 @@
 # 📝 위키 업데이트 로그
 
+- **2026-06-16**: `2026-06-16_(Oracle-주요-힌트-레퍼런스).md` 추가 — Oracle SQL 힌트 레퍼런스. 최적화 목표·액세스 방식·조인순서/방식·서브쿼리 팩토링·쿼리 변환·병렬 처리·기타 8개 분류 30+ 힌트 목록. OT01·OT04 연관 개념 백링크 추가.
+
 - **2026-06-05**: 위키 시스템 구축 완료 — CLAUDE.md, wiki/index.md, wiki/log.md, .schema/ 파일 및 전체 폴더 구조 초기화.
 - **2026-06-05**: `2026-06-05_(Oracle-유저-생성하기).md` 추가 — Oracle 19c 사용자 계정 생성 절차 (sysdba 접속, _ORACLE_SCRIPT 설정, CREATE USER, GRANT), ORA-65096 에러 대처법.
 - **2026-06-05**: `2026-06-05_(Oracle-19c-Rocky-Linux-설치-가이드).md` 추가 — Rocky Linux 9.7 환경에서 Oracle 19.3.0.0 설치 시 GCC 11+ / libpthread 충돌 해결 전 과정 (심볼릭 링크 패치, ins_rdbms.mk 수정, 수동 relink).
@@ -89,3 +91,25 @@
 - **2026-06-14**: **Sub 폴더 일괄 정리 (Step 7 사후 적용)** — 야간 배치로 root에 집중됐던 신규 문서를 주제별 sub 폴더로 이동. kafka/ → connect(9)·core(5)·tools(4); elasticsearch/ → cluster(7)·index(10)·query(4); DBMS/PostgreSQL/ → install(4)·admin(11)·monitoring(5)·replication(3)·maintenance(6), root 잔류 5(pgvector·MinTool4PG·pg_dump·FDW·citus). index.md 경로 필드 66건 자동 갱신(파일시스템 기준, 고아 링크 0) + 전체 카테고리 표 sub 폴더 행 추가. 백링크는 Obsidian 위키링크라 경로 무관(영향 없음).
 - **2026-06-14**: graphify 재빌드(1713 노드·1545 엣지·168 커뮤니티, 168 파일) 후 `/lint` 보고서 생성 (이슈 14건). 핵심: sub 폴더 정리 정상 검증, 신규 카테고리(kafka·ES·PG) 허브 문서 부재(P1)·카테고리 간 교차참조 단절(P2).
 - **2026-06-14**: **lint 후속조치 (P1·P2)** — kafka·elasticsearch·PostgreSQL **개요 허브 문서 3종 생성**(sub 폴더별 전체 문서 목차) → 모든 leaf 문서가 허브에서 인바운드 링크 확보(고아/island 해소). 교차참조 브리지 추가: K02→MySQL binlog(01·20), ES18→K11, K04→ES04. index.md에 허브 3종 등록. graphify 재빌드(1753 노드·1581 엣지·172 커뮤니티).
+- **2026-06-14**: [run-batch 배치 1/16] Airflow 설치·기본 7개 문서 신규 생성 (AF01~AF07) — pip/Docker설치, 개발환경, SSHOperator usecase, 동시성제어, db clean, backfill. aw/clippings/airflow_0614/ 7건 처리.
+- **2026-06-14**: [run-batch 배치 2/16] Airflow Operator·연동 7개 문서 신규 생성 (AF08~AF14) — PostgresOperator/Hook, SSH 리턴 xcom, trigger rule, 파티션·백업 완료확인 DAG, ES 백업검증, MySQL→PG ETL. aw/clippings/airflow_0614/ 7건 처리. 이어서 airflow 14개 문서 sub 폴더 정리: irflow/install/(3)·irflow/admin/(4)·irflow/usecase/(7) 생성·이동, index.md 경로 일괄 갱신.
+- **2026-06-14**: [run-batch 배치 3/16] MySQL InnoDB·잠금 5개 문서 신규 (MS01~MS05) — AHI, InnoDB 아키텍처(innodb/), InnoDB Locking&Transaction Model·스토리지엔진 잠금·MySQL 엔진잠금(lock/). 기존 lock/innodb 문서와 1:1 분리(각도 상이)·백링크. aw/clippings/mysql_0614/ 5건 처리.
+- **2026-06-14**: [run-batch 배치 4/16] MySQL Full-Text·인덱스 5개 문서 신규 (MS06~MS10) — FBI+LIKE 한계, 생성칼럼+인덱스, FULLTEXT(MATCH AGAINST·ngram), ngram 장단점, online DDL 모니터링. DBMS/MySQL/index/ sub폴더 신설(MS06~09 4건 이동), MS10은 root. aw/clippings/mysql_0614/ 5건 처리.
+- **2026-06-14**: [run-batch 배치 5/16] MySQL Online DDL·대용량 5개 문서 신규 (MS11~MS15) — 대용량 DDL 주의·실패케이스, ALGORITHM(INSTANT/INPLACE/COPY), online 인덱스 추가절차, pt-osc, 대량삭제 스크립트. DBMS/MySQL/online-ddl/ sub폴더 신설(MS11~14 + MS10 이동, 5건), MS15는 root. aw/clippings/mysql_0614/ 5건 처리.
+- **2026-06-15**: [run-batch 배치 6/16] MySQL binlog·백업복구 5건 처리 — MS16(binlog 방식비교)·MS17(archiver daemon)·MS18(mysqlbinlog 사용법) → inlog/ sub폴더 신설, MS19(MariaDB flashback) → backup/. 백업 복구 시나리오는 기존 2026-06-13-45와 내용 동일로 처리현황 등록만(중복 문서 미생성). aw/clippings/mysql_0614/ 5건 처리.
+- **2026-06-15**: [run-batch 배치 7/16] MySQL 복제·이중화 5개 문서 신규 (MS20~MS24) — MTS 로그억제, 이중화 지연(LOGICAL_CLOCK), ALTER COLUMN 에러·GTID skip, GTID consistency 위반, MDL 폭주 패턴. replication/(MS20~23)·lock/(MS24). aw/clippings/mysql_0614/ 5건 처리.
+- **2026-06-15**: [run-batch 배치 8/16] MySQL CLI·모니터링 도구 7개 문서 신규 (MS25~MS31) — CLI auto-rehash, mysql_config_editor, mysqlpump, mytop, innotop, prompt → tools/ sub폴더 신설(6건), AWS RDS log 디스크 해소 → admin/. aw/clippings/mysql_0614/ 7건 처리.
+- **2026-06-15**: [run-batch 배치 9/16] MySQL 에러메시지 5개 문서 신규 (MS32~MS36) — ERROR 1292(sql_mode), MY-010288(conn attrs), MY-011370/355/202(keyring_file), MY-013360(native_password deprecated), MY-013712(keyring_component). troubleshooting/ sub폴더 신설(5건). aw/clippings/mysql_0614/ 5건 처리.
+- **2026-06-15**: [run-batch 배치 10/16] MySQL 기타 4개 문서 신규 (MS37~MS40) — Definer vs Invoker(admin/), LOAD DATA INFILE, pt-table-sync, Percona Toolkit 도구모음(tools/). aw/clippings/mysql_0614/ 4건 처리.
+- **2026-06-15**: [run-batch 배치 11/16] 공통 ELK 스택 5개 문서 신규 (DBELK01~05) — Docker Compose 구성, ES ILM·템플릿, Filebeat 수집, Logstash 파이프라인, ElastAlert 알림룰 → elasticsearch/ 폴더. aw/clippings/공통_0614/ 5건 처리.
+- **2026-06-15**: [run-batch 배치 12/16] 공통 모니터링·PMM 5개 문서 신규 (MON01~02, PMM03~05) — DB 로그 모니터링 아키텍처·장애 알림 설계(기타ETC/), PMM AlertManager·서버구축·Client 설치(DBMS/(공통)/PMM/). aw/clippings/공통_0614/ 5건 처리.
+- **2026-06-15**: [run-batch 배치 13/16] 쿼리튜닝 5개 문서 신규 (QT01~05) — LIKE 성능향상 비교, MySQL 실행계획·통계, 프로파일링·EXPLAIN, 쿼리힌트(SKIP_SCAN), 지연된조인·래터럴조인 → DBMS/쿼리튜닝/. aw/clippings/공통_0614/ 5건 처리.
+- **2026-06-15**: [run-batch 배치 14/16] 시스템 Docker 11개 문서 신규 (DCK01~11) — 오프라인 설치, 주요명령, Dockerfile, 이미지이관, Compose, 볼륨, 컨테이너 백업복원, 볼륨 백업복원, IP대역, 권한문제, KOSTA PDF. 시스템/Docker/ sub폴더 신설. PDF→pdf2md 변환 완료. aw/clippings/시스템_0614/ 11건(md 10 + pdf 1) 처리. (배치14 rate_limit 중단 후 재처리 완료)
+- **2026-06-15**: [run-batch 배치 15/16] 잔여 4건 처리 — archived MySQL 3건(auto_increment·binlog·charset) 기존 문서와 동일 원본으로 중복 처리현황 등록만, PostgreSQL RPM EL-7/PG11 신규 1건 생성(DBMS/PostgreSQL/install/). 85개 전체 원본 처리 완료.
+- **2026-06-15**: [run-batch 배치 16/16 - 최종] graphify 재빌드 완료 — 2340 nodes / 2087 edges / 253 communities. 신규 85개 raw 원본 전량 처리 완료 (14배치, 자동 루프 종료).
+- **2026-06-15**: PDF 참조 규칙 보강 — .schema/template_note.md에 PDF 원본 링크 필수 규칙 추가(참조원본 wikilink + 📄 원본 PDF 섹션). 기존 PDF 문서 2건 소급 적용: DCK11(KOSTA Docker 교재), PG27(PostgreSQL Vacuum). 각 문서에 [[파일명.pdf]] wikilink + pdf2md 변환본 경로 + 📄 원본 PDF 열기 섹션 추가.
+- **2026-06-15**: 문서 작성 규칙 추가 — 속성 단락 아래·핵심요약 위에 [[#섹션명]] 형식 목차 필수 삽입. .schema/template_note.md·CLAUDE.md 동시 반영.
+- **2026-06-15**: 2026-06-15_(LLM-Wiki-구축-과정-및-구조).md 생성 — Obsidian 플러그인·구축 단계·디렉토리 구조·Skills 원본 내용 최대 보존. 신규 목차 template 적용.
+- **2026-06-15**: aw/2026-06-15_LLM wiki 구축.md → aw/AI/ 이동. wiki 참조 문서(ML(AI)/2026-06-15_LLM-Wiki-구축) 참조 원본 경로 수정, index.md 처리현황 섹션명 갱신.
+- **2026-06-15**: Oracle 쿼리튜닝 4개 문서 생성 (OT01~04) — 12단계 실무 가이드, 실행계획 확인 방법, 플랜 해석, 19c 단계별 절차. raw/clippings/oracle/ 4건 처리. 원본 내용 최대 보존, 목차 포함.
+- **2026-06-15**: DBMS/쿼리튜닝/ 폴더 구조 개편 — (공통)/·MySQL/·Oracle/·PostgreSQL/ sub폴더 신설, 기존 14개 문서 재배치. index.md 경로 14건 일괄 갱신, 카테고리 테이블 추가. CLAUDE.md 분류 규칙 업데이트.

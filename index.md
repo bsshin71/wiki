@@ -37,6 +37,10 @@
 | Oracle/install | DBMS/Oracle/install/ | Oracle 설치·구성 관련 문서 |
 | Altibase | DBMS/Altibase/ | Altibase 관련 문서 |
 | 쿼리튜닝 | DBMS/쿼리튜닝/ | DB 종류 무관 쿼리튜닝 (최우선 분류) |
+| 쿼리튜닝/(공통) | DBMS/쿼리튜닝/(공통)/ | DB 무관 공통 튜닝 자료 |
+| 쿼리튜닝/MySQL | DBMS/쿼리튜닝/MySQL/ | MySQL 전용 쿼리튜닝 |
+| 쿼리튜닝/Oracle | DBMS/쿼리튜닝/Oracle/ | Oracle 전용 쿼리튜닝 |
+| 쿼리튜닝/PostgreSQL | DBMS/쿼리튜닝/PostgreSQL/ | PostgreSQL 전용 쿼리튜닝 |
 | DW | DBMS/DW/ | 데이터웨어하우스 / 분석 관련 문서 |
 | (공통) | DBMS/(공통)/ | DB 공통 개념 문서 |
 | ML(AI) | ML(AI)/ | ML·AI·딥러닝 관련 문서 (독립 최상위) |
@@ -57,7 +61,7 @@
 
 > 형식: `[[문서명]]` : 설명 `#태그1 #태그2` `경로`
 
-- [[2026-06-08_(Advanced-SQL-PostgreSQL)]] : Oracle→PG 전환 관점의 Advanced SQL 실습 가이드 — INDEX·분석함수·ROLLUP·계층질의·이행 체크리스트 `#PostgreSQL #AdvancedSQL #Oracle이행` `DBMS/쿼리튜닝/`
+- [[2026-06-08_(Advanced-SQL-PostgreSQL)]] : Oracle→PG 전환 관점의 Advanced SQL 실습 가이드 — INDEX·분석함수·ROLLUP·계층질의·이행 체크리스트 `#PostgreSQL #AdvancedSQL #Oracle이행` `DBMS/쿼리튜닝/PostgreSQL/`
 - [[2026-06-05_(Oracle-유저-생성하기)]] : Oracle 19c 사용자 계정 생성 4단계 절차 및 ORA-65096 에러 대처 `#Oracle #install` `DBMS/Oracle/install/`
 - [[2026-06-05_(Oracle-19c-Rocky-Linux-설치-가이드)]] : Rocky Linux 9.7에서 Oracle 19c 설치 시 GCC 11+ 충돌 해결 마스터 가이드 `#Oracle #install` `DBMS/Oracle/install/`
 - [[2026-06-05_(Oracle-리스너-등록)]] : 동적 등록(자동)과 정적 등록(listener.ora 수동) 비교 및 사용 시나리오 `#Oracle #install` `DBMS/Oracle/install/`
@@ -68,13 +72,13 @@
 - [[2026-06-12_(Obsidian-Git-플러그인-연동가이드)]] : Obsidian Git 플러그인으로 wiki/ 폴더만 GitHub Private 레포에 선택적 동기화 — Custom base path 설정·자동 백업 주기·첫 푸시 절차 `#git #github #backup` `시스템/`
 - [[2026-06-12_(LLMWiki-시스템-전체-가이드)]] : LLM Wiki 전체 구조·프로세스·구축 과정·Obsidian 플러그인 통합 가이드 `#wiki #obsidian #graphify #mcp` `ML(AI)/`
 - [[2026-06-02_(Oracle-모니터링-관리-쿼리-모음)]] : ASH·v$sql·Lock·Dictionary table 조회 쿼리 `#Oracle #admin #모니터링` `DBMS/Oracle/`
-- [[2026-06-02_(Oracle-쿼리튜닝-트러블슈팅)]] : Snapshot too old 원인·해결, SELECT 절 사용자 함수 병목 튜닝 4가지 방법 `#Oracle #쿼리튜닝 #tibero` `DBMS/쿼리튜닝/`
+- [[2026-06-02_(Oracle-쿼리튜닝-트러블슈팅)]] : Snapshot too old 원인·해결, SELECT 절 사용자 함수 병목 튜닝 4가지 방법 `#Oracle #쿼리튜닝 #tibero` `DBMS/쿼리튜닝/Oracle/`
 - [[2026-06-02_(Oracle-spool-데이터-Export)]] : SQL*Plus spool을 이용한 테이블 데이터 Export 스크립트 `#Oracle #export #spool` `DBMS/Oracle/`
 - [[2026-06-02_(PostgreSQL-RPM-설치-가이드)]] : RHEL/Rocky Linux에서 공식 RPM으로 PG16·PG18 설치 절차 및 데이터 경로 변경 `#PostgreSQL #install` `DBMS/PostgreSQL/install/`
 - [[2026-06-02_(PostgreSQL-모니터링-쿼리-모음)]] : pg_stat_statements·pg_stat_activity·Block 관계·Cache Hit 비율 조회 `#PostgreSQL #admin #모니터링` `DBMS/PostgreSQL/admin/`
 - [[2026-06-02_(PostgreSQL-객체-용량-조회-쿼리-모음)]] : DB 용량·Tablespace·Index·파티션·제약조건 조회 쿼리 모음 `#PostgreSQL #admin` `DBMS/PostgreSQL/admin/`
 - [[2026-06-02_(PostgreSQL-운영-유틸리티-모음)]] : psql 명령어·파라미터 조회/변경·Auto Vacuum·테스트 데이터 생성 `#PostgreSQL #admin #psql` `DBMS/PostgreSQL/admin/`
-- [[2026-06-02_(PostgreSQL-EXPLAIN-실행계획-가이드)]] : EXPLAIN 옵션 비교표·실행계획 노드·BUFFERS 해석·pg_hint_plan 힌트 `#PostgreSQL #쿼리튜닝 #EXPLAIN` `DBMS/쿼리튜닝/`
+- [[2026-06-02_(PostgreSQL-EXPLAIN-실행계획-가이드)]] : EXPLAIN 옵션 비교표·실행계획 노드·BUFFERS 해석·pg_hint_plan 힌트 `#PostgreSQL #쿼리튜닝 #EXPLAIN` `DBMS/쿼리튜닝/PostgreSQL/`
 - [[2026-06-02_(PostgreSQL-pgBackRest-백업-가이드)]] : Stanza 생성→전체 백업→증분 백업→crontab 자동화, Tablespace 주의사항 `#PostgreSQL #backup` `DBMS/PostgreSQL/maintenance/`
 - [[2026-06-02_(PostgreSQL-pgvector-설치)]] : pgvector 확장 설치·벡터 테이블 생성·유사도 검색·IVFFlat/HNSW 인덱스 `#PostgreSQL #AI-RAG #pgvector` `DBMS/PostgreSQL/`
 - [[2026-06-02_(PostgreSQL-MinTool4PG-DBA-도구)]] : Windows Terminal 환경용 PostgreSQL DBA 스크립트 도구 설치 및 pgpass.conf 설정 `#PostgreSQL #DBA #Windows` `DBMS/PostgreSQL/`
@@ -84,7 +88,7 @@
 - [[2026-06-13_(MySQL-XtraBackup-백업복구-가이드)]] : 🗂️**허브** — XtraBackup 원리·Full/증분·복구 시나리오 개별문서 목차(11,35~38,44~46,64) `#MySQL #backup #허브` `DBMS/MySQL/backup/`
 - [[2026-06-13_(MySQL-Percona-설치-가이드)]] : 🗂️**허브** — Percona 설치·경로·패치·운영설정 개별문서 목차(14,15,39~43,63) `#MySQL #install #허브` `DBMS/MySQL/installation/`
 - [[2026-06-13_(MySQL-관리자-쿼리-모음)]] : 🗂️**허브** — admin 기초·계정/권한·세션진단 개별문서 목차(05,18,19,47~54) `#MySQL #admin #허브` `DBMS/MySQL/admin/`
-- [[2026-06-13_(MySQL-Performance-Schema-활용)]] : PS 활성화·초기화, 접속/세션 모니터링, digest SQL분석, sys뷰, 인덱스·테이블 I/O, 프로파일링(stage 추적), 메모리분석, InnoDB튜닝, 오버헤드 — 구버전(2026-06-12) 통합 `#MySQL #performance_schema #sys #성능분석` `DBMS/쿼리튜닝/`
+- [[2026-06-13_(MySQL-Performance-Schema-활용)]] : PS 활성화·초기화, 접속/세션 모니터링, digest SQL분석, sys뷰, 인덱스·테이블 I/O, 프로파일링(stage 추적), 메모리분석, InnoDB튜닝, 오버헤드 — 구버전(2026-06-12) 통합 `#MySQL #performance_schema #sys #성능분석` `DBMS/쿼리튜닝/MySQL/`
 - [[2026-06-13-01_(MySQL-Binary-Log-Position-복제)]] : Master Binary Log 파일/위치 기반 복제. 초기 데이터 동기화(mysqldump/cold backup), Slave 설정, 검증. `#MySQL #replication` `DBMS/MySQL/replication/`
 - [[2026-06-13-02_(MySQL-GTID-기반-복제)]] : GTID(Global Transaction ID)로 유일한 트랜잭션 식별. MASTER_AUTO_POSITION으로 자동 위치 결정, 중복 실행 방지, mysql.gtid_executed 테이블. `#MySQL #GTID #replication` `DBMS/MySQL/replication/`
 - [[2026-06-13-03_(MySQL-Semi-Sync-복제)]] : Slave Relay Log 기록 ACK 후 Master 응답. 안전성 > 성능, Semi-Sync 플러그인 설정, timeout 관리, 모니터링. `#MySQL #replication` `DBMS/MySQL/replication/`
@@ -146,7 +150,7 @@
 - [[2026-06-13-59_(MySQL-Slave-gtid_executed-Master와-일치시키기)]] : RESET MASTER→gtid_purged 수동설정→AUTO_POSITION 재연결로 Slave GTID 동기화. `#MySQL #replication #GTID` `DBMS/MySQL/replication/`
 - [[2026-06-13-60_(MySQL-파티션-관리)]] : RANGE 파티션 생성·조회, MAXVALUE REORGANIZE로 구간 추가, DROP/REMOVE PARTITIONING, EXCHANGE PARTITION 테이블 교체. `#MySQL #partition` `DBMS/MySQL/`
 - [[2026-06-13-61_(MySQL-Timezone-설정)]] : CONVERT_TZ NULL·ERROR 1298 원인은 mysql.time_zone 테이블 비어있음. mysql_tzinfo_to_sql로 zoneinfo 적재. `#MySQL #timezone` `DBMS/MySQL/`
-- [[2026-06-13-62_(MySQL-데이터-Load-Bulk-Insert-성능-개선)]] : 대량 적재 8기법 — binlog/autocommit/제약 OFF, multi-value INSERT, PK순서, LOAD DATA(20배), flush 설정. `#MySQL #bulk_insert #성능` `DBMS/쿼리튜닝/`
+- [[2026-06-13-62_(MySQL-데이터-Load-Bulk-Insert-성능-개선)]] : 대량 적재 8기법 — binlog/autocommit/제약 OFF, multi-value INSERT, PK순서, LOAD DATA(20배), flush 설정. `#MySQL #bulk_insert #성능` `DBMS/쿼리튜닝/MySQL/`
 - [[2026-06-13-63_(MySQL-성능-최적화-커널-파라미터)]] : Linux sysctl(file-max·swappiness·dirty·net backlog·aio) + limits.conf nofile MySQL 서버 튜닝. `#MySQL #install #kernel` `DBMS/MySQL/installation/`
 - [[2026-06-13-64_(MySQL-증분-백업-자동화-스크립트-LSN기반)]] : lastbackupinfo로 last_lsn 전달하는 증분백업 스크립트, 복구 순서(마지막만 롤백), PXB-2406 버그(8.0.23-16+). `#MySQL #backup #script` `DBMS/MySQL/backup/`
 - [[2026-06-14-65_(MySQL-MHA-설치-RedHat8)]] : MHA Node/Manager Perl 설치, RHEL8 모듈 보충, MySQL 8.0 버전'-' 파싱 코드수정, SSH·VIP·계정 설정. `#MySQL #HA #MHA` `DBMS/MySQL/ha/`
@@ -224,6 +228,86 @@
 - [[2026-06-14-PG26_(PostgreSQL-Citus-분산-샤딩)]] : Citus scale-out hash 샤딩, Coordinator/Worker 구조, HA·백업 별도. `#PostgreSQL #citus #sharding` `DBMS/PostgreSQL/`
 - [[2026-06-14-PG27_(PostgreSQL-Vacuum-개념-MVCC-XID-Wraparound-Freeze)]] : MVCC dead tuple, XID 4바이트 wraparound, freeze·relfrozenxid·age로 wraparound 방지. `#PostgreSQL #vacuum #XID` `DBMS/PostgreSQL/maintenance/`
 - [[2026-06-02_(Linux-고정-IP-설정)]] : CentOS/RHEL ifcfg 파일로 고정 IP 설정, nmcli 강제 적용, DHCP 덮어쓰기 방지 `#Linux #네트워크 #IP고정` `시스템/`
+- [[2026-06-14-AF01_(Airflow-설치-pip-Metadb)]] : Airflow pip 설치·Metadb(PG)·기동 `#airflow #install` `airflow/`
+- [[2026-06-14-AF02_(Airflow-Docker-Compose-설치)]] : Docker Compose(Celery+PG+Redis) 설치·provider `#airflow #install #docker` `airflow/`
+- [[2026-06-14-AF03_(Airflow-개발환경-VSCode-DevContainer)]] : VSCode Remote-SSH+Dev Container 개발환경 `#airflow #install` `airflow/`
+- [[2026-06-14-AF04_(Airflow-기본-Usecase-SSHOperator-Telegram)]] : SSHOperator 원격실행+Telegram 알림 DAG `#airflow #usecase` `airflow/`
+- [[2026-06-14-AF05_(Airflow-동시실행-제어-parallelism)]] : parallelism·max_active·Pool 동시성 제어 `#airflow #admin` `airflow/`
+- [[2026-06-14-AF06_(Airflow-DB-Clean)]] : 메타DB 이력 정리 db clean `#airflow #admin` `airflow/`
+- [[2026-06-14-AF07_(Airflow-Backfill)]] : 과거 구간 재처리 backfill `#airflow #admin` `airflow/`
+- [[2026-06-14-MS01_(MySQL-InnoDB-Adaptive-Hash-Index-AHI)]] : AHI 자동 해시 인덱스 개념·장단점·설정 `#MySQL #innodb #AHI` `DBMS/MySQL/innodb/`
+- [[2026-06-14-MS02_(MySQL-InnoDB-Storage-Engine-아키텍처)]] : InnoDB In-Memory/On-Disk 구조 총괄 `#MySQL #innodb #아키텍처` `DBMS/MySQL/innodb/`
+- [[2026-06-14-MS03_(MySQL-InnoDB-Locking-Transaction-Model)]] : 락 종류+격리수준 개념 레퍼런스 `#MySQL #lock #transaction` `DBMS/MySQL/lock/`
+- [[2026-06-14-MS04_(MySQL-InnoDB-스토리지엔진-잠금-레코드-갭-넥스트키)]] : 레코드/갭/넥스트키 + Lock 대기 조회 쿼리 `#MySQL #lock #gap-lock` `DBMS/MySQL/lock/`
+- [[2026-06-14-MS05_(MySQL-엔진-잠금-Global-Table-Named-Metadata)]] : 글로벌/테이블/네임드/메타데이터 락 `#MySQL #lock` `DBMS/MySQL/lock/`
+- [[2026-06-14-MS06_(MySQL-Functional-Index-FBI-LIKE-한계)]] : FBI(REVERSE)는 =만 인덱스, LIKE 버그(#101207) `#MySQL #index #FBI` `DBMS/MySQL/index/`
+- [[2026-06-14-MS07_(MySQL-Generated-Column-Virtual-Stored-인덱스)]] : 생성칼럼+인덱스로 LIKE prefix 우회 `#MySQL #index #generated-column` `DBMS/MySQL/index/`
+- [[2026-06-14-MS08_(MySQL-Full-Text-Search-MATCH-AGAINST-ngram)]] : FULLTEXT MATCH AGAINST·BOOLEAN·ngram `#MySQL #index #fts` `DBMS/MySQL/index/`
+- [[2026-06-14-MS09_(MySQL-Ngram-Full-Text-Search-장단점)]] : ngram FTS 장단점·인덱스 비대화 `#MySQL #index #fts` `DBMS/MySQL/index/`
+- [[2026-06-14-MS10_(MySQL-Online-DDL-진행상황-모니터링)]] : online DDL 진척률·row log buffer 모니터링 `#MySQL #monitoring #online-ddl` `DBMS/MySQL/online-ddl/`
+- [[2026-06-14-MS11_(MySQL-대용량-테이블-DDL-주의사항-실패케이스)]] : 대용량 DDL 사전설정·실패케이스 5종·sizing `#MySQL #online-ddl` `DBMS/MySQL/online-ddl/`
+- [[2026-06-14-MS12_(MySQL-Online-DDL-ALGORITHM-INSTANT-INPLACE-COPY)]] : INSTANT/INPLACE/COPY 알고리즘·시도순서 `#MySQL #online-ddl #INSTANT` `DBMS/MySQL/online-ddl/`
+- [[2026-06-14-MS13_(MySQL-대용량-Online-인덱스-추가-절차)]] : 무중단 인덱스 추가 실전 절차·모니터링 `#MySQL #online-ddl #index` `DBMS/MySQL/online-ddl/`
+- [[2026-06-14-MS14_(MySQL-pt-online-schema-change-pt-osc)]] : 트리거 기반 pt-osc 스키마 변경 `#MySQL #online-ddl #pt-osc` `DBMS/MySQL/online-ddl/`
+- [[2026-06-14-MS15_(MySQL-대량-데이터-삭제-Chunk-Script)]] : LIMIT 청크 반복 삭제 부하분산 스크립트 `#MySQL #admin #대용량작업` `DBMS/MySQL/`
+- [[2026-06-14-MS16_(MySQL-binlog-아카이빙-방식-비교-cp-vs-mysqlbinlog)]] : cp 주기복사 vs mysqlbinlog 실시간 스트리밍 비교 `#MySQL #binlog #archiving` `DBMS/MySQL/binlog/`
+- [[2026-06-14-MS17_(MySQL-binlog-archiver-daemon-스크립트)]] : mysqlbinlog --stop-never 데몬화·systemd 등록 `#MySQL #binlog #daemon` `DBMS/MySQL/binlog/`
+- [[2026-06-14-MS18_(MySQL-mysqlbinlog-유틸-사용법)]] : binlog 조회·시점복구·아카이빙 사용법 `#MySQL #binlog #mysqlbinlog` `DBMS/MySQL/binlog/`
+- [[2026-06-14-MS19_(MySQL-MariaDB-Flashback-binlog-DML-원복)]] : MariaDB mysqlbinlog --flashback으로 DML 원복·GTID처리 `#MySQL #backup #flashback` `DBMS/MySQL/backup/`
+- [[2026-06-14-MS20_(MySQL-MTS-Multi-Threaded-Slave-통계로그-끄기)]] : MTS 120초 통계 NOTE 로그 억제·log_error_verbosity `#MySQL #replication #MTS` `DBMS/MySQL/replication/`
+- [[2026-06-14-MS21_(MySQL-이중화-지연-원인분석-MTS-병렬복제-설정)]] : IO/SQL Thread 지연 판별·LOGICAL_CLOCK 병렬복제 설정 `#MySQL #replication #slave-lag` `DBMS/MySQL/replication/`
+- [[2026-06-14-MS22_(MySQL-이중화-에러-ALTER-COLUMN-데이터잘림-조치)]] : ALTER COLUMN 길이축소·Data truncated 에러·GTID skip `#MySQL #replication #troubleshooting` `DBMS/MySQL/replication/`
+- [[2026-06-14-MS23_(MySQL-GTID-consistency-위반-에러-처리)]] : ERROR 1785 InnoDB+MyISAM 혼용 트랜잭션 분리 `#MySQL #replication #GTID` `DBMS/MySQL/replication/`
+- [[2026-06-14-MS24_(MySQL-Metadata-Lock-Wait-Connection-폭주-패턴)]] : 롱트랜잭션→DDL→SELECT 연쇄 MDL 폭주·시발점 kill `#MySQL #lock #troubleshooting` `DBMS/MySQL/lock/`
+- [[2026-06-14-MS25_(MySQL-CLI-auto-rehash-탭완성-프로시저-문제)]] : --skip-auto-rehash·탭→스페이스 변환으로 프로시저 입력 오류 해결 `#MySQL #tools #mysql-cli` `DBMS/MySQL/tools/`
+- [[2026-06-14-MS26_(MySQL-mysql_config_editor-login-path)]] : ~/.mylogin.cnf login-path로 접속정보 암호화 관리 `#MySQL #tools #credentials` `DBMS/MySQL/tools/`
+- [[2026-06-14-MS27_(MySQL-mysqlpump-병렬-덤프-도구)]] : mysqldump 병렬처리·user 백업·8.4 deprecated `#MySQL #tools #mysqlpump` `DBMS/MySQL/tools/`
+- [[2026-06-14-MS28_(MySQL-mytop-CLI-모니터링-도구)]] : top 유사 MySQL CLI 모니터링·스레드 kill `#MySQL #tools #mytop` `DBMS/MySQL/tools/`
+- [[2026-06-14-MS29_(MySQL-Innotop-InnoDB-CLI-모니터링-도구)]] : InnoDB 특화 CLI 모니터링·복제·Buffer·I/O `#MySQL #tools #innotop` `DBMS/MySQL/tools/`
+- [[2026-06-14-MS30_(MySQL-AWS-RDS-general-log-slow-log-디스크-점유-해소)]] : RDS rds_rotate 프로시저로 general/slow log 디스크 해소 `#MySQL #admin #AWS-RDS` `DBMS/MySQL/admin/`
+- [[2026-06-14-MS31_(MySQL-CLI-prompt-커스텀)]] : 4가지 방법으로 mysql CLI 프롬프트 커스텀 `#MySQL #tools #mysql-cli` `DBMS/MySQL/tools/`
+- [[2026-06-14-MS32_(MySQL-ERROR-1292-Incorrect-datetime-value-sql_mode)]] : NO_ZERO_DATE sql_mode 제거로 datetime 에러 해결 `#MySQL #troubleshooting #sql_mode` `DBMS/MySQL/troubleshooting/`
+- [[2026-06-14-MS33_(MySQL-MY-010288-Connection-Attributes-Truncated)]] : ProxySQL 연결 속성 크기 초과 경고·connect_attrs_size 증가 `#MySQL #troubleshooting #proxysql` `DBMS/MySQL/troubleshooting/`
+- [[2026-06-14-MS34_(MySQL-MY-011370-011355-010202-keyring_file-오류)]] : keyring_file 디렉터리 없음 초기화 실패·my.cnf 설정 `#MySQL #troubleshooting #keyring` `DBMS/MySQL/troubleshooting/`
+- [[2026-06-14-MS35_(MySQL-MY-013360-mysql_native_password-deprecated)]] : native_password deprecated·caching_sha2_password 전환·ProxySQL 2.6 `#MySQL #troubleshooting #authentication` `DBMS/MySQL/troubleshooting/`
+- [[2026-06-14-MS36_(MySQL-MY-013712-keyring_component_metadata_query-Warning)]] : keyring_component 버그 경고·log_error_suppression_list 억제 `#MySQL #troubleshooting #keyring` `DBMS/MySQL/troubleshooting/`
+- [[2026-06-14-MS37_(MySQL-Definer-vs-Invoker-SQL-SECURITY)]] : 프로시저·뷰 SQL SECURITY DEFINER/INVOKER 권한 차이·사용 판단 `#MySQL #admin #definer` `DBMS/MySQL/admin/`
+- [[2026-06-14-MS38_(MySQL-LOAD-DATA-LOCAL-INFILE-파일-임포트)]] : local_infile 설정·LOAD DATA LOCAL INFILE 파일 임포트 `#MySQL #tools #load-infile` `DBMS/MySQL/tools/`
+- [[2026-06-14-MS39_(MySQL-pt-table-sync-테이블-데이터-동기화)]] : pt-table-checksum+pt-table-sync로 master↔slave 데이터 sync `#MySQL #tools #pt-table-sync` `DBMS/MySQL/tools/`
+- [[2026-06-14-MS40_(MySQL-Percona-Toolkit-도구-모음)]] : pt-query-digest·pt-summary·pt-archiver 등 Percona Toolkit 도구 모음 `#MySQL #tools #percona-toolkit` `DBMS/MySQL/tools/`
+- [[2026-06-14-DBELK01_(DB-ELK-Docker-Compose-통합구성)]] : ES+Kibana+Logstash Docker Compose SSL 구성·.env·fleet-server `#elasticsearch #monitoring #ELK` `elasticsearch/`
+- [[2026-06-14-DBELK02_(DB-ELK-Elasticsearch-인덱스-ILM-템플릿-설정)]] : DB 로그별 ILM 정책·인덱스 템플릿·mapping `#elasticsearch #monitoring #ILM` `elasticsearch/`
+- [[2026-06-14-DBELK03_(DB-ELK-Filebeat-DB로그-수집-설정)]] : filebeat mysql-err/slow 로그 수집·커스텀필드 `#elasticsearch #monitoring #filebeat` `elasticsearch/`
+- [[2026-06-14-DBELK04_(DB-ELK-Logstash-파이프라인-구성)]] : beats 수신→msg_type 분기→ES 적재 파이프라인 `#elasticsearch #monitoring #logstash` `elasticsearch/`
+- [[2026-06-14-DBELK05_(DB-ELK-ElastAlert-DB에러-알림-룰)]] : ES 쿼리 기반 DB 에러 탐지·Slack/webhook 알림 룰 `#elasticsearch #monitoring #elastalert` `elasticsearch/`
+- [[2026-06-14-MON01_(DB-로그-모니터링-이상감지-아키텍처)]] : filebeat→Logstash→ES→ElastAlert 1차/Kafka 2차 통합 아키텍처 `#monitoring #ELK #elastalert` `기타(ETC)/`
+- [[2026-06-14-MON02_(DB-장애-알림-시스템-단계별-설계)]] : PMM Grafana→AlertManager→자체 webhook 3단계 알림 설계 `#monitoring #PMM #alertmanager` `기타(ETC)/`
+- [[2026-06-14-PMM03_(PMM-AlertManager-설정)]] : alertmanager.yml 구조·route·receivers·PMM JSON 예시 `#PMM #alertmanager #prometheus` `DBMS/(공통)/PMM/`
+- [[2026-06-14-PMM04_(PMM-모니터링-서버-구축-Docker)]] : PMM 서버 Docker 설치·AlertManager 연동 `#PMM #monitoring #docker` `DBMS/(공통)/PMM/`
+- [[2026-06-14-PMM05_(PMM-Client-설치-운영서버)]] : pmm-client 설치·서버 등록·MySQL 계정·slow query 설정 `#PMM #monitoring #pmm-client` `DBMS/(공통)/PMM/`
+- [[2026-06-14-QT01_(LIKE-검색-성능향상-FTS-FBI-ES-비교)]] : LIKE 앞% 성능향상 3방식(ngram FTS·FBI·ES) 비교표 `#쿼리튜닝 #LIKE #FTS` `DBMS/쿼리튜닝/(공통)/`
+- [[2026-06-14-QT02_(MySQL-실행계획-통계정보-히스토그램)]] : innodb_stats·ANALYZE TABLE·히스토그램 수집·pt-query-digest `#쿼리튜닝 #MySQL #통계정보` `DBMS/쿼리튜닝/MySQL/`
+- [[2026-06-14-QT03_(MySQL-쿼리-프로파일링-EXPLAIN-칼럼)]] : SET profiling·SHOW PROFILES·EXPLAIN 칼럼 의미 `#쿼리튜닝 #MySQL #profiling #EXPLAIN` `DBMS/쿼리튜닝/MySQL/`
+- [[2026-06-14-QT04_(MySQL-쿼리힌트-SKIP_SCAN-INDEX)]] : SKIP_SCAN·IGNORE INDEX·STRAIGHT_JOIN·Optimizer Hint `#쿼리튜닝 #MySQL #쿼리힌트` `DBMS/쿼리튜닝/MySQL/`
+- [[2026-06-14-QT05_(MySQL-튜닝사례-지연된조인-래터럴조인)]] : 지연된 조인 패턴·래터럴 조인 사용법·주의점 `#쿼리튜닝 #MySQL #LATERAL` `DBMS/쿼리튜닝/MySQL/`
+- [[2026-06-14-DCK01_(Docker-설치-offline-RHEL)]] : yumdownloader+localinstall 오프라인 Docker CE 설치(RHEL) `#시스템 #Docker #offline` `시스템/Docker/`
+- [[2026-06-14-DCK02_(Docker-주요-명령어-run-exec-commit)]] : docker run·exec·commit·stop·rm 핵심 명령 `#시스템 #Docker #command` `시스템/Docker/`
+- [[2026-06-14-DCK03_(Dockerfile-문법-build-run)]] : Dockerfile FROM·RUN·CMD·ENV, 빌드·실행 패턴 `#시스템 #Docker #Dockerfile` `시스템/Docker/`
+- [[2026-06-14-DCK04_(Docker-image-이관-save-load)]] : docker save/load로 tar 파일 이미지 이관 `#시스템 #Docker #image` `시스템/Docker/`
+- [[2026-06-14-DCK05_(Docker-Compose-주요-명령)]] : docker compose up/down/logs + .env 활용 `#시스템 #Docker #compose` `시스템/Docker/`
+- [[2026-06-14-DCK06_(Docker-볼륨-호스트-컨테이너-도커볼륨)]] : 호스트·볼륨컨테이너·도커볼륨 3가지 방식 `#시스템 #Docker #volume` `시스템/Docker/`
+- [[2026-06-14-DCK07_(Docker-컨테이너-볼륨-백업복원)]] : commit+save/load, --volumes-from tar, Compose 백업 `#시스템 #Docker #backup` `시스템/Docker/`
+- [[2026-06-14-DCK08_(Docker-볼륨-백업복원-4가지-방법)]] : 호스트tar·docker run·docker cp·docker volume 4가지 `#시스템 #Docker #backup` `시스템/Docker/`
+- [[2026-06-14-DCK09_(Docker-컨테이너-IP-대역-지정)]] : daemon.json bip·default-address-pools IP 충돌 방지 `#시스템 #Docker #network` `시스템/Docker/`
+- [[2026-06-14-DCK10_(Docker-host-container-소유자-권한문제)]] : UID/GID 맞추기·호스트 권한 조정 `#시스템 #Docker #permission` `시스템/Docker/`
+- [[2026-06-14-DCK11_(KOSTA-Docker-컨테이너-교육과정-개요)]] : KOSTA 2020 Docker 교육 교재 목차 개요 `#시스템 #Docker #학습` `시스템/Docker/`
+- [[2026-06-13-PG-RPM-설치-EL7-PG11]] : EL-7 CentOS PGDG저장소·PG11 설치·원격접속 설정 `#PostgreSQL #install #EL-7` `DBMS/PostgreSQL/install/`
+- [[2026-06-15_(LLM-Wiki-구축-과정-및-구조)]] : Obsidian+Claude Code 기반 LLM Wiki 구축 단계·플러그인·디렉토리 구조·Skills `#ML(AI) #wiki #구축` `ML(AI)/`
+- [[2026-06-15-OT01_(Oracle-SQL-튜닝-실무-12단계-가이드)]] : 인덱스·조인·서브쿼리·힌트·함수 등 실무 12단계 튜닝 체크리스트 `#Oracle #쿼리튜닝 #실무` `DBMS/쿼리튜닝/Oracle/`
+- [[2026-06-15-OT02_(Oracle-실행계획-확인-방법-EXPLAIN-PLAN-DBMS_XPLAN)]] : EXPLAIN PLAN·DISPLAY_CURSOR·SQL Developer F10·Toad Ctrl+E `#Oracle #쿼리튜닝 #실행계획` `DBMS/쿼리튜닝/Oracle/`
+- [[2026-06-15-OT03_(Oracle-실행계획-플랜-해석-방법)]] : 실행계획 표 읽는 순서·칼럼 의미·FULL SCAN·Predicate Information `#Oracle #쿼리튜닝 #실행계획` `DBMS/쿼리튜닝/Oracle/`
+- [[2026-06-15-OT04_(Oracle-19c-SQL-튜닝-절차-단계별-가이드)]] : AWR/ASH 식별→실행계획분석→통계→원인→SPM/힌트→STA→검증 7단계 `#Oracle #쿼리튜닝 #19c #SPM` `DBMS/쿼리튜닝/Oracle/`
+- [[2026-06-16_(Oracle-주요-힌트-레퍼런스)]] : Oracle SQL 힌트 레퍼런스 — 최적화 목표·액세스 방식·조인순서/방식·쿼리변환·병렬처리 8개 분류 30+ 힌트 목록 `#Oracle #쿼리튜닝 #힌트` `DBMS/쿼리튜닝/Oracle/`
 
 ---
 
@@ -497,3 +581,141 @@
 - `2026-06-12-MySQL Performance_schema 활용 - BigDataTeam.md` → [[2026-06-13_(MySQL-Performance-Schema-활용)]] (2.5단계: 제목 90%+ 일치, 기존 문서가 이미 커버 — 중복 생성 금지)
 - `2026-06-12-MySQL 성능 튜닝 - BigDataTeam.md` → [[2026-06-13_(MySQL-Performance-Schema-활용)]] (기존 문서 참조 원본, 커버됨)
 - `2026-06-12-Performance 스키마를 이용한 프로파일링 - BigDataTeam.md` → [[2026-06-13_(MySQL-Performance-Schema-활용)]] (기존 문서 참조 원본, 커버됨)
+
+
+### raw/clippings/airflow_0614/ (Airflow, 2026-06-14 신규 · 배치 1)
+- [[2026-06-14-AF01_(Airflow-설치-pip-Metadb)]] : Airflow pip 설치·Metadb(PG)·기동 `#airflow #install` `airflow/install/`
+- [[2026-06-14-AF02_(Airflow-Docker-Compose-설치)]] : Docker Compose(Celery+PG+Redis) 설치·provider `#airflow #install #docker` `airflow/install/`
+- [[2026-06-14-AF03_(Airflow-개발환경-VSCode-DevContainer)]] : VSCode Remote-SSH+Dev Container 개발환경 `#airflow #install` `airflow/install/`
+- [[2026-06-14-AF04_(Airflow-기본-Usecase-SSHOperator-Telegram)]] : SSHOperator 원격실행+Telegram 알림 DAG `#airflow #usecase` `airflow/usecase/`
+- [[2026-06-14-AF05_(Airflow-동시실행-제어-parallelism)]] : parallelism·max_active·Pool 동시성 제어 `#airflow #admin` `airflow/admin/`
+- [[2026-06-14-AF06_(Airflow-DB-Clean)]] : 메타DB 이력 정리 db clean `#airflow #admin` `airflow/admin/`
+- [[2026-06-14-AF07_(Airflow-Backfill)]] : 과거 구간 재처리 backfill `#airflow #admin` `airflow/admin/`
+- [[2026-06-14-AF08_(Airflow-DB연결-PostgresOperator-Hook)]] : PostgresOperator/SQLExecuteQueryOperator/Hook DB 사용 `#airflow #usecase` `airflow/usecase/`
+- [[2026-06-14-AF09_(Airflow-SSHOperator-리턴값-처리-xcom-retry)]] : SSH stdout xcom(base64)·retry 처리 `#airflow #usecase` `airflow/usecase/`
+- [[2026-06-14-AF10_(Airflow-Trigger-Rule)]] : 트리거 규칙(all_success/one_failed 등) `#airflow #admin` `airflow/admin/`
+- [[2026-06-14-AF11_(Airflow-파티션-완료확인-알림-DAG)]] : 파티션 add/remove 로그 점검·알림 DAG `#airflow #usecase` `airflow/usecase/`
+- [[2026-06-14-AF12_(Airflow-DB백업-완료확인-멀티인스턴스-DAG)]] : 멀티 인스턴스 백업 로그 동적 점검 DAG `#airflow #usecase` `airflow/usecase/`
+- [[2026-06-14-AF13_(Airflow-Elasticsearch-백업로그-검증-알림-DAG)]] : ES 백업로그 쿼리 검증·webhook 알림 `#airflow #usecase` `airflow/usecase/`
+- [[2026-06-14-AF14_(Airflow-MySQL-PostgreSQL-데이터전송-ETL)]] : MySQL→PG 일별 ETL Hook 전송 `#airflow #usecase` `airflow/usecase/`
+- `airflow backfill - BigDataTeam.md` → [[2026-06-14-AF07_(Airflow-Backfill)]]
+
+### raw/clippings/airflow_0614/ (Airflow, 2026-06-14 신규 · 배치 2)
+- `Database 사용 (PostgresOperator) - BigDataTeam.md` → [[2026-06-14-AF08_(Airflow-DB연결-PostgresOperator-Hook)]]
+- `airflow sshoperator 리턴 테스트 - BigDataTeam.md` → [[2026-06-14-AF09_(Airflow-SSHOperator-리턴값-처리-xcom-retry)]]
+- `airflow trigger rule - BigDataTeam.md` → [[2026-06-14-AF10_(Airflow-Trigger-Rule)]]
+- `add partitionremove partition 완료 여부 확인 - BigDataTeam.md` → [[2026-06-14-AF11_(Airflow-파티션-완료확인-알림-DAG)]]
+- `DB backup 완료 여부 확인, rmoldbackup 완료 여부 확인 - BigDataTeam.md` → [[2026-06-14-AF12_(Airflow-DB백업-완료확인-멀티인스턴스-DAG)]]
+- `elasticsearch 로그 검색결과를 통한 backup 결과 전송 - BigDataTeam.md` → [[2026-06-14-AF13_(Airflow-Elasticsearch-백업로그-검증-알림-DAG)]]
+- `mysql - postgresql 어제 일자 데이터 전송 - BigDataTeam.md` → [[2026-06-14-AF14_(Airflow-MySQL-PostgreSQL-데이터전송-ETL)]]
+
+### raw/clippings/mysql_0614/ (MySQL, 2026-06-14 신규 · 배치 3 InnoDB·잠금)
+- `AHI(Adaptive Hash Index) - BigDataTeam.md` → [[2026-06-14-MS01_(MySQL-InnoDB-Adaptive-Hash-Index-AHI)]]
+- `InnoDB storage engine - BigDataTeam.md` → [[2026-06-14-MS02_(MySQL-InnoDB-Storage-Engine-아키텍처)]]
+- `InnoDB Locking and Transaction Model - BigDataTeam.md` → [[2026-06-14-MS03_(MySQL-InnoDB-Locking-Transaction-Model)]]
+- `InnoDB 스토리지 엔진 잠금 - BigDataTeam.md` → [[2026-06-14-MS04_(MySQL-InnoDB-스토리지엔진-잠금-레코드-갭-넥스트키)]]
+- `MySQL 엔진잠금 - BigDataTeam.md` → [[2026-06-14-MS05_(MySQL-엔진-잠금-Global-Table-Named-Metadata)]]
+
+### raw/clippings/mysql_0614/ (MySQL, 2026-06-14 신규 · 배치 4 Full-Text·인덱스)
+- `FBI(Function Based Index) + LIKE 동작테스트 - BigDataTeam.md` → [[2026-06-14-MS06_(MySQL-Functional-Index-FBI-LIKE-한계)]]
+- `명시적생성칼럼+인덱스 - BigDataTeam.md` → [[2026-06-14-MS07_(MySQL-Generated-Column-Virtual-Stored-인덱스)]]
+- `Full text search 테스트 - BigDataTeam.md` → [[2026-06-14-MS08_(MySQL-Full-Text-Search-MATCH-AGAINST-ngram)]]
+- `Ngram Full Text Search 장단점 - BigDataTeam.md` → [[2026-06-14-MS09_(MySQL-Ngram-Full-Text-Search-장단점)]]
+- `online DDL 진행상황 보기 - BigDataTeam.md` → [[2026-06-14-MS10_(MySQL-Online-DDL-진행상황-모니터링)]]
+
+### raw/clippings/mysql_0614/ (MySQL, 2026-06-14 신규 · 배치 5 Online DDL·대용량)
+- `대용량 테이블 DDL 작업시 주의할 사항들 - BigDataTeam.md` → [[2026-06-14-MS11_(MySQL-대용량-테이블-DDL-주의사항-실패케이스)]]
+- `대용량 테이블 온라인 DDL lock 최소로 잡기 - BigDataTeam.md` → [[2026-06-14-MS12_(MySQL-Online-DDL-ALGORITHM-INSTANT-INPLACE-COPY)]]
+- `대용량 테이블에 online 인덱스 추가절차 - BigDataTeam.md` → [[2026-06-14-MS13_(MySQL-대용량-Online-인덱스-추가-절차)]]
+- `pt-online-schema-change 사용하기 - BigDataTeam.md` → [[2026-06-14-MS14_(MySQL-pt-online-schema-change-pt-osc)]]
+- `대량데이터삭제용 script - BigDataTeam.md` → [[2026-06-14-MS15_(MySQL-대량-데이터-삭제-Chunk-Script)]]
+- (이동) MS10 online DDL 모니터링 → `DBMS/MySQL/online-ddl/`
+
+### raw/clippings/mysql_0614/ (MySQL, 2026-06-14 신규 · 배치 6 binlog·백업복구)
+- `binlog 아카이빙 방식 선정 - BigDataTeam.md` → [[2026-06-14-MS16_(MySQL-binlog-아카이빙-방식-비교-cp-vs-mysqlbinlog)]]
+- `binlog archiver daemon - BigDataTeam.md` → [[2026-06-14-MS17_(MySQL-binlog-archiver-daemon-스크립트)]]
+- `mysqlbinlog - BigDataTeam.md` → [[2026-06-14-MS18_(MySQL-mysqlbinlog-유틸-사용법)]]
+- `MySQL에서 mariadb flashback 사용하기 - BigDataTeam.md` → [[2026-06-14-MS19_(MySQL-MariaDB-Flashback-binlog-DML-원복)]]
+- `백업 복구 시나리오 - BigDataTeam.md` → [[2026-06-13-45_(MySQL-백업-복구-시나리오)]] (기존 문서와 내용 동일 — 처리현황 등록만, 신규 문서 없음)
+
+### raw/clippings/mysql_0614/ (MySQL, 2026-06-14 신규 · 배치 7 복제·이중화)
+- `Multi-Threaded Slave Statistics  로깅 끄기 - BigDataTeam.md` → [[2026-06-14-MS20_(MySQL-MTS-Multi-Threaded-Slave-통계로그-끄기)]]
+- `이중화 지연문제 해결 - BigDataTeam.md` → [[2026-06-14-MS21_(MySQL-이중화-지연-원인분석-MTS-병렬복제-설정)]]
+- `이중화 에러 - BigDataTeam.md` → [[2026-06-14-MS22_(MySQL-이중화-에러-ALTER-COLUMN-데이터잘림-조치)]]
+- `Statement violates GTID consistency - BigDataTeam.md` → [[2026-06-14-MS23_(MySQL-GTID-consistency-위반-에러-처리)]]
+- `Waiting for table metadata lock 로 인한 connection 폭주 - BigDataTeam.md` → [[2026-06-14-MS24_(MySQL-Metadata-Lock-Wait-Connection-폭주-패턴)]]
+
+### raw/clippings/mysql_0614/ (MySQL, 2026-06-14 신규 · 배치 8 CLI·도구)
+- `mysql cli - BigDataTeam.md` → [[2026-06-14-MS25_(MySQL-CLI-auto-rehash-탭완성-프로시저-문제)]]
+- `mysql_config_editor - BigDataTeam.md` → [[2026-06-14-MS26_(MySQL-mysql_config_editor-login-path)]]
+- `mysqlpump - BigDataTeam.md` → [[2026-06-14-MS27_(MySQL-mysqlpump-병렬-덤프-도구)]]
+- `mytop - BigDataTeam.md` → [[2026-06-14-MS28_(MySQL-mytop-CLI-모니터링-도구)]]
+- `Innotop - MySQL용 CLI 기반 탑과 유사한 모니터 도구.md` → [[2026-06-14-MS29_(MySQL-Innotop-InnoDB-CLI-모니터링-도구)]]
+- `AWSRDSgeneral logslow log disk 점유관련 - BigDataTeam.md` → [[2026-06-14-MS30_(MySQL-AWS-RDS-general-log-slow-log-디스크-점유-해소)]]
+- `prompt - BigDataTeam.md` → [[2026-06-14-MS31_(MySQL-CLI-prompt-커스텀)]]
+
+### raw/clippings/mysql_0614/ (MySQL, 2026-06-14 신규 · 배치 9 에러메시지)
+- `ERROR 1292 (22007) Incorrect datetime value - BigDataTeam.md` → [[2026-06-14-MS32_(MySQL-ERROR-1292-Incorrect-datetime-value-sql_mode)]]
+- `MY-010288 - BigDataTeam.md` → [[2026-06-14-MS33_(MySQL-MY-010288-Connection-Attributes-Truncated)]]
+- `MY-011370, MY-011355, MY-010202 keyring 오류 - BigDataTeam.md` → [[2026-06-14-MS34_(MySQL-MY-011370-011355-010202-keyring_file-오류)]]
+- `MY-013360 mysql_native_password' is deprecated 오류 - BigDataTeam.md` → [[2026-06-14-MS35_(MySQL-MY-013360-mysql_native_password-deprecated)]]
+- `MY-013712 No suitable 'keyring_component_metadata_query' .. - BigDataTeam.md` → [[2026-06-14-MS36_(MySQL-MY-013712-keyring_component_metadata_query-Warning)]]
+
+### raw/clippings/mysql_0614/ (MySQL, 2026-06-14 신규 · 배치 10 기타)
+- `MySQL Definer vs Invoker - BigDataTeam.md` → [[2026-06-14-MS37_(MySQL-Definer-vs-Invoker-SQL-SECURITY)]]
+- `load into infile 사용법 - BigDataTeam.md` → [[2026-06-14-MS38_(MySQL-LOAD-DATA-LOCAL-INFILE-파일-임포트)]]
+- `pt-table-sync 사용하기 - BigDataTeam.md` → [[2026-06-14-MS39_(MySQL-pt-table-sync-테이블-데이터-동기화)]]
+- `Percona-Toolkit - BigDataTeam.md` → [[2026-06-14-MS40_(MySQL-Percona-Toolkit-도구-모음)]]
+
+### raw/clippings/공통_0614/ (공통, 2026-06-14 신규 · 배치 11 ELK 스택)
+- `db-elk docker 구성 - BigDataTeam.md` → [[2026-06-14-DBELK01_(DB-ELK-Docker-Compose-통합구성)]]
+- `db-elk elasticsearch 구성 - BigDataTeam.md` → [[2026-06-14-DBELK02_(DB-ELK-Elasticsearch-인덱스-ILM-템플릿-설정)]]
+- `db-elk filebeat 구성 - BigDataTeam.md` → [[2026-06-14-DBELK03_(DB-ELK-Filebeat-DB로그-수집-설정)]]
+- `db-elk logstash 구성 - BigDataTeam.md` → [[2026-06-14-DBELK04_(DB-ELK-Logstash-파이프라인-구성)]]
+- `elastalert db rule 파일 - BigDataTeam.md` → [[2026-06-14-DBELK05_(DB-ELK-ElastAlert-DB에러-알림-룰)]]
+
+### raw/clippings/공통_0614/ (공통, 2026-06-14 신규 · 배치 12 모니터링·PMM)
+- `db 로그 모니터링 및 이상감지 - BigDataTeam.md` → [[2026-06-14-MON01_(DB-로그-모니터링-이상감지-아키텍처)]]
+- `DB 장애 알림 시스템 - BigDataTeam.md` → [[2026-06-14-MON02_(DB-장애-알림-시스템-단계별-설계)]]
+- `PMM alertmanager - BigDataTeam.md` → [[2026-06-14-PMM03_(PMM-AlertManager-설정)]]
+- `pmm 모니터링 서버 구축 - BigDataTeam.md` → [[2026-06-14-PMM04_(PMM-모니터링-서버-구축-Docker)]]
+- `PMM 설치 (운영 서버) - BigDataTeam.md` → [[2026-06-14-PMM05_(PMM-Client-설치-운영서버)]]
+
+### raw/clippings/공통_0614/ (공통, 2026-06-14 신규 · 배치 13 쿼리튜닝)
+- `Like '%검색어%' 성능 향상 방안 비교 - BigDataTeam.md` → [[2026-06-14-QT01_(LIKE-검색-성능향상-FTS-FBI-ES-비교)]]
+- `MySQL 실행계획 - BigDataTeam.md` → [[2026-06-14-QT02_(MySQL-실행계획-통계정보-히스토그램)]]
+- `mysql 쿼리 profiling - BigDataTeam.md` → [[2026-06-14-QT03_(MySQL-쿼리-프로파일링-EXPLAIN-칼럼)]]
+- `MySQL 쿼리힌트 - BigDataTeam.md` → [[2026-06-14-QT04_(MySQL-쿼리힌트-SKIP_SCAN-INDEX)]]
+- `MySQL 튜닝사례 - BigDataTeam.md` → [[2026-06-14-QT05_(MySQL-튜닝사례-지연된조인-래터럴조인)]]
+
+### raw/clippings/시스템_0614/ (시스템 Docker, 2026-06-14 신규 · 배치 14)
+- `offline 으로 docker 설치하기 - BigDataTeam.md` → [[2026-06-14-DCK01_(Docker-설치-offline-RHEL)]]
+- `Docker 주요 명령 - BigDataTeam.md` → [[2026-06-14-DCK02_(Docker-주요-명령어-run-exec-commit)]]
+- `Dockerfile 문법 - BigDataTeam.md` → [[2026-06-14-DCK03_(Dockerfile-문법-build-run)]]
+- `docker image 이관 - BigDataTeam.md` → [[2026-06-14-DCK04_(Docker-image-이관-save-load)]]
+- `Docker compose - BigDataTeam.md` → [[2026-06-14-DCK05_(Docker-Compose-주요-명령)]]
+- `Docker 볼륨 - BigDataTeam.md` → [[2026-06-14-DCK06_(Docker-볼륨-호스트-컨테이너-도커볼륨)]]
+- `Docker container 백업복원 - BigDataTeam.md` → [[2026-06-14-DCK07_(Docker-컨테이너-볼륨-백업복원)]]
+- `docker 볼륨 백업복원 - BigDataTeam.md` → [[2026-06-14-DCK08_(Docker-볼륨-백업복원-4가지-방법)]]
+- `Docker container의 IP 대역지정 - BigDataTeam.md` → [[2026-06-14-DCK09_(Docker-컨테이너-IP-대역-지정)]]
+- `Docker host 와 container 소유자가 다른 권한문제 - BigDataTeam.md` → [[2026-06-14-DCK10_(Docker-host-container-소유자-권한문제)]]
+- `T108259_KOSTA_교육과정_Learning_Object_기반_교재_도커_컨테이너_20200114.pdf` → [[2026-06-14-DCK11_(KOSTA-Docker-컨테이너-교육과정-개요)]] (pdf2md 변환 완료)
+
+### raw/archived/2026/MySQL/clippings/ (MySQL archived, 배치 15)
+- `2026-06-12-auto_increment 의 사용시 주의점 - BigDataTeam.md` → [[2026-06-13-07_(MySQL-auto_increment-주의점-및-최적화)]] (기존 문서와 동일 원본 — 중복, 처리현황 등록만)
+- `2026-06-12-MySQL bin log 활성비활성 작업 - BigDataTeam.md` → [[2026-06-13-20_(MySQL-Binary-Log-활성화-비활성화)]] (기존 문서와 동일 원본 — 중복, 처리현황 등록만)
+- `2026-06-12-mysql character set 설정 - BigDataTeam.md` → [[2026-06-13-21_(MySQL-Character-Set-설정)]] (기존 문서와 동일 원본 — 중복, 처리현황 등록만)
+### raw/postgresql/ (PostgreSQL, 배치 15)
+- `2026-06-13-Postgres 설치(RPM 설치) - BigDataTeam.md` → [[2026-06-13-PG-RPM-설치-EL7-PG11]] (EL-7/PG11, 기존 Rocky9/PG16 문서와 버전 달라 별도 생성)
+
+### raw/AI/ (2026-06-15 신규)
+- `2026-06-15_LLM wiki 구축.md` → [[2026-06-15_(LLM-Wiki-구축-과정-및-구조)]]
+
+### raw/clippings/oracle/ (Oracle 쿼리튜닝, 2026-06-15 신규)
+- `오라클 Sql 튜닝 가이드~~~.md` → [[2026-06-15-OT01_(Oracle-SQL-튜닝-실무-12단계-가이드)]]
+- `오라클 Sql 튜닝.md` → [[2026-06-15-OT02_(Oracle-실행계획-확인-방법-EXPLAIN-PLAN-DBMS_XPLAN)]]
+- `옵티마이저 실행계획 플랜 보는 법.md` → [[2026-06-15-OT03_(Oracle-실행계획-플랜-해석-방법)]]
+- `Oracle 19c SQL 튜닝 절차 및 가이드.md` → [[2026-06-15-OT04_(Oracle-19c-SQL-튜닝-절차-단계별-가이드)]]
+
+### raw/ (루트, 2026-06-16 신규)
+- `2026-06-16_oracle주요hint문.md` → [[2026-06-16_(Oracle-주요-힌트-레퍼런스)]]

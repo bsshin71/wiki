@@ -3,7 +3,7 @@
 - **카테고리**: #DBMS #PostgreSQL #구조
 - **태그**: #PostgreSQL #vacuum #MVCC #XID #wraparound #freeze
 - **작성일**: 2026-06-14
-- **참조 원본**: [[postgresql-Vacuum-개념]] (raw/pdf2md/postgresql-Vacuum-개념.md, PDF 변환)
+- **참조 원본**: [[postgresql-Vacuum-개념.pdf]] · `raw/pdf2md/postgresql-Vacuum-개념.md` (PDF 변환)
 
 ## 1. 핵심 요약
 
@@ -64,3 +64,8 @@ SELECT relname, age(relfrozenxid) FROM pg_class WHERE relkind='r' ORDER BY age(r
 - [[2026-06-14-PG17_(PostgreSQL-AutoVacuum-설정-및-튜닝)]]
 - [[2026-06-14-PG02_(PostgreSQL-아키텍처-및-특징)]]
 - [[2026-06-14-PG21_(PostgreSQL-문제상황-Index-Bloating-Deadlock)]]
+
+## 📄 원본 PDF
+
+- [[postgresql-Vacuum-개념.pdf|📄 원본 PDF 열기 (PostgreSQL Vacuum 개념)]]
+- pdf2md 변환본(이미지 미포함): `raw/pdf2md/postgresql-Vacuum-개념.md`
