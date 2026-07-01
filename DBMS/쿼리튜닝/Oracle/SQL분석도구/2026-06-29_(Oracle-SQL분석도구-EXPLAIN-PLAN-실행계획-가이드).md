@@ -107,3 +107,4 @@ SQL> SELECT * FROM TABLE(DBMS_XPLAN.DISPLAY(NULL, NULL, 'serial'));
 - [[2026-06-15-OT04_(Oracle-19c-SQL-튜닝-절차-단계별-가이드)]]
 - [[2026-06-29_(Oracle-SQL분석도구-AUTOTRACE-가이드)]]
 - [[2026-06-30_(Oracle-SQL분석도구-SQL-Trace-TKPROF-가이드)]]
+- [[2026-07-01_(Oracle-SQL분석도구-DBMS_XPLAN-심화-가이드)]]

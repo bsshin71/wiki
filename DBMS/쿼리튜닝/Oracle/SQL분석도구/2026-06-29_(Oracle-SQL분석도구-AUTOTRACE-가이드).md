@@ -1,4 +1,4 @@
-# Oracle SQL분석도구 — AUTOTRACE 가이드
+﻿﻿# Oracle SQL분석도구 — AUTOTRACE 가이드
 - **카테고리**: #Oracle #쿼리튜닝
 - **태그**: #Oracle #쿼리튜닝 #AUTOTRACE #PLUSTRACE #실행계획
 - **작성일**: 2026-06-29
@@ -88,5 +88,7 @@ Statistics
 
 ## 5. 연관 개념
 - [[2026-06-29_(Oracle-SQL분석도구-EXPLAIN-PLAN-실행계획-가이드)]]
+- [[2026-06-30_(Oracle-SQL분석도구-SQL-Trace-TKPROF-가이드)]]
+- [[2026-07-01_(Oracle-SQL분석도구-DBMS_XPLAN-심화-가이드)]]
 - [[2026-06-15-OT02_(Oracle-실행계획-확인-방법-EXPLAIN-PLAN-DBMS_XPLAN)]]
 - [[2026-06-15-OT03_(Oracle-실행계획-플랜-해석-방법)]]
